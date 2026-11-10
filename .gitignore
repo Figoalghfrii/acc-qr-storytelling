@@ -5,10 +5,12 @@ dist/
 .env.*
 node_modules/
 
-# Large local archives & proposal documents (kept locally, not pushed to GitHub)
+# Large local archives, proposal documents & internal notes (kept locally, not pushed to GitHub)
 *.zip
 *.pdf
 *.docx
+*.txt
+!robots.txt
 
 # OS & editor junk
 .DS_Store
