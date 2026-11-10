@@ -105,7 +105,7 @@
       <div class="flex items-center gap-2">
         <a href="#catatan-batch" class="inline-flex items-center gap-2.5 bg-[#5B6B2F] text-[#FAF6EC] pl-3.5 pr-2 py-1.5 rounded-full text-xs font-semibold hover:bg-[#475522] transition">
           <span class="w-2 h-2 rounded-full bg-[#EFDCBA]"></span>
-          <span id="nav-batch-label">TB-2612-01</span>
+          <span id="nav-batch-label">Contoh · TB-2612-01</span>
           <span class="w-6 h-6 rounded-full bg-[#9A9F46] text-[#283118] flex items-center justify-center font-bold">
             <svg class="w-3.5 h-3.5" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4.5 2.5L8 6L4.5 9.5"/>
@@ -115,6 +115,15 @@
       </div>
     </div>
   </header>
+
+  <!-- Banner Status Prototipe Proposal -->
+  <div class="bg-[#F8F9F5] border-b border-[#E2E6DC] py-2 px-4 text-center text-[11px] sm:text-xs text-[#5C5338]">
+    <span class="inline-flex items-center gap-1.5 font-semibold text-[#283118]">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#5B6B2F]"></span>
+      Prototipe Proposal ACC #NextGreen 2026:
+    </span>
+    Data pemeriksaan batch di halaman ini adalah <strong>simulasi ilustrasi rancangan</strong> pra-implementasi bersama KWT Malati Asih (jadwal produksi: Des 2026–Jan 2027).
+  </div>
 
   <!-- ===================================================================== -->
   <!-- SECTION 1 — HERO SECTION (Botanical Hillside Editorial Introduction)  -->
@@ -266,7 +275,7 @@
 
           <!-- Transparansi Data & Masa Simpan -->
           <div class="bg-[#FFFFFF] border border-[#E2E6DC] rounded-xl p-4 text-xs text-[#5C5338] leading-relaxed">
-            <strong class="text-[#283118]">Catatan Pencatatan:</strong> Data batch bersumber dari pencatatan internal KWT Malati Asih. Estimasi masa simpan <strong>6 bulan</strong> (klip <em>ziplock</em> tertutup rapat), dapat disesuaikan menurut hasil uji simpan per batch.
+            <strong class="text-[#283118]">Status Data Prototipe:</strong> Data batch pada halaman ini merupakan <strong>simulasi ilustrasi rancangan</strong> sebelum produksi lapangan bersama KWT Malati Asih. Estimasi masa simpan <strong>6 bulan</strong> (klip <em>ziplock</em> tertutup rapat), dapat disesuaikan menurut hasil uji simpan per batch.
           </div>
         </div>
 
@@ -278,13 +287,13 @@
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-[#EFDCBA] text-[#5B6B2F] flex items-center justify-center font-serif-display font-bold text-lg">D</div>
                 <div>
-                  <div class="text-[11px] uppercase tracking-widest text-[#EFDCBA]/85">Catatan Pemeriksaan Batch</div>
-                  <div id="val-code" class="font-serif-display text-2xl font-bold text-[#FFFFFF]">TB-2612-01 · Batch Tercatat</div>
+                  <div class="text-[11px] uppercase tracking-widest text-[#EFDCBA]/85">Simulasi Catatan Pemeriksaan Batch</div>
+                  <div id="val-code" class="font-serif-display text-2xl font-bold text-[#FFFFFF]">TB-2612-01 · Contoh Rancangan</div>
                 </div>
               </div>
               <div class="inline-flex items-center gap-2 bg-[#9A9F46]/30 border border-[#EFDCBA] text-[#EFDCBA] px-3.5 py-1.5 rounded-full text-xs font-bold">
                 <span class="w-2 h-2 rounded-full bg-[#EFDCBA]"></span>
-                <span id="val-badge">Data Dicatat KWT Malati Asih</span>
+                <span id="val-badge">Simulasi Prototipe · Pra-Implementasi</span>
               </div>
             </div>
 
@@ -613,6 +622,9 @@
             <a id="wa-parcel" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#EFDCBA] hover:bg-[#FFFFFF] text-[#283118] font-bold text-xs py-3 px-4 rounded-full transition">
               <span>Pesan Parsel Edisi Ini via Duta Desa</span>
             </a>
+            <p id="wa-parcel-demo-hint" class="text-[11px] text-[#FAF6EC]/80 text-center leading-snug">
+              Mode prototipe: klik tombol untuk pratinjau pesan pemesanan parsel ke Duta Desa.
+            </p>
           </div>
         </div>
       </div>
@@ -802,6 +814,9 @@
           <span>Unduh Kode QR Kemasan</span>
         </button>
       </div>
+      <p id="wa-reorder-demo-hint" class="text-[11px] text-[#EFDCBA]/80 max-w-md mx-auto leading-snug">
+        Mode prototipe: klik tombol WhatsApp untuk melihat pratinjau pesan pemesanan ke Duta Pemuda (tautan aktif saat implementasi).
+      </p>
     </div>
   </section>
 
@@ -846,6 +861,34 @@
     </div>
   </div>
 
+  <!-- WHATSAPP DEMO PREVIEW MODAL (Aktif otomatis saat nomor WA Duta masih placeholder) -->
+  <div id="wa-demo-modal" class="hidden fixed inset-0 bg-[#283118]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFFFF] rounded-3xl max-w-md w-full p-6 space-y-4 border border-[#E2E6DC] shadow-2xl">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B6B2F] block">Mode Simulasi Prototipe</span>
+          <h3 id="wa-demo-title" class="font-serif-display text-lg font-bold text-[#283118]">Pratinjau Pesan WhatsApp Duta Desa</h3>
+        </div>
+        <button onclick="closeWADemoModal()" class="w-8 h-8 rounded-full bg-[#F8F9F5] text-[#283118] font-bold text-xs hover:bg-[#9A9F46] transition cursor-pointer shrink-0">✕</button>
+      </div>
+      <p class="text-xs text-[#5C5338] leading-relaxed">
+        Nomor WhatsApp Duta Pemuda Desa Cinanjung diaktifkan pada fase implementasi lapangan (Des 2026). Saat QR dipindai pembeli nanti, tombol ini langsung mengirim pesan berikut:
+      </p>
+      <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-4 space-y-1.5">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#926936]">Tujuan: Duta Pemuda Desa Cinanjung</div>
+        <p id="wa-demo-message" class="text-xs text-[#283118] font-medium leading-relaxed"></p>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <button id="wa-demo-copy-btn" onclick="copyWADemoMessage()" class="flex-1 py-2.5 px-4 rounded-full bg-[#5B6B2F] hover:bg-[#475522] text-[#FFFFFF] text-xs font-bold transition cursor-pointer">
+          Salin Format Pesan
+        </button>
+        <button onclick="closeWADemoModal()" class="py-2.5 px-5 rounded-full bg-[#F8F9F5] hover:bg-[#E2E6DC] text-[#283118] text-xs font-semibold transition cursor-pointer">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Centralized Image Asset Mapping & Dynamic Batch + Moment Logic -->
   <script>
     window.IMAGE_ASSETS = {
@@ -861,37 +904,38 @@
 
     // GANTI dengan nomor WhatsApp Duta Pemuda Desa Cinanjung (format 62xxxxxxxxxx)
     const WA_NUMBER = '6281234567890';
+    const IS_DEMO_WA = !WA_NUMBER || WA_NUMBER === '6281234567890';
 
     const batches = {
       'TB-2612-01': {
-        code: 'TB-2612-01 · Batch Tercatat',
+        code: 'TB-2612-01 · Contoh Rancangan',
         prodShort: '21 Desember 2026',
         ratioShort: '2,0 kg → 0,5 kg (25%)',
         sortedShort: '3 dari 20 daun sampel',
         dates: 'Baik diseduh s.d. Jun 2027 (estimasi 6 bulan)',
         aiCheck: 'Dibantu aplikasi deteksi gambar, hasilnya dicek petugas (daun sortir dikomposkan)',
         physical: 'Penirisan bebas sisa air, log food dehydrator tercatat, warna/aroma merata, timbang 25 g & cek segel',
-        badge: 'Data Dicatat KWT Malati Asih'
+        badge: 'Simulasi Prototipe · Pra-Implementasi'
       },
       'TB-2612-02': {
-        code: 'TB-2612-02 · Batch Tercatat',
+        code: 'TB-2612-02 · Contoh Rancangan',
         prodShort: '28 Desember 2026',
         ratioShort: '2,5 kg → 0,6 kg (24%)',
         sortedShort: '2 dari 20 daun sampel',
         dates: 'Baik diseduh s.d. Jun 2027 (estimasi 6 bulan)',
         aiCheck: 'Dibantu aplikasi deteksi gambar, hasilnya dicek petugas (daun sortir dikomposkan)',
         physical: 'Penirisan bebas sisa air, log food dehydrator tercatat, warna/aroma merata, timbang 25 g & cek segel',
-        badge: 'Data Dicatat KWT Malati Asih'
+        badge: 'Simulasi Prototipe · Pra-Implementasi'
       },
       'TB-2701-01': {
-        code: 'TB-2701-01 · Batch Tercatat',
+        code: 'TB-2701-01 · Contoh Rancangan',
         prodShort: '12 Januari 2027',
         ratioShort: '2,0 kg → 0,5 kg (25%)',
         sortedShort: '4 dari 20 daun sampel',
         dates: 'Baik diseduh s.d. Jul 2027 (estimasi 6 bulan)',
         aiCheck: 'Dibantu aplikasi deteksi gambar, hasilnya dicek petugas (daun sortir dikomposkan)',
         physical: 'Penirisan bebas sisa air, log food dehydrator tercatat, warna/aroma merata, timbang 25 g & cek segel',
-        badge: 'Data Dicatat KWT Malati Asih'
+        badge: 'Simulasi Prototipe · Pra-Implementasi'
       }
     };
 
@@ -929,11 +973,53 @@
     const rawMoment = (params.get('momen') || '').trim().toLowerCase();
     let currentMoment = moments[rawMoment] ? rawMoment : 'nataru';
 
+    function openWADemoModal(title, message) {
+      document.getElementById('wa-demo-title').textContent = title;
+      document.getElementById('wa-demo-message').textContent = message;
+      document.getElementById('wa-demo-copy-btn').textContent = 'Salin Format Pesan';
+      document.getElementById('wa-demo-modal').classList.remove('hidden');
+    }
+
+    function closeWADemoModal() {
+      document.getElementById('wa-demo-modal').classList.add('hidden');
+    }
+
+    function copyWADemoMessage() {
+      const txt = document.getElementById('wa-demo-message').textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).catch(() => {});
+      }
+      const btn = document.getElementById('wa-demo-copy-btn');
+      btn.textContent = '✓ Format Pesan Disalin';
+      setTimeout(() => { btn.textContent = 'Salin Format Pesan'; }, 2000);
+    }
+
+    function bindWhatsAppLink(anchorId, hintId, modalTitle, message) {
+      const el = document.getElementById(anchorId);
+      const hint = hintId ? document.getElementById(hintId) : null;
+      if (IS_DEMO_WA) {
+        el.href = '#wa-demo-modal';
+        el.removeAttribute('target');
+        el.removeAttribute('rel');
+        el.onclick = function (e) {
+          e.preventDefault();
+          openWADemoModal(modalTitle, message);
+        };
+        if (hint) hint.classList.remove('hidden');
+      } else {
+        el.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(message);
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+        el.onclick = null;
+        if (hint) hint.classList.add('hidden');
+      }
+    }
+
     function setBatch(id) {
       const targetId = batches[id] ? id : 'TB-2612-01';
       currentBatch = targetId;
       const d = batches[targetId];
-      document.getElementById('nav-batch-label').textContent = targetId;
+      document.getElementById('nav-batch-label').textContent = 'Contoh · ' + targetId;
       document.getElementById('val-code').textContent = d.code;
       document.getElementById('val-prod-short').textContent = d.prodShort;
       document.getElementById('val-ratio-short').textContent = d.ratioShort;
@@ -944,7 +1030,7 @@
       document.getElementById('val-badge').textContent = d.badge;
 
       const msg = 'Halo Duta Pemuda Desa Cinanjung, saya ingin memesan ulang DAUNARA Teh Daun Bidara (dari batch ' + targetId + ').';
-      document.getElementById('wa-reorder').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      bindWhatsAppLink('wa-reorder', 'wa-reorder-demo-hint', 'Pratinjau Pesan Ulang DAUNARA', msg);
       updateQRModal();
     }
 
@@ -965,7 +1051,7 @@
       });
 
       const msgParcel = 'Halo Duta Pemuda Desa Cinanjung, saya tertarik memesan Parsel DAUNARA edisi ' + d.label + '.';
-      document.getElementById('wa-parcel').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msgParcel);
+      bindWhatsAppLink('wa-parcel', 'wa-parcel-demo-hint', 'Pratinjau Pemesanan Parsel DAUNARA', msgParcel);
       updateQRModal();
     }
 
@@ -987,6 +1073,21 @@
       modal.classList.toggle('hidden');
       updateQRModal();
     }
+
+    ['qr-modal', 'wa-demo-modal'].forEach(id => {
+      const overlay = document.getElementById(id);
+      if (overlay) {
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) overlay.classList.add('hidden');
+        });
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('qr-modal').classList.add('hidden');
+        closeWADemoModal();
+      }
+    });
 
     setBatch(currentBatch);
     setMoment(currentMoment);
