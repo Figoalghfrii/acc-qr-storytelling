@@ -1,0 +1,21 @@
+[build]
+  command = "node build.mjs"
+  publish = "dist"
+  environment = { NODE_VERSION = "20" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/pasir-wetan/public/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
+
+[[headers]]
+  for = "/cinanjung/public/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"

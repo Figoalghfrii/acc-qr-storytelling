@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if ((location.protocol === 'http:' || location.protocol === 'https:') && /^\/(pasir-wetan|cinanjung)$/.test(location.pathname)) {
+      location.replace(location.pathname + '/' + location.search + location.hash);
+    }
+  </script>
+  <title>RELIGHT — Desa Pasir Wetan | Catatan Batch & Cerita Desa</title>
+  <meta name="description" content="Lilin wangi 50 g dari jelantah rumah tangga Desa Pasir Wetan, dalam wadah logam buatan pengrajin desa. Lihat catatan batch (B-YYYYMMDD) dan dampak program Bank Sampah Suka Mandiri." />
+  <meta property="og:title" content="RELIGHT — Desa Pasir Wetan | From Local Kitchens, Crafted by Local Heritage" />
+  <meta property="og:description" content="Catatan batch lilin wangi 50 g dan ringkasan jelantah tercatat dari ledger Bank Sampah Suka Mandiri, Desa Pasir Wetan, Karanglewas, Banyumas." />
+  <meta property="og:image" content="public/images/relight/hero-village.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      /* RELIGHT Official Moodboard + Jelantah Ledger Color System (white canvas) */
+      --color-primary: #F7911D;       /* Oranye api — Olah & aksen logo (bukan teks kecil di atas putih) */
+      --color-primary-hover: #DF7B0B;
+      --color-accent-text: #A3560A;   /* Teks oranye kecil lolos WCAG AA di latar putih/krem */
+      --color-sold: #6D4B1D;          /* Cokelat tua — alokasi Dijual */
+      --color-background: #FFFFFF;    /* Latar utama putih bersih */
+      --color-surface: #FFFFFF;
+      --color-surface-soft: #F9F8F5;
+      --color-cream: #EFDCBA;
+      --color-secondary: #926633;     /* Cokelat tombol utama */
+      --color-text: #3D281E;          /* Teks utama cokelat gelap */
+      --color-text-muted: #694B38;
+      --color-border: #E8E5DF;
+    }
+    body {
+      background-color: var(--color-background);
+      color: var(--color-text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .font-serif-display { font-family: 'Playfair Display', Georgia, serif; }
+    .font-serif-editorial { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .tracking-editorial { letter-spacing: -0.025em; }
+    .artisan-surface {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: 0 14px 34px -14px rgba(61, 40, 30, 0.10);
+    }
+    .artisan-dark-card { background-color: var(--color-text); color: #FAF3E6; }
+    .editorial-img-wrap { overflow: hidden; position: relative; background-color: #F1EEE8; }
+    .editorial-img-wrap img { transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1); }
+    .editorial-img-wrap:hover img { transform: scale(1.035); }
+  </style>
+</head>
+<body class="selection:bg-[#F7911D] selection:text-[#3D281E]">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FFFFFF]/95 border-b border-[#E8E5DF]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
+      <a href="#" class="inline-flex items-center gap-3 group" aria-label="RELIGHT Desa Pasir Wetan">
+        <div class="w-10 h-10 rounded-full bg-[#FFFFFF] border border-[#926633]/25 flex items-center justify-center group-hover:border-[#F7911D] transition">
+          <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 8C32 8 42 19.5 42 27.5C42 33.2 37.5 37.5 32 37.5C26.5 37.5 22 33.2 22 27.5C22 23.5 24.5 19.5 26.8 17C26.2 21 28.5 25.5 30.5 25.5C28.8 18.5 32 8 32 8Z" fill="#F7911D"/>
+            <path d="M12 40H52C50.8 50.2 42.4 56 32 56C21.6 56 13.2 50.2 12 40Z" fill="#6D4B1D"/>
+            <rect x="10" y="37.5" width="44" height="3" rx="1.5" fill="#3D281E"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block font-serif-display font-bold tracking-[0.18em] text-base md:text-lg text-[#3D281E] leading-none">RELIGHT</span>
+          <span class="block text-[10px] tracking-widest uppercase text-[#926633] font-semibold mt-0.5">Desa Pasir Wetan</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:inline-flex items-center gap-5 bg-[#F9F8F5] border border-[#E8E5DF] px-6 py-2 rounded-full text-xs font-semibold text-[#3D281E]">
+        <a href="#jejak-batch" class="hover:text-[#A3560A] transition">Catatan Batch</a>
+        <a href="#dampak" class="hover:text-[#A3560A] transition">Dampak Program</a>
+        <a href="#proses" class="hover:text-[#A3560A] transition">Cara Dibuat</a>
+        <a href="#kisah" class="hover:text-[#A3560A] transition">Cerita Desa</a>
+        <a href="#produk" class="hover:text-[#A3560A] transition">Komposisi</a>
+        <a href="#panduan" class="hover:text-[#A3560A] transition">Panduan Aman</a>
+      </nav>
+
+      <a href="#jejak-batch" class="inline-flex items-center gap-2.5 bg-[#3D281E] text-[#FAF3E6] pl-3.5 pr-2 py-1.5 rounded-full text-xs font-semibold hover:bg-[#926633] transition">
+        <span class="w-2 h-2 rounded-full bg-[#F7911D]"></span>
+        <span id="nav-batch-label">B-20261215</span>
+        <span class="w-6 h-6 rounded-full bg-[#F7911D] text-[#3D281E] flex items-center justify-center">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 2.5L8 6L4.5 9.5"/></svg>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== SECTION 1 — HERO ===================== -->
+  <section class="relative pt-8 sm:pt-12 md:pt-16 pb-14 md:pb-20 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+      <div class="inline-flex items-center gap-2 bg-[#FFFFFF] border border-[#E8E5DF] px-3.5 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-widest text-[#926633]">
+        <span class="w-2 h-2 rounded-full bg-[#F7911D]"></span>
+        <span>From Local Kitchens, Crafted by Local Heritage</span>
+      </div>
+      <div class="text-xs font-medium text-[#694B38]">Kec. Karanglewas · Kab. Banyumas · Jawa Tengah</div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end mb-8 md:mb-10">
+      <div class="lg:col-span-8">
+        <h1 class="font-serif-display text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-[1.04] tracking-editorial font-semibold text-[#3D281E]">
+          Dari Dapur Warga,
+          <span class="block font-serif-editorial italic font-semibold text-[#926633] text-5xl sm:text-6xl md:text-7xl mt-1">
+            ke Wadah Buatan Pengrajin Pasir Wetan
+          </span>
+        </h1>
+      </div>
+      <div class="lg:col-span-4 space-y-4">
+        <p class="text-sm md:text-base text-[#3D281E]/90 leading-relaxed">
+          Terima kasih telah menjadi bagian dari gerakan lingkungan <strong>Desa Pasir Wetan, Kecamatan Karanglewas, Kabupaten Banyumas</strong>.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a href="#jejak-batch" class="inline-flex items-center gap-2.5 bg-[#926633] hover:bg-[#6D4B1D] text-[#FFFFFF] font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md transition">
+            <span>Lihat Catatan Batch</span>
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" /></svg>
+          </a>
+          <a href="#dampak" class="inline-flex items-center gap-2 bg-[#FFFFFF] hover:bg-[#F9F8F5] text-[#3D281E] border border-[#E8E5DF] font-semibold text-xs sm:text-sm px-5 py-3 rounded-full transition">
+            <span>Dampak Program</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+      <figure class="lg:col-span-8 editorial-img-wrap rounded-3xl border border-[#E8E5DF] shadow-lg aspect-[16/10] sm:aspect-[16/9] relative">
+        <img src="public/images/relight/hero-village.webp" alt="Bentang alam Kabupaten Banyumas di kaki Gunung Slamet" class="w-full h-full object-cover object-center" fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3D281E]/85 via-[#3D281E]/20 to-transparent"></div>
+        <figcaption class="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-[#FAF3E6]">
+          <div>
+            <span class="inline-block text-[10px] uppercase tracking-widest bg-[#F7911D] text-[#3D281E] font-bold px-2.5 py-0.5 rounded-full mb-1.5">Foto Lokasi · Kabupaten Banyumas</span>
+            <p class="text-xs sm:text-sm font-medium leading-snug">Bentang alam Kabupaten Banyumas di kaki Gunung Slamet — wilayah tempat Desa Pasir Wetan berada.</p>
+          </div>
+          <span class="text-[11px] text-[#EFDCBA]/80 shrink-0">Foto: Tyo Satriany (CC BY-SA 4.0)</span>
+        </figcaption>
+      </figure>
+
+      <div class="lg:col-span-4 artisan-dark-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-[#F7911D]/20 blur-2xl pointer-events-none"></div>
+        <div class="space-y-3 relative z-10">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] uppercase tracking-widest text-[#F7911D] font-bold">Identitas Produk</span>
+            <span class="text-[11px] text-[#EFDCBA]/75">Lilin Wangi 50 g</span>
+          </div>
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#FFFFFF] leading-tight">Lilin Wangi dari Jelantah Warga</h2>
+          <p class="text-xs sm:text-sm text-[#EFDCBA]/85 leading-relaxed">
+            Sebagian jelantah warga diolah jadi lilin, sisanya dijual dan dicatat. Lilin dituang ke wadah logam buatan pengrajin logam Desa Pasir Wetan.
+          </p>
+        </div>
+        <div class="my-5 bg-[#2A1B14] border border-[#926633]/40 rounded-2xl p-3.5 flex items-center gap-3.5 relative z-10">
+          <img src="public/images/relight/product-relight.webp" alt="Suasana lilin aromaterapi RELIGHT" class="w-16 h-20 rounded-xl object-cover shrink-0 border border-[#F7911D]/40" />
+          <div class="space-y-1">
+            <div class="text-xs font-bold text-[#F7911D] uppercase tracking-wider">RELIGHT Candle</div>
+            <p class="text-xs text-[#FAF3E6] font-medium leading-snug">"Bisa dibawa ke mana saja, bisa ditutup lagi."</p>
+            <p class="text-[11px] text-[#EFDCBA]/70">Wadah logam bertutup</p>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-[#926633]/30 flex items-center justify-between text-[11px] text-[#EFDCBA]/80 relative z-10">
+          <span>Bank Sampah Suka Mandiri</span>
+          <span class="text-[#F7911D]">×</span>
+          <span>Pengrajin Logam Desa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full overflow-hidden leading-none" aria-hidden="true">
+    <svg class="w-full h-8 sm:h-12 md:h-16" viewBox="0 0 1440 96" fill="none" preserveAspectRatio="none">
+      <path d="M0 48C240 96 480 0 720 48C960 96 1200 12 1440 48V96H0V48Z" fill="#F9F8F5"/>
+      <path d="M0 48C240 96 480 0 720 48C960 96 1200 12 1440 48" stroke="#E8E5DF" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <!-- ===================== SECTION 2 — CATATAN BATCH (FORMAT B-YYYYMMDD) ===================== -->
+  <section id="jejak-batch" class="bg-[#F9F8F5] py-14 md:py-20 border-b border-[#E8E5DF]">
+    <div id="asal-batch" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 space-y-12">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <!-- Left Column: Intro + Privacy + Data Disclaimer -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#926633]">
+            <span class="w-6 h-[2px] bg-[#F7911D]"></span>
+            <span>01 · Dari Ledger Bank Sampah</span>
+          </div>
+          <h2 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#3D281E] tracking-editorial leading-tight">Catatan Batch Produk Anda</h2>
+          <p class="text-sm text-[#694B38] leading-relaxed">
+            Jelantah dikumpulkan oleh <strong>Bank Sampah Suka Mandiri</strong> di Desa Pasir Wetan dan dicatat per batch (<code class="text-xs font-mono bg-[#FFFFFF] px-1.5 py-0.5 rounded border border-[#E8E5DF]">B-YYYYMMDD</code>) sesuai porsi diolah, dijual, maupun stok yang belum dialokasikan.
+          </p>
+
+          <!-- Privasi Penyetor (Selaras Figma Build Plan + Catatan Revisi) -->
+          <div id="privasi" class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-xl p-4 text-xs text-[#3D281E] space-y-1.5">
+            <div class="font-bold uppercase tracking-wider text-[#926633]">Privasi Rumah Tangga & Penyetor</div>
+            <p class="text-[#694B38] leading-relaxed">
+              Halaman publik hanya menampilkan tanggal batch, jumlah setoran warga, volume, alokasi, dan jumlah lilin — <strong>tanpa nama lengkap, alamat, nomor HP, atau identitas penyetor</strong>.
+            </p>
+          </div>
+
+          <div class="bg-[#FFFFFF] border border-[#E8E5DF] rounded-xl p-4 text-xs text-[#694B38] leading-relaxed">
+            <strong class="text-[#3D281E]">Sumber Data:</strong> Angka adalah data operasional ledger internal Bank Sampah Suka Mandiri, <strong>bukan sertifikasi independen atau jaminan keamanan</strong>.
+          </div>
+        </div>
+
+        <!-- Right Batch Card -->
+        <div class="lg:col-span-7">
+          <div class="artisan-surface rounded-3xl overflow-hidden">
+            <div class="bg-[#3D281E] text-[#FAF3E6] px-6 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#F7911D] text-[#3D281E] flex items-center justify-center font-serif-display font-bold text-lg">R</div>
+                <div>
+                  <div class="text-[11px] uppercase tracking-widest text-[#EFDCBA]/80">Lilin Ini Berasal Dari</div>
+                  <div id="val-code" class="font-serif-display text-2xl font-bold text-[#FFFFFF]">Batch B-20261215</div>
+                </div>
+              </div>
+              <div class="inline-flex items-center gap-2 bg-[#F7911D]/20 border border-[#F7911D] text-[#EFDCBA] px-3.5 py-1.5 rounded-full text-xs font-bold">
+                <span class="w-2 h-2 rounded-full bg-[#F7911D]"></span>
+                <span id="val-status">Tercatat di Ledger Bank Sampah Suka Mandiri</span>
+              </div>
+            </div>
+
+            <!-- Batch Key Metrics Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E5DF] bg-[#FFFFFF] border-b border-[#E8E5DF]">
+              <div class="p-4 sm:p-5">
+                <div class="text-[11px] uppercase tracking-wider text-[#926633] font-semibold">Dikumpulkan</div>
+                <div id="val-date" class="text-base font-bold text-[#3D281E] mt-1">Selasa, 15 Desember 2026</div>
+              </div>
+              <div class="p-4 sm:p-5">
+                <div class="text-[11px] uppercase tracking-wider text-[#926633] font-semibold">Setoran Warga</div>
+                <div id="val-depositors-short" class="text-base font-bold text-[#3D281E] mt-1">2 setoran · 2,00 L</div>
+              </div>
+              <div class="p-4 sm:p-5">
+                <div class="text-[11px] uppercase tracking-wider text-[#926633] font-semibold">Alokasi Diolah</div>
+                <div id="val-volume-short" class="text-base font-bold text-[#A3560A] mt-1">0,50 L · 18 lilin</div>
+              </div>
+            </div>
+
+            <!-- Visual Allocation Breakdown (Diolah / Dijual / Belum Dialokasikan) -->
+            <div class="px-6 sm:px-8 pt-6 pb-2 space-y-3">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold uppercase tracking-wider text-[#926633]">Arah Jelantah Batch Ini</span>
+                <span id="val-collected-pill" class="font-bold text-[#3D281E]">Terkumpul: 2,00 L</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-[#E8E5DF] overflow-hidden flex" aria-label="Proporsi alokasi jelantah batch">
+                <div id="bar-olah" style="width: 25%" class="bg-[#F7911D] h-full transition-all duration-300" title="Dialokasikan untuk diolah"></div>
+                <div id="bar-jual" style="width: 40%" class="bg-[#6D4B1D] h-full transition-all duration-300" title="Dialokasikan untuk dijual"></div>
+                <div id="bar-sisa" style="width: 35%" class="bg-[#D5CEC2] h-full transition-all duration-300" title="Belum dialokasikan"></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
+                <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-xl p-3 space-y-1">
+                  <div class="flex items-center gap-1.5 text-[11px] font-semibold text-[#694B38]">
+                    <span class="w-2 h-2 rounded-full bg-[#F7911D]"></span>
+                    <span>Diolah jadi lilin</span>
+                  </div>
+                  <div id="val-olah-amount" class="text-sm font-bold text-[#A3560A]">0,50 L</div>
+                  <div id="val-olah-note" class="text-[11px] text-[#3D281E] font-medium">✓ Produksi tercatat · 18 lilin</div>
+                </div>
+                <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-xl p-3 space-y-1">
+                  <div class="flex items-center gap-1.5 text-[11px] font-semibold text-[#694B38]">
+                    <span class="w-2 h-2 rounded-full bg-[#6D4B1D]"></span>
+                    <span>Dijual & dicatat</span>
+                  </div>
+                  <div id="val-jual-amount" class="text-sm font-bold text-[#3D281E]">0,80 L</div>
+                  <div id="val-jual-note" class="text-[11px] text-[#694B38]">✓ Penjualan tercatat (16 Des)</div>
+                </div>
+                <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-xl p-3 space-y-1">
+                  <div class="flex items-center gap-1.5 text-[11px] font-semibold text-[#694B38]">
+                    <span class="w-2 h-2 rounded-full bg-[#A89E90]"></span>
+                    <span>Belum dialokasikan</span>
+                  </div>
+                  <div id="val-sisa-amount" class="text-sm font-bold text-[#3D281E]">0,70 L</div>
+                  <div id="val-sisa-note" class="text-[11px] text-[#694B38]">Stok di Bank Sampah</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concise Non-Duplicated Metadata Rows -->
+            <div class="p-6 sm:p-8 divide-y divide-[#E8E5DF] text-sm">
+              <div class="py-3 first:pt-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                <span class="text-xs uppercase tracking-wider text-[#926633] font-semibold shrink-0">Wadah Logam</span>
+                <span id="val-artisan" class="font-semibold text-[#3D281E] sm:text-right">Pengrajin logam Desa Pasir Wetan</span>
+              </div>
+              <div class="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                <span class="text-xs uppercase tracking-wider text-[#926633] font-semibold shrink-0">Cara Penjernihan</span>
+                <span id="val-method" class="font-medium text-[#694B38] sm:text-right">Pengendapan, rempah dapur, dan adsorben (arang aktif/zeolit) sesuai SOP pelatihan 2023</span>
+              </div>
+              <div class="py-3 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                <span class="text-xs uppercase tracking-wider text-[#926633] font-semibold shrink-0">Produk</span>
+                <span id="val-scent" class="font-serif-editorial italic text-lg font-semibold text-[#926633] sm:text-right">RELIGHT Lilin Wangi 50 g</span>
+              </div>
+            </div>
+
+            <div class="mx-6 sm:mx-8 mb-6 bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 text-xs text-[#694B38] leading-relaxed">
+              <span class="font-bold text-[#3D281E]">Ringkasan batch ini:</span>
+              <span id="val-note">Lilin Anda dibuat dari 0,50 L bagian batch ini yang diolah menjadi 18 lilin, bukan dari bagian 0,80 L yang dijual sebagai minyak. Sisa 0,70 L masih disimpan Bank Sampah.</span>
+            </div>
+
+            <div class="bg-[#F9F8F5] px-6 sm:px-8 py-4 border-t border-[#E8E5DF] flex flex-wrap items-center justify-between gap-3 text-xs text-[#694B38]">
+              <span>Sumber data: <strong>Ledger Bank Sampah Suka Mandiri</strong></span>
+              <button onclick="toggleQRModal()" class="font-bold text-[#3D281E] hover:text-[#A3560A] underline cursor-pointer transition">Cetak / Unduh Label QR</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== DAMPAK PROGRAM (RINGKAS & TANPA DUPLIKASI) ===================== -->
+      <div id="dampak" class="artisan-surface rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-[#E8E5DF] pb-4">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-[#A3560A] mb-0.5">Dampak Program · Jelantah Desa yang Tercatat</div>
+            <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E]">Ringkasan Gabungan Bank Sampah Suka Mandiri</h3>
+          </div>
+          <div class="text-xs text-[#694B38]">Diperbarui 17 Des 2026</div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+          <!-- Left Total Hero + Combined Progress Bar -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+            <div class="bg-[#926633] text-[#FFFFFF] rounded-2xl p-5 flex items-center justify-between gap-4">
+              <div>
+                <div class="text-xs text-[#EFDCBA] font-medium">Total Jelantah Terkumpul</div>
+                <div id="agg-total" class="font-serif-display text-3xl sm:text-4xl font-bold mt-0.5">6,75 L</div>
+                <div id="agg-batch-count" class="text-xs text-[#EFDCBA]/90 mt-1">dari 3 batch tercatat</div>
+              </div>
+            </div>
+
+            <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 space-y-2.5">
+              <div class="text-xs font-bold uppercase tracking-wider text-[#3D281E]">Arah Jelantah Keseluruhan</div>
+              <div class="w-full h-2.5 rounded-full bg-[#E8E5DF] overflow-hidden flex">
+                <div id="agg-bar-jual" style="width: 48.9%" class="bg-[#6D4B1D] h-full" title="Dijual"></div>
+                <div id="agg-bar-olah" style="width: 22.2%" class="bg-[#F7911D] h-full" title="Diolah"></div>
+                <div id="agg-bar-sisa" style="width: 28.9%" class="bg-[#D5CEC2] h-full" title="Belum dialokasikan"></div>
+              </div>
+              <div class="text-[11px] text-[#694B38] flex flex-wrap gap-x-4 gap-y-1">
+                <span><strong class="text-[#6D4B1D]">▲ Dijual:</strong> <span id="agg-legend-jual">3,30 L (48,9%)</span></span>
+                <span><strong class="text-[#A3560A]">● Diolah:</strong> <span id="agg-legend-olah">1,50 L (22,2%)</span></span>
+                <span><strong class="text-[#3D281E]">○ Stok:</strong> <span id="agg-legend-sisa">1,95 L (28,9%)</span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 2x2 Metrics Grid -->
+          <div class="lg:col-span-7 grid grid-cols-2 gap-3">
+            <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 flex flex-col justify-between">
+              <div class="text-[11px] font-semibold text-[#A3560A]">Diolah jadi lilin</div>
+              <div id="agg-olah" class="text-2xl font-bold text-[#3D281E] mt-1">1,50 L</div>
+              <div id="agg-olah-pct" class="text-[11px] text-[#694B38] mt-0.5">22,2% dari total</div>
+            </div>
+            <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 flex flex-col justify-between">
+              <div class="text-[11px] font-semibold text-[#6D4B1D]">Dijual &amp; dicatat</div>
+              <div id="agg-jual" class="text-2xl font-bold text-[#3D281E] mt-1">3,30 L</div>
+              <div id="agg-jual-pct" class="text-[11px] text-[#694B38] mt-0.5">48,9% dari total</div>
+            </div>
+            <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 flex flex-col justify-between">
+              <div class="text-[11px] font-semibold text-[#694B38]">Lilin diproduksi</div>
+              <div id="agg-candles" class="text-2xl font-bold text-[#3D281E] mt-1">18</div>
+              <div class="text-[11px] text-[#694B38] mt-0.5">unit yang sudah dicatat</div>
+            </div>
+            <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-4 flex flex-col justify-between">
+              <div class="text-[11px] font-semibold text-[#694B38]">Belum dialokasikan</div>
+              <div id="agg-sisa" class="text-2xl font-bold text-[#3D281E] mt-1">1,95 L</div>
+              <div id="agg-sisa-pct" class="text-[11px] text-[#694B38] mt-0.5">28,9% · stok desa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 3 — CARA DIBUAT ===================== -->
+  <section id="proses" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#926633] mb-3">
+        <span class="w-6 h-[2px] bg-[#F7911D]"></span>
+        <span>02 · Sebagian Diolah, Sebagian Dijual</span>
+      </div>
+      <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#3D281E] tracking-editorial leading-tight">Perjalanan Lilin di Tangan Anda</h2>
+      <p class="text-sm sm:text-base text-[#694B38] mt-3 leading-relaxed">
+        Sebagian jelantah diolah jadi lilin, sisanya dijual dan dicatat. Begini prosesnya.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-8">
+      <article class="artisan-surface rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <figure class="editorial-img-wrap aspect-[4/3] relative">
+            <img src="public/images/relight/used-oil-collection.webp" alt="Ilustrasi pengumpulan minyak rumah tangga dalam botol" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#3D281E] text-[#FAF3E6] text-xs font-bold px-3 py-1 rounded-full">Tahap 01</div>
+          </figure>
+          <div class="px-5 pt-2.5 pb-1"><p class="text-[11px] italic text-[#694B38]">Ilustrasi pengumpulan minyak bekas rumah tangga.</p></div>
+          <div class="p-5 sm:p-6 pt-3 space-y-2.5">
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Setor & Catat</h3>
+            <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
+              Warga menyetorkan jelantah dari dapur rumah tangga ke <strong>Bank Sampah Suka Mandiri</strong>. Petugas mencatat volumenya ke dalam kode batch (<code class="text-[11px] font-mono">B-YYYYMMDD</code>) tanpa menampilkan identitas pribadi di halaman publik — ikut mengurangi jelantah yang terbuang percuma.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 py-3.5 bg-[#F9F8F5] border-t border-[#E8E5DF] text-[11px] font-semibold text-[#926633] flex items-center justify-between">
+          <span>Sebagian diolah jadi lilin</span>
+          <span>Sebagian dijual & dicatat</span>
+        </div>
+      </article>
+
+      <article class="artisan-surface rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <figure class="editorial-img-wrap aspect-[4/3] relative">
+            <img src="public/images/relight/oil-processing.webp" alt="Gambaran proses penyaringan minyak" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#F7911D] text-[#3D281E] text-xs font-bold px-3 py-1 rounded-full">Tahap 02</div>
+          </figure>
+          <div class="px-5 pt-2.5 pb-1"><p class="text-[11px] italic text-[#694B38]">Gambaran proses penyaringan minyak secara bertahap.</p></div>
+          <div class="p-5 sm:p-6 pt-3 space-y-2.5">
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Dijernihkan & Dicampur</h3>
+            <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
+              Kelompok produksi desa menjernihkan bagian yang dialokasikan untuk diolah sesuai SOP pelatihan 2023: diendapkan, disaring dengan rempah dapur dan adsorben (arang aktif/zeolit) sehingga bau khas minyak bekas berkurang, lalu dicampur <strong>stearin</strong> dan pewangi.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 py-3.5 bg-[#F9F8F5] border-t border-[#E8E5DF] text-[11px] font-semibold text-[#926633] flex items-center justify-between">
+          <span>SOP pelatihan 2023</span>
+          <span>Netto 50 g</span>
+        </div>
+      </article>
+
+      <article class="artisan-surface rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <figure class="editorial-img-wrap aspect-[4/3] relative">
+            <img src="public/images/relight/metal-craftsmanship.webp" alt="Ilustrasi kerajinan logam tradisional Indonesia" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#926633] text-[#FFFFFF] text-xs font-bold px-3 py-1 rounded-full">Tahap 03</div>
+          </figure>
+          <div class="px-5 pt-2.5 pb-1"><p class="text-[11px] italic text-[#694B38]">Ilustrasi kerajinan logam tradisional (bukan foto pengrajin desa).</p></div>
+          <div class="p-5 sm:p-6 pt-3 space-y-2.5">
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Dituang ke Wadah Logam</h3>
+            <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
+              Lilin dituang ke wadah logam buatan <strong>pengrajin logam Desa Pasir Wetan</strong>, jumlah lilin hasil produksi dicatat pada batch terkait, lalu ditempeli kode QR yang membuka halaman ini.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 py-3.5 bg-[#F9F8F5] border-t border-[#E8E5DF] text-[11px] font-semibold text-[#926633] flex items-center justify-between">
+          <span>Wadah logam desa</span>
+          <span>Label QR batch</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 4 — CERITA DESA & PRODUK ===================== -->
+  <section id="kisah" class="bg-[#F9F8F5] py-16 md:py-24 border-y border-[#E8E5DF]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 space-y-16 md:space-y-20">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#926633] mb-3">
+            <span class="w-6 h-[2px] bg-[#F7911D]"></span>
+            <span>03 · Cerita Desa</span>
+          </div>
+          <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#3D281E] tracking-editorial leading-tight">
+            Kisah di Balik Nyala:
+            <span class="block font-serif-editorial italic text-[#926633] font-semibold mt-1">Bank Sampah, Pengrajin Logam & Warga Pasir Wetan</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-sm sm:text-base text-[#694B38] leading-relaxed">
+            Desa Pasir Wetan berada di Kecamatan Karanglewas, Kabupaten Banyumas, pada ketinggian ±300 mdpl, dengan 4.553 jiwa dalam 1.492 KK.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pengrajin logam + Slot Persetujuan Nama -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <figure class="artisan-surface rounded-2xl overflow-hidden p-2">
+              <div class="editorial-img-wrap rounded-xl aspect-[4/3]">
+                <img src="public/images/relight/village-landscape.webp" alt="Lanskap Kecamatan Karanglewas, Kabupaten Banyumas" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-2.5 text-[11px] text-[#694B38] leading-snug"><strong class="text-[#3D281E]">Foto lokasi:</strong> Kecamatan Karanglewas, Kabupaten Banyumas (Tyo Satriany, CC BY-SA 4.0).</figcaption>
+            </figure>
+            <figure class="artisan-surface rounded-2xl overflow-hidden p-2">
+              <div class="editorial-img-wrap rounded-xl aspect-[4/3]">
+                <img src="public/images/relight/metal-craftsmanship.webp" alt="Ilustrasi kerajinan logam tradisional" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-2.5 text-[11px] text-[#694B38] leading-snug"><strong class="text-[#3D281E]">Ilustrasi:</strong> Kerajinan logam tradisional Indonesia, bukan foto pengrajin Desa Pasir Wetan.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#A3560A]">Kerajinan Logam Desa</span>
+          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-snug">Karya Pengrajin Logam yang Ingin Dikenal Lebih Luas</h3>
+          <p class="text-sm text-[#694B38] leading-relaxed">
+            Desa Pasir Wetan memiliki pengrajin logam yang masih aktif berkarya. Selama ini, hasil kerajinan mereka sebagian besar beredar di dalam desa dan belum banyak dikenal di luar.
+          </p>
+          <p class="text-sm text-[#694B38] leading-relaxed">
+            Lewat wadah logam <strong>RELIGHT</strong>, karya pengrajin desa ikut sampai ke tangan pembeli di luar Pasir Wetan.
+          </p>
+          <!-- Slot persetujuan nama pengrajin (ringkas & rapi) -->
+          <div class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-xl p-3.5 text-xs text-[#694B38]">
+            <strong class="text-[#3D281E]">[Nama pengrajin wadah]:</strong> Ditampilkan setelah pengrajin logam Desa Pasir Wetan menyetujui pencantuman nama.
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Sampah -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 order-2 lg:order-1 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#926633]">Bank Sampah Suka Mandiri</span>
+          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-snug">Agar Tujuan Akhir Jelantah Jelas</h3>
+          <p class="text-sm text-[#694B38] leading-relaxed">
+            Sejak 2016, <strong>Bank Sampah Suka Mandiri</strong> mengumpulkan jelantah warga Desa Pasir Wetan. Sebanyak 89% anggotanya sudah memahami bahaya membuang jelantah sembarangan, bahkan sebelum pelatihan penjernihan tahun 2023.
+          </p>
+          <p class="text-sm text-[#694B38] leading-relaxed">
+            Selama ini jelantah dijual tanpa catatan per batch, dan pengurus ingin memastikan tujuan akhir jelantah jelas. Karena itu, kini setiap setoran dicatat per batch: sebagian jelantah diolah jadi lilin, sisanya dijual dan dicatat — tanpa mengurangi tabungan warga.
+          </p>
+          <blockquote class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#F7911D] p-5 rounded-r-2xl my-4">
+            <p class="font-serif-editorial italic text-xl sm:text-2xl text-[#3D281E] leading-snug">
+              "Yang paling menenangkan bagi pengurus dan warga adalah kepastian ke mana jelantah kami pergi, sekaligus melihat kerajinan logam Pasir Wetan hadir membawa cerita desa kami."
+            </p>
+            <footer class="text-xs font-bold uppercase tracking-wider text-[#926633] mt-2.5">— Bank Sampah Suka Mandiri & Kelompok Produksi Desa Pasir Wetan</footer>
+          </blockquote>
+        </div>
+        <div class="lg:col-span-6 order-1 lg:order-2">
+          <figure class="artisan-surface rounded-3xl overflow-hidden p-3">
+            <div class="editorial-img-wrap rounded-2xl aspect-[4/3]">
+              <img src="public/images/relight/waste-bank.webp" alt="Gambaran kegiatan di bank sampah masyarakat" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <figcaption class="p-3 text-xs text-[#694B38] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span><strong class="text-[#3D281E]">Ilustrasi:</strong> Bank sampah masyarakat di Jawa Tengah, bukan foto Bank Sampah Suka Mandiri.</span>
+              <span class="text-[11px] text-[#926633] shrink-0">CC BY-SA 4.0</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- PRODUK & KOMPOSISI -->
+      <div id="produk" class="artisan-dark-card rounded-3xl p-6 sm:p-10 md:p-12 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+          <div class="lg:col-span-6 space-y-5">
+            <div class="inline-flex items-center gap-2 bg-[#F7911D] text-[#3D281E] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Lilin Wangi Ruangan · Netto 50 g</div>
+            <h3 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#FFFFFF] leading-tight">
+              RELIGHT Scented Candle
+              <span class="block font-serif-editorial italic text-[#EFDCBA] font-normal text-3xl sm:text-4xl mt-1">"Bisa dibawa ke mana saja, bisa ditutup lagi"</span>
+            </h3>
+
+            <!-- Komposisi -->
+            <div class="bg-[#2A1B14] border border-[#926633]/40 rounded-2xl p-5 space-y-3">
+              <div class="text-xs font-bold text-[#F7911D] uppercase tracking-wider">Komposisi</div>
+              <ul class="text-sm text-[#FAF3E6] space-y-1.5 list-disc list-inside">
+                <li>Minyak jelantah yang telah dijernihkan</li>
+                <li>Stearin</li>
+                <li>Pewangi</li>
+                <li>Sumbu</li>
+              </ul>
+              <div class="pt-2 border-t border-[#926633]/30 grid grid-cols-2 gap-2 text-xs text-[#EFDCBA]/85">
+                <div><span class="block text-[#EFDCBA]/60">Wadah</span>Logam bertutup, buatan pengrajin desa</div>
+                <div><span class="block text-[#EFDCBA]/60">Berat bersih</span>50 g</div>
+                <div><span class="block text-[#EFDCBA]/60">Kegunaan</span>Pengharum ruangan</div>
+                <div><span class="block text-[#EFDCBA]/60">Kode batch</span>Format <code class="font-mono">B-YYYYMMDD</code> pada kemasan</div>
+              </div>
+            </div>
+            <p class="text-xs text-[#EFDCBA]/70 leading-relaxed">Produk ini adalah lilin pengharum ruangan dan tidak memiliki klaim kesehatan atau terapi.</p>
+          </div>
+
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5 items-center">
+            <div class="bg-[#FFFFFF] text-[#3D281E] rounded-2xl p-5 flex flex-col items-center text-center shadow-lg">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-[#926633] mb-2">Desain Kemasan</span>
+              <svg class="w-40 h-48 my-2" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi kaleng logam RELIGHT">
+                <ellipse cx="100" cy="212" rx="68" ry="10" fill="#3D281E" fill-opacity="0.18"/>
+                <path d="M36 74V186C36 199 64.6 208 100 208C135.4 208 164 199 164 186V74H36Z" fill="#3D281E"/>
+                <path d="M48 74V192C58 197 72 200 84 201V74H48Z" fill="#52372A" fill-opacity="0.55"/>
+                <path d="M33 48V74C33 85 63 94 100 94C137 94 167 85 167 74V48H33Z" fill="#D97917"/>
+                <ellipse cx="100" cy="48" rx="67" ry="20" fill="#F7911D"/>
+                <ellipse cx="100" cy="48" rx="58" ry="15" fill="#E58315" stroke="#FAF3E6" stroke-opacity="0.35" stroke-width="1"/>
+                <path d="M100 108C100 108 111 120 111 128.5C111 134.5 106 139 100 139C94 139 89 134.5 89 128.5C89 124 91.5 120 94 117.5C93.5 121.5 96 124 98 124C96.2 119 100 108 100 108Z" fill="#F7911D"/>
+                <path d="M77 143H123C121.5 154 112 160 100 160C88 160 78.5 154 77 143Z" fill="#926633"/>
+                <rect x="75" y="140" width="50" height="3" rx="1.5" fill="#EFDCBA"/>
+                <text x="100" y="179" text-anchor="middle" fill="#EFDCBA" font-family="Georgia, serif" font-size="15" font-weight="bold" letter-spacing="4">RELIGHT</text>
+                <text x="100" y="192" text-anchor="middle" fill="#926633" font-family="sans-serif" font-size="6.5" letter-spacing="1.5">PASIR WETAN · 50G</text>
+              </svg>
+              <p class="text-xs font-bold text-[#3D281E] mt-1">Wadah Logam Bertutup 50 g</p>
+              <p class="text-[11px] text-[#694B38]">Rancangan dari moodboard RELIGHT</p>
+            </div>
+            <figure class="bg-[#FFFFFF] text-[#3D281E] rounded-2xl p-3 shadow-lg">
+              <div class="editorial-img-wrap rounded-xl aspect-[4/5]">
+                <img src="public/images/relight/product-relight.webp" alt="Referensi suasana lilin RELIGHT" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="pt-2.5 px-1 text-[11px] text-[#694B38] leading-snug"><strong class="text-[#3D281E]">Referensi suasana</strong> dari moodboard RELIGHT.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 5 — PANDUAN KEAMANAN ===================== -->
+  <section id="panduan" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
+    <div class="artisan-surface rounded-3xl p-6 sm:p-10 md:p-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-4 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#926633]">
+            <span class="w-6 h-[2px] bg-[#F7911D]"></span>
+            <span>04 · Keamanan Penggunaan</span>
+          </div>
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-tight">Panduan Penggunaan & Keamanan</h2>
+          <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">Wadah lilin terbuat dari logam yang ikut panas saat lilin menyala. Mohon ikuti panduan singkat berikut.</p>
+          <div class="bg-[#F7911D]/10 border border-[#F7911D]/50 rounded-xl p-3.5 text-xs text-[#3D281E] leading-relaxed">
+            <strong>⚠ Aman digunakan:</strong> Jangan tinggalkan lilin menyala tanpa pengawasan. Wadah bisa panas.
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">1. Sebelum Menyalakan</div>
+            <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
+              <li><strong class="text-[#3D281E]">Pangkas sumbu ±0,5 cm</strong> agar nyala stabil dan minim jelaga.</li>
+              <li><strong class="text-[#3D281E]">Permukaan rata & tahan panas,</strong> jauh dari tirai, kertas, dan angin langsung.</li>
+              <li><strong class="text-[#3D281E]">Jauhkan dari anak & hewan peliharaan.</strong></li>
+              <li><strong class="text-[#3D281E]">Ruangan berventilasi;</strong> hentikan bila aroma mengganggu.</li>
+            </ul>
+          </div>
+
+          <div class="bg-[#F7911D]/10 border border-[#F7911D]/40 rounded-2xl p-5 space-y-2.5">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#A3560A]">2. Saat Menyala</div>
+            <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
+              <li><strong class="text-[#3D281E]">Wadah logam menjadi panas:</strong> jangan sentuh atau pindahkan saat menyala dan sesaat setelah padam.</li>
+              <li><strong class="text-[#3D281E]">Maksimal 3–4 jam</strong> sekali menyala.</li>
+              <li><strong class="text-[#3D281E]">Padamkan segera</strong> bila nyala terlalu besar, berasap, atau sumbu bergeser ke tepi.</li>
+            </ul>
+          </div>
+
+          <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">3. Padamkan & Simpan</div>
+            <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
+              <li><strong class="text-[#3D281E]">Jangan disiram air;</strong> tiup perlahan atau gunakan pemadam lilin.</li>
+              <li><strong class="text-[#3D281E]">Tutup kaleng setelah dingin</strong> dan simpan di tempat sejuk tanpa matahari langsung.</li>
+              <li><strong class="text-[#3D281E]">Hentikan saat sisa ±1 cm</strong> agar dasar wadah tidak terlalu panas.</li>
+              <li><strong class="text-[#3D281E]">Bukan untuk dikonsumsi</strong> atau dipanaskan ulang di kompor (tanpa klaim kesehatan).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 6 — PESAN ULANG ===================== -->
+  <section id="pesan" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-16">
+    <div class="artisan-dark-card rounded-3xl p-8 sm:p-12 text-center space-y-5">
+      <div class="w-12 h-12 rounded-full bg-[#F7911D]/20 border border-[#F7911D] mx-auto flex items-center justify-center">
+        <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
+          <path d="M32 10C32 10 42 21.5 42 29.5C42 35.2 37.5 39.5 32 39.5C26.5 39.5 22 35.2 22 29.5C22 25.5 24.5 21.5 26.8 19C26.2 23 28.5 25.5 30.5 25.5C28.8 20.5 32 10 32 10Z" fill="#F7911D"/>
+          <path d="M14 42H50C48.8 51.2 41.4 56 32 56C22.6 56 15.2 51.2 14 42Z" fill="#EFDCBA"/>
+        </svg>
+      </div>
+      <h2 class="font-serif-display text-2xl sm:text-4xl font-semibold text-[#FFFFFF] max-w-xl mx-auto leading-tight">Suka dengan Lilinnya? Pesan Lagi Lewat Duta Pemuda Desa</h2>
+      <p class="text-xs sm:text-sm text-[#EFDCBA]/85 max-w-xl mx-auto leading-relaxed">
+        Pemesanan ulang <strong>RELIGHT Lilin Wangi 50 g</strong> dilayani oleh <strong>Duta Pemuda Desa Pasir Wetan</strong>. Setiap pembelian ikut mendukung Bank Sampah Suka Mandiri dan pengrajin logam desa.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a id="wa-reorder" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#F7911D] hover:bg-[#DF7B0B] text-[#3D281E] font-bold text-xs sm:text-sm px-6 py-3 rounded-full transition shadow-md">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          <span>Pesan Ulang via WhatsApp</span>
+        </a>
+        <button onclick="toggleQRModal()" class="inline-flex items-center gap-2 bg-transparent hover:bg-[#FFFFFF]/10 text-[#FAF3E6] border border-[#EFDCBA]/40 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition cursor-pointer">
+          <span>Cetak / Unduh Label QR</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-[#E8E5DF] bg-[#FFFFFF] py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-[#694B38]">
+      <div class="space-y-1">
+        <div class="font-bold text-[#3D281E] tracking-wide">RELIGHT — Desa Pasir Wetan, Kec. Karanglewas, Kab. Banyumas</div>
+        <p>Bank Sampah Suka Mandiri × Pengrajin Logam Desa Pasir Wetan × Duta Pemuda Desa · ACC #NextGreen Leaders Challenge</p>
+      </div>
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="#pesan" class="font-bold text-[#3D281E] underline hover:text-[#A3560A] transition">Pesan Ulang</a>
+        <button onclick="toggleQRModal()" class="font-bold text-[#3D281E] underline hover:text-[#A3560A] cursor-pointer transition">Cetak Label QR</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR MODAL (Gaya Label QR Cetak Figma Mockup P0) -->
+  <div id="qr-modal" class="hidden fixed inset-0 bg-[#3D281E]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFFFF] rounded-3xl max-w-md w-full p-6 space-y-4 border border-[#E8E5DF] shadow-2xl">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-[#926633] block">Label QR Cetak</span>
+          <span class="font-serif-display text-lg font-bold text-[#3D281E]">RELIGHT — Jelantah Pasir Wetan</span>
+        </div>
+        <button onclick="toggleQRModal()" class="w-8 h-8 rounded-full bg-[#F9F8F5] text-[#3D281E] font-bold text-xs hover:bg-[#F7911D] transition cursor-pointer">✕</button>
+      </div>
+
+      <!-- Pratinjau Label QR horizontal ala Figma Image 3 -->
+      <div class="bg-[#FFFFFF] rounded-2xl p-4 border-2 border-[#E8E5DF] grid grid-cols-12 gap-4 items-center">
+        <div class="col-span-5 flex justify-center">
+          <img id="qr-img" src="" alt="QR Code RELIGHT Pasir Wetan" class="w-32 h-32 bg-white p-1 rounded-lg border border-[#E8E5DF]" />
+        </div>
+        <div class="col-span-7 space-y-1 text-left">
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4" viewBox="0 0 64 64" fill="none">
+              <path d="M32 8C32 8 42 19.5 42 27.5C42 33.2 37.5 37.5 32 37.5C26.5 37.5 22 33.2 22 27.5C22 23.5 24.5 19.5 26.8 17C26.2 21 28.5 23.5 30.5 25.5C28.8 18.5 32 8 32 8Z" fill="#F7911D"/>
+              <path d="M12 40H52C50.8 50.2 42.4 56 32 56C21.6 56 13.2 50.2 12 40Z" fill="#6D4B1D"/>
+            </svg>
+            <span class="font-bold text-sm text-[#3D281E]">Relight</span>
+          </div>
+          <div class="text-[11px] font-semibold text-[#694B38]">Jelantah Pasir Wetan</div>
+          <div class="pt-1">
+            <span class="text-[10px] uppercase tracking-wider text-[#926633] block">Batch</span>
+            <span id="qr-batch-code" class="font-mono font-bold text-sm text-[#3D281E]">B-20261215</span>
+          </div>
+          <p class="text-[11px] text-[#694B38] pt-0.5">Pindai untuk lihat asal lilin ini</p>
+          <p id="qr-url-label" class="text-[10px] font-mono text-[#926633] break-all"></p>
+        </div>
+      </div>
+
+      <a id="qr-download-btn" href="#" target="_blank" rel="noopener" class="block w-full py-3 rounded-full bg-[#926633] hover:bg-[#3D281E] text-[#FFFFFF] text-center text-xs font-bold transition">Buka / Simpan Gambar QR Resolusi Tinggi</a>
+    </div>
+  </div>
+
+  <script>
+    window.IMAGE_ASSETS = {
+      heroVillage: "public/images/relight/hero-village.webp",
+      villageLandscape: "public/images/relight/village-landscape.webp",
+      metalCraftsmanship: "public/images/relight/metal-craftsmanship.webp",
+      wasteBank: "public/images/relight/waste-bank.webp",
+      usedOilCollection: "public/images/relight/used-oil-collection.webp",
+      oilProcessing: "public/images/relight/oil-processing.webp",
+      productRelight: "public/images/relight/product-relight.webp"
+    };
+
+    // GANTI dengan nomor WhatsApp Duta Pemuda Desa Pasir Wetan (format 62xxxxxxxxxx)
+    const WA_NUMBER = '6281234567890';
+
+    const METHOD = 'Pengendapan, rempah dapur, dan adsorben (arang aktif/zeolit) sesuai SOP pelatihan 2023';
+    const ARTISAN = 'Pengrajin logam Desa Pasir Wetan';
+    const STATUS = 'Tercatat di Ledger Bank Sampah Suka Mandiri';
+
+    // Data contoh selaras Figma Jelantah Ledger — Mockup P0 (bukan data nyata)
+    const batches = {
+      'B-20261215': {
+        code: 'B-20261215',
+        date: 'Selasa, 15 Desember 2026',
+        deposits: 2,
+        collectedL: 2.00,
+        olahL: 0.50,
+        jualL: 0.80,
+        sisaL: 0.70,
+        candles: 18,
+        olahNote: '✓ Produksi tercatat · 18 lilin (18 Des)',
+        jualNote: '✓ Penjualan tercatat (16 Des)',
+        sisaNote: 'Stok tersimpan di Bank Sampah'
+      },
+      'B-20261216': {
+        code: 'B-20261216',
+        date: 'Rabu, 16 Desember 2026',
+        deposits: 2,
+        collectedL: 3.50,
+        olahL: 1.00,
+        jualL: 2.50,
+        sisaL: 0.00,
+        candles: 0,
+        olahNote: '✓ Alokasi dikunci · produksi lilin belum dicatat',
+        jualNote: '✓ Alokasi dikunci untuk dijual',
+        sisaNote: 'Seluruh batch sudah dialokasikan'
+      },
+      'B-20261217': {
+        code: 'B-20261217',
+        date: 'Kamis, 17 Desember 2026',
+        deposits: 2,
+        collectedL: 1.25,
+        olahL: 0.00,
+        jualL: 0.00,
+        sisaL: 1.25,
+        candles: 0,
+        olahNote: 'Belum ada alokasi diolah',
+        jualNote: 'Belum ada alokasi dijual',
+        sisaNote: 'Belum dialokasikan · stok Bank Sampah'
+      }
+    };
+
+    const fmtL = (n) => n.toFixed(2).replace('.', ',') + ' L';
+    const fmtPct = (part, total) => total > 0 ? ((part / total) * 100).toFixed(1).replace('.', ',') + '%' : '0,0%';
+    const set = (id, v) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = v;
+    };
+
+    let currentBatch = 'B-20261215';
+
+    function renderAggregateImpact() {
+      const list = Object.values(batches);
+      const total = list.reduce((s, b) => s + b.collectedL, 0);
+      const olah = list.reduce((s, b) => s + b.olahL, 0);
+      const jual = list.reduce((s, b) => s + b.jualL, 0);
+      const sisa = list.reduce((s, b) => s + b.sisaL, 0);
+      const candles = list.reduce((s, b) => s + b.candles, 0);
+
+      set('agg-total', fmtL(total));
+      set('agg-batch-count', 'dari ' + list.length + ' batch tercatat');
+      set('agg-olah', fmtL(olah));
+      set('agg-olah-pct', fmtPct(olah, total) + ' dari total');
+      set('agg-jual', fmtL(jual));
+      set('agg-jual-pct', fmtPct(jual, total) + ' dari total');
+      set('agg-candles', String(candles));
+      set('agg-sisa', fmtL(sisa));
+      set('agg-sisa-pct', fmtPct(sisa, total) + ' · stok desa');
+
+      document.getElementById('agg-bar-jual').style.width = ((jual / total) * 100).toFixed(1) + '%';
+      document.getElementById('agg-bar-olah').style.width = ((olah / total) * 100).toFixed(1) + '%';
+      document.getElementById('agg-bar-sisa').style.width = ((sisa / total) * 100).toFixed(1) + '%';
+
+      set('agg-legend-jual', fmtL(jual) + ' (' + fmtPct(jual, total) + ')');
+      set('agg-legend-olah', fmtL(olah) + ' (' + fmtPct(olah, total) + ')');
+      set('agg-legend-sisa', fmtL(sisa) + ' (' + fmtPct(sisa, total) + ')');
+    }
+
+    function setBatch(id) {
+      const cleanId = String(id || '').trim().toUpperCase();
+      const targetId = batches[cleanId] ? cleanId : 'B-20261215';
+      currentBatch = targetId;
+      const d = batches[targetId];
+
+      set('nav-batch-label', d.code);
+      set('val-code', 'Batch ' + d.code);
+      set('val-date', d.date);
+      set('val-depositors-short', d.deposits + ' setoran · ' + fmtL(d.collectedL));
+      set('val-volume-short', d.candles > 0 ? (fmtL(d.olahL) + ' · ' + d.candles + ' lilin') : fmtL(d.olahL));
+      set('val-collected-pill', 'Terkumpul: ' + fmtL(d.collectedL));
+
+      document.getElementById('bar-olah').style.width = ((d.olahL / d.collectedL) * 100).toFixed(1) + '%';
+      document.getElementById('bar-jual').style.width = ((d.jualL / d.collectedL) * 100).toFixed(1) + '%';
+      document.getElementById('bar-sisa').style.width = ((d.sisaL / d.collectedL) * 100).toFixed(1) + '%';
+
+      set('val-olah-amount', fmtL(d.olahL));
+      set('val-olah-note', d.olahNote);
+      set('val-jual-amount', fmtL(d.jualL));
+      set('val-jual-note', d.jualNote);
+      set('val-sisa-amount', fmtL(d.sisaL));
+      set('val-sisa-note', d.sisaNote);
+
+      set('val-artisan', ARTISAN);
+      set('val-method', METHOD);
+      set('val-status', STATUS);
+      set('val-scent', 'RELIGHT Lilin Wangi 50 g');
+
+      let noteText = '';
+      if (d.candles > 0) {
+        noteText = 'Lilin Anda dibuat dari ' + fmtL(d.olahL) + ' bagian batch ini yang diolah menjadi ' + d.candles + ' lilin, bukan dari bagian ' + fmtL(d.jualL) + ' yang dijual sebagai minyak. Sisa ' + fmtL(d.sisaL) + ' masih disimpan Bank Sampah.';
+      } else if (d.olahL > 0) {
+        noteText = 'Dari ' + fmtL(d.collectedL) + ' jelantah batch ini, ' + fmtL(d.olahL) + ' sudah dialokasikan untuk diolah dan ' + fmtL(d.jualL) + ' untuk dijual. Catatan jumlah lilin hasil produksi menunggu pembaruan admin.';
+      } else {
+        noteText = 'Seluruh ' + fmtL(d.collectedL) + ' jelantah pada batch ini sudah tercatat masuk di Bank Sampah Suka Mandiri dan saat ini berstatus belum dialokasikan.';
+      }
+      set('val-note', noteText);
+
+      const msg = 'Halo Duta Pemuda Desa Pasir Wetan, saya ingin memesan ulang RELIGHT Lilin Wangi 50 g (dari Batch ' + d.code + ').';
+      document.getElementById('wa-reorder').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      updateQRModal();
+    }
+
+    function updateQRModal() {
+      let base = 'https://jejak-pasirwetan.netlify.app/';
+      if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        const cleanPath = window.location.pathname.replace(/\/index\.html$/i, '/');
+        base = window.location.origin + (cleanPath.endsWith('/') ? cleanPath : cleanPath + '/');
+      }
+      const fullUrl = base + '?batch=' + currentBatch;
+      const qrApi = 'https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=16&color=3D281E&bgcolor=FFFFFF&data=' + encodeURIComponent(fullUrl);
+      document.getElementById('qr-img').src = qrApi;
+      set('qr-batch-code', currentBatch);
+      set('qr-url-label', fullUrl);
+      document.getElementById('qr-download-btn').href = qrApi;
+    }
+
+    function toggleQRModal() {
+      document.getElementById('qr-modal').classList.toggle('hidden');
+      updateQRModal();
+    }
+
+    renderAggregateImpact();
+    const urlBatch = new URLSearchParams(window.location.search).get('batch');
+    setBatch(urlBatch);
+  </script>
+</body>
+</html>

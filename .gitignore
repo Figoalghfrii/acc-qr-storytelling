@@ -1,0 +1,15 @@
+# Netlify state & local build output
+.netlify/
+dist/
+.env
+.env.*
+node_modules/
+
+# Large local archives & proposal documents (kept locally, not pushed to GitHub)
+*.zip
+*.pdf
+*.docx
+
+# OS & editor junk
+.DS_Store
+Thumbs.db

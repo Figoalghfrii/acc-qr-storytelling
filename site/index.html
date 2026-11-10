@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jejak Produk Desa — RELIGHT Pasir Wetan &amp; DAUNARA Cinanjung</title>
+  <meta name="description" content="Portal cerita produk dan catatan batch QR untuk RELIGHT (Desa Pasir Wetan, Banyumas) dan DAUNARA (Desa Cinanjung, Sumedang)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #FFFFFF;
+      color: #2B2620;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-display { font-family: 'Playfair Display', Georgia, serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+  <main class="max-w-5xl mx-auto w-full px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+    <header class="max-w-2xl space-y-3">
+      <div class="inline-flex items-center gap-2 bg-[#F9F8F5] border border-[#E6E3DC] px-3.5 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-widest text-[#694B38]">
+        <span>ACC #NextGreen Leaders Challenge</span>
+      </div>
+      <h1 class="font-serif-display text-3xl sm:text-5xl font-semibold text-[#2B2620] leading-tight">
+        Cerita Produk &amp; Catatan Batch Dua Desa
+      </h1>
+      <p class="text-sm sm:text-base text-[#5C5449] leading-relaxed">
+        Pilih produk untuk membuka halaman QR storytelling masing-masing desa beserta catatan batch dan kontak Duta Pemuda setempat.
+      </p>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- RELIGHT Pasir Wetan -->
+      <a href="./pasir-wetan/" class="group bg-[#FFFFFF] border border-[#E8E5DF] rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:border-[#926633] transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/10] bg-[#F1EEE8] overflow-hidden">
+            <img src="pasir-wetan/public/images/relight/product-relight.webp" alt="RELIGHT Lilin Wangi Desa Pasir Wetan" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+          </div>
+          <div class="p-6 space-y-2.5">
+            <div class="text-[11px] font-bold uppercase tracking-widest text-[#A3560A]">Desa Pasir Wetan · Banyumas</div>
+            <h2 class="font-serif-display text-2xl font-semibold text-[#3D281E]">RELIGHT — Lilin Wangi 50 g</h2>
+            <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
+              Lilin pengharum ruangan dari minyak jelantah rumah tangga yang dicatat oleh Bank Sampah Suka Mandiri dalam wadah buatan pengrajin logam desa.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-[#F9F8F5] border-t border-[#E8E5DF] flex items-center justify-between text-xs font-bold text-[#3D281E] group-hover:text-[#A3560A]">
+          <span>Buka Halaman RELIGHT</span>
+          <span>/pasir-wetan/ →</span>
+        </div>
+      </a>
+
+      <!-- DAUNARA Cinanjung -->
+      <a href="./cinanjung/" class="group bg-[#FFFFFF] border border-[#E2E6DC] rounded-3xl overflow-hidden shadow-sm hover:shadow-md hover:border-[#5B6B2F] transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/10] bg-[#EEF1E8] overflow-hidden">
+            <img src="cinanjung/public/images/daunara/product-daunara.webp" alt="DAUNARA Teh Daun Bidara Desa Cinanjung" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" />
+          </div>
+          <div class="p-6 space-y-2.5">
+            <div class="text-[11px] font-bold uppercase tracking-widest text-[#5B6B2F]">Desa Cinanjung · Sumedang</div>
+            <h2 class="font-serif-display text-2xl font-semibold text-[#283118]">DAUNARA — Teh Daun Bidara 25 g</h2>
+            <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
+              Minuman seduhan herbal olahan Ibu-ibu KWT Malati Asih bersama Kelompok Berlian dan Duta Pemuda Desa Cinanjung, lengkap dengan catatan batch dan varian kartu parsel.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-[#F8F9F5] border-t border-[#E2E6DC] flex items-center justify-between text-xs font-bold text-[#5B6B2F] group-hover:text-[#926936]">
+          <span>Buka Halaman DAUNARA</span>
+          <span>/cinanjung/ →</span>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#E8E5DF] py-6 px-4 sm:px-6 text-center text-xs text-[#694B38]">
+    Desa Pasir Wetan (RELIGHT) &amp; Desa Cinanjung (DAUNARA) · Portal QR Storytelling
+  </footer>
+</body>
+</html>
