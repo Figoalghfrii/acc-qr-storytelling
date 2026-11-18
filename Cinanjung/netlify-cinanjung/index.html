@@ -8,29 +8,31 @@
       location.replace(location.pathname + '/' + location.search + location.hash);
     }
   </script>
-  <title>DAUNARA — Desa Cinanjung | Catatan Pemeriksaan Batch & Kisah KWT Malati Asih</title>
-  <meta name="description" content="Dari Kebun Lereng Cinanjung ke Seduhan Hangat di Cangkir Anda. Teh Daun Bidara (Netto 40 g · Rp15.000 · ±20 cangkir) karya Ibu-ibu KWT Malati Asih Desa Cinanjung, Kec. Tanjungsari, Kab. Sumedang." />
-  <meta property="og:title" content="DAUNARA — Teh Daun Bidara Desa Cinanjung | From the Hillside Garden to Your Cup" />
-  <meta property="og:description" content="Lihat catatan pemeriksaan per batch, pengeringan rak jemur tertutup plastik UV, varian kartu parsel gambar Duta Cilik (Rp65.000 & Rp110.000), serta kisah KWT Malati Asih dan Duta Remaja Karang Taruna Desa Cinanjung." />
-  <meta property="og:image" content="public/images/daunara/hero-village.webp" />
+  <title>Ngalang — Desa Cinanjung | Teh Bunga Telang &amp; Catatan Batch</title>
+  <meta name="description" content="Dari Kebun Lereng Cinanjung, Biru ke Ungu di Cangkir Anda. Ngalang — Teh Bunga Telang + Jeruk Nipis (Rp15.000/kemasan · NIB, P-IRT &amp; Halal) produksi KWT Malati Asih, UMKM penjual, Duta Remaja Karang Taruna &amp; SMK, dan Duta Cilik Desa Cinanjung, Kab. Sumedang." />
+  <meta property="og:title" content="Ngalang — Teh Bunga Telang Desa Cinanjung | Biru ke Ungu dengan Jejak Batch QR" />
+  <meta property="og:description" content="Lihat catatan pemeriksaan per batch, pengeringan rak jemur tertutup plastik UV, pengasapan tradisional KWT, varian kartu parsel gambar Duta Cilik (Rp65.000 &amp; Rp110.000), serta kisah KWT Malati Asih, UMKM penjual, dan Duta Remaja Desa Cinanjung." />
+  <meta property="og:image" content="public/images/telang/telang-tea-shift.jpg" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      /* DAUNARA Official Moodboard Color System on Clean White Canvas */
-      --color-primary: #5B6B2F;       /* Forest Olive — Primary brand color */
-      --color-primary-hover: #475522; /* Deep Forest Olive hover */
-      --color-accent: #9A9F46;        /* Muted Olive — Botanical accent */
-      --color-background: #FFFFFF;    /* Pure white canvas */
+      /* Teh Bunga Telang Cinanjung Color System — Derived from Official 5-Petal Telang Icon */
+      --color-primary: #2A4EB3;       /* Telang Cobalt Blue — Primary brand color */
+      --color-primary-hover: #1E3A8A; /* Deep Royal Indigo hover */
+      --color-secondary: #5B3FA7;     /* Telang Acid-Shift Violet (biru -> ungu) */
+      --color-accent: #FFCF79;        /* Warm Pollen / Citrus Gold */
+      --color-background: #FFFFFF;    /* Clean white editorial canvas */
       --color-surface: #FFFFFF;       /* White card surface */
-      --color-surface-soft: #F8F9F5;  /* Subtle botanical off-white */
-      --color-cream: #EFDCBA;         /* Soft Cream moodboard accent */
-      --color-secondary: #926936;     /* Earth Brown */
-      --color-text: #283118;          /* Deep Olive-Bark text */
-      --color-text-muted: #5C5338;    /* Warm Earth Muted */
-      --color-border: #E2E6DC;
+      --color-surface-soft: #F4F1E9;  /* Warm botanical cream from icon & label canvas */
+      --color-surface-tint: #F3F5FC;  /* Subtle cobalt-tinted off-white */
+      --color-text: #1A2240;          /* Deep Indigo Ink */
+      --color-text-muted: #4C5370;    /* Slate Indigo Muted */
+      --color-border: #DFDDD4;        /* Soft warm border */
     }
 
     body {
@@ -48,18 +50,23 @@
     .botanical-surface {
       background-color: var(--color-surface);
       border: 1px solid var(--color-border);
-      box-shadow: 0 14px 34px -14px rgba(40, 49, 24, 0.08);
+      box-shadow: 0 14px 34px -14px rgba(26, 34, 64, 0.09);
     }
 
-    .botanical-olive-card {
-      background-color: var(--color-primary);
-      color: #FAF6EC;
+    .telang-hero-card {
+      background: linear-gradient(145deg, #1E3A8A 0%, #2A4EB3 55%, #5B3FA7 100%);
+      color: #F4F1E9;
+    }
+
+    .telang-deep-card {
+      background: linear-gradient(135deg, #1B2D6E 0%, #2A4EB3 52%, #5B3FA7 100%);
+      color: #F4F1E9;
     }
 
     .editorial-img-wrap {
       overflow: hidden;
       position: relative;
-      background-color: #EEF1E8;
+      background-color: #ECEAE2;
     }
     .editorial-img-wrap img {
       transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
@@ -69,44 +76,37 @@
     }
   </style>
 </head>
-<body class="selection:bg-[#5B6B2F] selection:text-[#FAF6EC]">
+<body class="selection:bg-[#2A4EB3] selection:text-[#F4F1E9]">
 
   <!-- Top Sticky Minimalist Botanical Header -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FFFFFF]/95 border-b border-[#E2E6DC] transition-all">
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FFFFFF]/95 border-b border-[#DFDDD4] transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
-      <!-- Official DAUNARA Brand Logo (Steaming Teacup + Serif Wordmark) -->
-      <a href="#" class="inline-flex items-center gap-3 group" aria-label="DAUNARA Desa Cinanjung">
-        <div class="w-10 h-10 rounded-full bg-[#FFFFFF] border border-[#5B6B2F]/25 flex items-center justify-center group-hover:border-[#5B6B2F] transition">
-          <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M27 11C24.5 15 29.5 18 27 22" stroke="#9A9F46" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M35 9C32.5 13.5 37.5 17 35 22" stroke="#9A9F46" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M16 27C11 22 13 16 19 18C22 19 22 24 16 27Z" fill="#9A9F46"/>
-            <path d="M16 27H46V34C46 42.8 38.8 50 30 50H32C23.2 50 16 42.8 16 34V27Z" fill="#5B6B2F"/>
-            <path d="M46 30H49.5C52.5 30 54.5 32 54.5 35C54.5 38 52.5 40 49.5 40H45" stroke="#5B6B2F" stroke-width="3" stroke-linecap="round"/>
-            <rect x="14" y="52" width="34" height="3" rx="1.5" fill="#926936"/>
-          </svg>
+      <!-- Official Ngalang Brand Logo (5-Petal Blue/Purple/Gold Icon + Serif Wordmark) -->
+      <a href="#" class="inline-flex items-center gap-3 group" aria-label="Ngalang Desa Cinanjung">
+        <div class="w-10 h-10 rounded-full bg-[#F4F1E9] border border-[#2A4EB3]/25 flex items-center justify-center group-hover:border-[#5B3FA7] transition overflow-hidden p-1.5">
+          <img src="assets/logo.png" alt="Logo Ngalang Desa Cinanjung" class="w-full h-full object-contain" />
         </div>
         <div>
-          <span class="block font-serif-display font-bold tracking-[0.18em] text-base md:text-lg text-[#5B6B2F] leading-none">DAUNARA</span>
-          <span class="block text-[10px] tracking-widest uppercase text-[#926936] font-semibold mt-0.5">Desa Cinanjung · Sumedang</span>
+          <span class="block font-serif-display font-bold tracking-[0.14em] text-sm sm:text-base md:text-lg text-[#2A4EB3] leading-none">NGALANG</span>
+          <span class="block text-[10px] tracking-widest uppercase text-[#5B3FA7] font-semibold mt-0.5">Teh Bunga Telang · Cinanjung</span>
         </div>
       </a>
 
       <!-- Center Navigation Pill -->
-      <nav class="hidden md:inline-flex items-center gap-6 bg-[#F8F9F5] border border-[#E2E6DC] px-6 py-2 rounded-full text-xs font-semibold text-[#283118]">
-        <a href="#catatan-batch" class="hover:text-[#5B6B2F] transition">Catatan Batch</a>
-        <a href="#proses" class="hover:text-[#5B6B2F] transition">Cara Olah</a>
-        <a href="#kisah" class="hover:text-[#5B6B2F] transition">Kisah KWT</a>
-        <a href="#kartu-ucapan" class="hover:text-[#5B6B2F] transition">Kartu Parsel</a>
-        <a href="#seduh" class="hover:text-[#5B6B2F] transition">Cara Seduh</a>
+      <nav class="hidden md:inline-flex items-center gap-6 bg-[#F4F1E9] border border-[#DFDDD4] px-6 py-2 rounded-full text-xs font-semibold text-[#1A2240]">
+        <a href="#catatan-batch" class="hover:text-[#2A4EB3] transition">Catatan Batch</a>
+        <a href="#proses" class="hover:text-[#2A4EB3] transition">Cara Olah</a>
+        <a href="#kisah" class="hover:text-[#2A4EB3] transition">Kisah Desa</a>
+        <a href="#kartu-ucapan" class="hover:text-[#2A4EB3] transition">Kartu Parsel</a>
+        <a href="#seduh" class="hover:text-[#2A4EB3] transition">Cara Seduh</a>
       </nav>
 
       <!-- Right Batch Status Pill -->
       <div class="flex items-center gap-2">
-        <a href="#catatan-batch" class="inline-flex items-center gap-2.5 bg-[#5B6B2F] text-[#FAF6EC] pl-3.5 pr-2 py-1.5 rounded-full text-xs font-semibold hover:bg-[#475522] transition">
-          <span class="w-2 h-2 rounded-full bg-[#EFDCBA]"></span>
-          <span id="nav-batch-label">Contoh · TB-2612-01</span>
-          <span class="w-6 h-6 rounded-full bg-[#9A9F46] text-[#283118] flex items-center justify-center font-bold">
+        <a href="#catatan-batch" class="inline-flex items-center gap-2.5 bg-[#2A4EB3] text-[#FFFFFF] pl-3.5 pr-2 py-1.5 rounded-full text-xs font-semibold hover:bg-[#1E3A8A] transition">
+          <span class="w-2 h-2 rounded-full bg-[#FFCF79]"></span>
+          <span id="nav-batch-label">Contoh · TT-2612-01</span>
+          <span class="w-6 h-6 rounded-full bg-[#FFCF79] text-[#1A2240] flex items-center justify-center font-bold">
             <svg class="w-3.5 h-3.5" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4.5 2.5L8 6L4.5 9.5"/>
             </svg>
@@ -114,52 +114,62 @@
         </a>
       </div>
     </div>
+
+    <!-- Mobile Quick-Jump Navigation Pills -->
+    <nav class="md:hidden border-t border-[#DFDDD4]/70 bg-[#F4F1E9]/70 px-4 py-2 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-[11px] font-semibold text-[#1A2240]" aria-label="Navigasi cepat">
+      <a href="#catatan-batch" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#DFDDD4] shrink-0">Catatan Batch</a>
+      <a href="#proses" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#DFDDD4] shrink-0">Cara Olah</a>
+      <a href="#kisah" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#DFDDD4] shrink-0">Kisah Desa</a>
+      <a href="#kartu-ucapan" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#DFDDD4] shrink-0">Kartu Parsel</a>
+      <a href="#seduh" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#DFDDD4] shrink-0">Cara Seduh</a>
+      <a href="#pesan" class="px-3 py-1 rounded-full bg-[#2A4EB3] text-[#FFFFFF] shrink-0">Pesan Ulang</a>
+    </nav>
   </header>
 
   <!-- Banner Status Prototipe Proposal -->
-  <div class="bg-[#F8F9F5] border-b border-[#E2E6DC] py-2 px-4 text-center text-[11px] sm:text-xs text-[#5C5338]">
-    <span class="inline-flex items-center gap-1.5 font-semibold text-[#283118]">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#5B6B2F]"></span>
-      Prototipe Proposal Revisi 4 ACC #NextGreen 2026:
+  <div class="bg-[#F4F1E9] border-b border-[#DFDDD4] py-2 px-4 text-center text-[11px] sm:text-xs text-[#4C5370]">
+    <span class="inline-flex items-center gap-1.5 font-semibold text-[#1A2240]">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#5B3FA7]"></span>
+      Prototipe Proposal Revisi 9 ACC #NextGreen 2026:
     </span>
-    Data batch adalah <strong>simulasi ilustrasi</strong> menjelang batch #1 &amp; uji rak (1–7 Des), pre-order &amp; pelatihan (8 Des), serah kemasan pasca-uji lab (18 Des), uji mandiri (11–21 Jan), hingga lepas penuh (1 Mei 2027).
+    Data batch di halaman ini masih <strong>simulasi ilustrasi</strong> menjelang implementasi desa (Des 2026–Jan 2027).
   </div>
 
   <!-- ===================================================================== -->
-  <!-- SECTION 1 — HERO SECTION (Botanical Hillside Editorial Introduction)  -->
+  <!-- SECTION 1 — HERO SECTION (Telang Blue-to-Purple Editorial Intro)       -->
   <!-- ===================================================================== -->
   <section class="relative pt-8 sm:pt-12 md:pt-16 pb-14 md:pb-20 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
     <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
-      <div class="inline-flex items-center gap-2 bg-[#FFFFFF] border border-[#E2E6DC] px-3.5 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-widest text-[#5B6B2F]">
-        <span class="w-2 h-2 rounded-full bg-[#9A9F46]"></span>
-        <span>Single-Origin Lereng Gunung Batu · Oleh-Oleh &amp; Hantaran Desa</span>
+      <div class="inline-flex items-center gap-2 bg-[#F3F5FC] border border-[#2A4EB3]/20 px-3.5 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-widest text-[#2A4EB3]">
+        <span class="w-2 h-2 rounded-full bg-[#5B3FA7]"></span>
+        <span>Bunga Telang + Jeruk Nipis · Hadiah &amp; Oleh-Oleh Desa</span>
       </div>
-      <div class="text-xs font-medium text-[#926936]">
+      <div class="text-xs font-medium text-[#5B3FA7]">
         Desa Cinanjung · Kec. Tanjungsari · Kab. Sumedang (855 mdpl)
       </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end mb-8 md:mb-10">
       <div class="lg:col-span-8">
-        <h1 class="font-serif-display text-4xl sm:text-5xl md:text-6xl lg:text-[62px] leading-[1.05] tracking-editorial font-semibold text-[#5B6B2F]">
-          Dari Kebun Lereng Cinanjung
-          <span class="block font-serif-editorial italic font-semibold text-[#926936] text-5xl sm:text-6xl md:text-7xl mt-1">
-            ke Seduhan Hangat di Cangkir Anda
+        <h1 class="font-serif-display text-4xl sm:text-5xl md:text-6xl lg:text-[62px] leading-[1.05] tracking-editorial font-semibold text-[#2A4EB3]">
+          Dari Kebun Lereng Cinanjung,
+          <span class="block font-serif-editorial italic font-semibold text-[#5B3FA7] text-5xl sm:text-6xl md:text-7xl mt-1">
+            Biru ke Ungu di Cangkir Anda
           </span>
         </h1>
       </div>
       <div class="lg:col-span-4 space-y-4">
-        <p class="text-sm md:text-base text-[#283118]/90 leading-relaxed">
-          Teh seduhan herbal <em>single-origin</em> 855 mdpl &amp; oleh-oleh khas kawasan Wisata Gunung Batu: diolah <strong>Ibu-ibu KWT Malati Asih</strong>, dicatat serta dipasarkan <strong>Duta Remaja (Karang Taruna)</strong>, dengan kartu cerita gambar kelas alam <strong>Duta Cilik</strong>.
+        <p class="text-sm md:text-base text-[#1A2240]/90 leading-relaxed">
+          Teh bunga telang + jeruk nipis berizin <strong>NIB, P-IRT &amp; Halal</strong> dari ketinggian 855 mdpl: diproduksi Ibu-ibu KWT Malati Asih, dipasarkan ke luar desa oleh UMKM penjual dan Duta Remaja (Karang Taruna &amp; siswa SMK), dengan kartu parsel gambar kelas alam Duta Cilik.
         </p>
         <div class="flex flex-wrap items-center gap-3 pt-1">
-          <a href="#catatan-batch" class="inline-flex items-center gap-2.5 bg-[#5B6B2F] hover:bg-[#475522] text-[#FAF6EC] font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md transition">
+          <a href="#catatan-batch" class="inline-flex items-center gap-2.5 bg-[#2A4EB3] hover:bg-[#1E3A8A] text-[#FFFFFF] font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md transition">
             <span>Lihat Catatan Batch</span>
             <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
             </svg>
           </a>
-          <a href="#kartu-ucapan" class="inline-flex items-center gap-2 bg-[#FFFFFF] hover:bg-[#F8F9F5] text-[#5B6B2F] border border-[#E2E6DC] font-semibold text-xs sm:text-sm px-5 py-3 rounded-full transition">
+          <a href="#kartu-ucapan" class="inline-flex items-center gap-2 bg-[#F4F1E9] hover:bg-[#EAE5D8] text-[#1A2240] border border-[#DFDDD4] font-semibold text-xs sm:text-sm px-5 py-3 rounded-full transition">
             <span>Kartu Ucapan Parsel</span>
           </a>
         </div>
@@ -168,67 +178,69 @@
 
     <!-- Hero Visual Showcase Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
-      <figure class="lg:col-span-8 editorial-img-wrap rounded-3xl border border-[#E2E6DC] shadow-lg aspect-[16/10] sm:aspect-[16/9] relative">
+      <figure class="lg:col-span-8 editorial-img-wrap rounded-3xl border border-[#DFDDD4] shadow-lg aspect-[16/10] sm:aspect-[16/9] relative">
         <img
-          src="public/images/daunara/hero-village.webp"
+          src="public/images/telang/hero-village.webp"
           alt="Lanskap perbukitan dan hamparan pertanian di Kabupaten Sumedang, Jawa Barat"
           class="w-full h-full object-cover object-center"
           fetchpriority="high"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#283118]/85 via-[#283118]/20 to-transparent"></div>
-        <figcaption class="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-[#FAF6EC]">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1A2240]/85 via-[#1A2240]/20 to-transparent"></div>
+        <figcaption class="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-[#F4F1E9]">
           <div>
-            <span class="inline-block text-[10px] uppercase tracking-widest bg-[#9A9F46] text-[#283118] font-bold px-2.5 py-0.5 rounded-full mb-1.5">
+            <span class="inline-block text-[10px] uppercase tracking-widest bg-[#FFCF79] text-[#1A2240] font-bold px-2.5 py-0.5 rounded-full mb-1.5">
               Foto Wilayah Regional · Kabupaten Sumedang
             </span>
             <p class="text-xs sm:text-sm font-medium leading-snug">
               Bentang alam perbukitan agrikultur di Kabupaten Sumedang, Jawa Barat — wilayah Desa Cinanjung berada pada ketinggian ±855 mdpl.
             </p>
           </div>
-          <span class="text-[11px] text-[#EFDCBA]/85 shrink-0">
+          <span class="text-[11px] text-[#FFCF79]/90 shrink-0">
             Foto: Pak Andri Irawan (CC BY 4.0)
           </span>
         </figcaption>
       </figure>
 
-      <div class="lg:col-span-4 botanical-olive-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-[#9A9F46]/40 relative overflow-hidden">
-        <div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-[#9A9F46]/25 blur-2xl pointer-events-none"></div>
+      <div class="lg:col-span-4 telang-hero-card rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-[#5B3FA7]/40 relative overflow-hidden">
+        <div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-[#FFCF79]/20 blur-2xl pointer-events-none"></div>
 
         <div class="space-y-3 relative z-10">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] uppercase tracking-widest text-[#EFDCBA] font-bold">Teh Seduh Herbal · Oleh-Oleh Desa</span>
-            <span class="text-[11px] text-[#EFDCBA]/80">Netto 40 g · Rp15.000</span>
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-[11px] uppercase tracking-widest text-[#FFCF79] font-bold">P-IRT &amp; Halal · Bunga Utuh</span>
+            <span class="text-[11px] text-[#F4F1E9]/90 font-semibold">Rp15.000 / kemasan</span>
           </div>
           <h2 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#FFFFFF] leading-tight">
-            Racikan Kebun Lereng Gunung Batu dengan Jejak Batch QR
+            Ngalang: Teh Telang + Jeruk Nipis
           </h2>
-          <p class="text-xs sm:text-sm text-[#FAF6EC]/85 leading-relaxed">
-            Berbeda dari simplisia curah tanpa catatan asal, setiap <em>pouch</em> foil <strong>DAUNARA (40 g · ±20 cangkir · Rp750/cangkir)</strong> memuat riwayat panen dan penjemuran matahari di rak plastik UV yang diperiksa Ibu-ibu KWT Malati Asih serta diinput Duta Remaja ke aplikasi usaha milik KWT.
+          <p class="text-xs sm:text-sm text-[#F4F1E9]/90 leading-relaxed">
+            Berbeda dari telang kering umum tanpa catatan asal, setiap <em>pouch</em> foil Ngalang memuat riwayat panen, jemur rak plastik UV, dan pengasapan tradisional KWT Malati Asih yang dicatat Duta Remaja pada akun UMKM penjual — berubah warna <strong>biru → ungu</strong> saat dituang jeruk nipis.
           </p>
         </div>
 
-        <div class="my-5 bg-[#445222] border border-[#9A9F46]/40 rounded-2xl p-3.5 flex items-center gap-3.5 relative z-10">
+        <div class="my-5 bg-[#162760]/70 border border-[#FFCF79]/30 rounded-2xl p-3.5 flex items-center gap-3.5 relative z-10">
           <img
-            src="public/images/daunara/bidara-leaves.webp"
-            alt="Detail daun bidara (Ziziphus mauritiana) segar"
-            class="w-16 h-20 rounded-xl object-cover shrink-0 border border-[#9A9F46]/50"
+            src="public/images/telang/telang-flower.jpg"
+            alt="Detail bunga telang (Clitoria ternatea) biru pekat segar"
+            class="w-16 h-20 rounded-xl object-cover shrink-0 border border-[#FFCF79]/50"
           />
           <div class="space-y-1">
-            <div class="text-xs font-bold text-[#EFDCBA] uppercase tracking-wider">Ziziphus mauritiana</div>
-            <p class="text-xs text-[#FAF6EC] font-medium leading-snug">
-              Pemeriksaan KWT (20 Daun Sampel) · Dicatat Duta Remaja
+            <div class="text-xs font-bold text-[#FFCF79] uppercase tracking-wider">Clitoria ternatea</div>
+            <p class="text-xs text-[#FFFFFF] font-medium leading-snug">
+              Cek KWT (20 Bunga Sampel) · Dicatat Duta Remaja
             </p>
-            <p class="text-[11px] text-[#EFDCBA]/75">
-              Jemur rak tertutup plastik UV · bobot &amp; lama jemur tercatat
+            <p class="text-[11px] text-[#F4F1E9]/80">
+              Bunga utuh tanpa giling · Jemur rak UV &amp; pengasapan KWT
             </p>
           </div>
         </div>
 
-        <div class="pt-3 border-t border-[#9A9F46]/30 flex items-center justify-between text-[11px] text-[#EFDCBA]/85 relative z-10">
+        <div class="pt-3 border-t border-[#FFFFFF]/20 flex flex-wrap items-center justify-between gap-1 text-[11px] text-[#F4F1E9]/90 relative z-10">
           <span>KWT Malati Asih</span>
-          <span class="text-[#9A9F46]">×</span>
+          <span class="text-[#FFCF79]">×</span>
+          <span>UMKM Penjual</span>
+          <span class="text-[#FFCF79]">×</span>
           <span>Duta Remaja</span>
-          <span class="text-[#9A9F46]">×</span>
+          <span class="text-[#FFCF79]">×</span>
           <span>Duta Cilik</span>
         </div>
       </div>
@@ -238,110 +250,134 @@
   <!-- Botanical Wave Separator -->
   <div class="w-full overflow-hidden leading-none" aria-hidden="true">
     <svg class="w-full h-8 sm:h-12 md:h-16" viewBox="0 0 1440 96" fill="none" preserveAspectRatio="none">
-      <path d="M0 48C280 92 520 4 760 48C1000 92 1220 16 1440 48V96H0V48Z" fill="#F8F9F5"/>
-      <path d="M0 48C280 92 520 4 760 48C1000 92 1220 16 1440 48" stroke="#E2E6DC" stroke-width="2"/>
+      <path d="M0 48C280 92 520 4 760 48C1000 92 1220 16 1440 48V96H0V48Z" fill="#F4F1E9"/>
+      <path d="M0 48C280 92 520 4 760 48C1000 92 1220 16 1440 48" stroke="#DFDDD4" stroke-width="2"/>
     </svg>
   </div>
 
   <!-- ===================================================================== -->
   <!-- SECTION 2 — CATATAN PEMERIKSAAN BATCH (#catatan-batch)                -->
   <!-- ===================================================================== -->
-  <section id="catatan-batch" class="bg-[#F8F9F5] py-14 md:py-20 border-b border-[#E2E6DC]">
+  <section id="catatan-batch" class="bg-[#F4F1E9] py-14 md:py-20 border-b border-[#DFDDD4]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-        <!-- Left Column -->
-        <div class="lg:col-span-5 space-y-5">
-          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#5B6B2F]">
-            <span class="w-6 h-[2px] bg-[#9A9F46]"></span>
-            <span>01 · Pencatatan Transparan KWT</span>
+        <!-- Left Column (Appears second on mobile so Batch Card is immediately visible) -->
+        <div class="lg:col-span-5 space-y-5 order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2A4EB3]">
+            <span class="w-6 h-[2px] bg-[#5B3FA7]"></span>
+            <span>01 · Transparansi &amp; Telusur Batch</span>
           </div>
 
-          <h2 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#283118] tracking-editorial leading-tight">
+          <h2 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#1A2240] tracking-editorial leading-tight">
             Catatan Pemeriksaan Batch
           </h2>
 
-          <p class="text-sm text-[#5C5338] leading-relaxed">
-            Setiap batch pengolahan (rutin tiap Selasa) diperiksa langsung oleh Ibu-ibu <strong>KWT Malati Asih</strong> lalu diinput ke <strong>aplikasi 3 layar (Google Sheets + AppSheet, ≤5 isian/layar: Catat Batch, Catat Jual, Rekap)</strong> oleh <strong>Duta Remaja (Karang Taruna)</strong> — mencakup tanggal petik (≥7 hari pascasemprot pestisida nabati), cek 20 daun sampel, durasi rak plastik UV 4 tingkat, bobot segar–kering, hingga stok &amp; 5 kanal jual.
+          <p class="text-sm text-[#4C5370] leading-relaxed">
+            Setiap batch pengolahan diperiksa oleh Ibu-ibu KWT Malati Asih lalu dicatat oleh Duta Remaja pada aplikasi milik UMKM penjual — mulai dari tanggal petik, bobot segar–kering, hingga foto cek sortir.
           </p>
 
-          <!-- Peran KWT Malati Asih, Duta Remaja & Fungsi QR -->
-          <div class="bg-[#FFFFFF] border border-[#E2E6DC] border-l-4 border-l-[#5B6B2F] rounded-r-xl p-4 text-xs text-[#283118] space-y-1.5">
-            <div class="font-bold uppercase tracking-wider text-[#5B6B2F]">Cek Lapangan KWT, Aplikasi AppSheet &amp; Peran QR</div>
-            <p class="leading-relaxed text-[#5C5338]">
-              Pemeriksaan awal daun segar dilakukan langsung dengan cek mata KWT pada <strong>20 daun sampel</strong> (bila ≥3 daun bergejala bercak, serbuk putih, lubang, atau kuning, batch disortir ulang dan daun buangan dikirim ke kompos TPS 3R / Kelompok Berlian). Aplikasi dibuat oleh tim prodi Sistem Informasi pada akun Google milik KWT (gratis, tanpa biaya server, dapat diekspor ke Excel sesuai rencana desa 2027, dilengkapi cadangan formulir kertas 1 lembar). Catatan QR ini adalah <strong>rekam internal usaha KWT apa adanya</strong> (terkunci setelah disimpan; tanpa klaim khasiat/ruqyah), bukan sertifikasi independen maupun pengganti izin P-IRT.
+          <!-- Legalitas P-IRT & Halal + Peran QR (Lampiran A18) -->
+          <div class="bg-[#FFFFFF] border border-[#DFDDD4] border-l-4 border-l-[#2A4EB3] rounded-r-xl p-4 text-xs text-[#1A2240] space-y-1.5">
+            <div class="font-bold uppercase tracking-wider text-[#2A4EB3]">Legalitas P-IRT &amp; Halal · Peran QR Code</div>
+            <p class="leading-relaxed text-[#4C5370]">
+              Produk ini sudah berizin NIB, P-IRT, dan sertifikat halal (disalin dari izin resmi UMKM penjual). Halaman QR berfungsi sebagai <strong>telusur batch dari catatan internal KWT</strong> (termasuk foto cek dan batch yang ditolak), tanpa klaim khasiat medis.
             </p>
           </div>
 
-          <!-- Transparansi Data, Kalibrasi SNI & Masa Simpan -->
-          <div class="bg-[#FFFFFF] border border-[#E2E6DC] rounded-xl p-4 text-xs text-[#5C5338] leading-relaxed">
-            <strong class="text-[#283118]">Status Prototipe &amp; Dua Lapis Cek Kadar Air ≤8%:</strong> Data batch di bawah adalah <strong>simulasi rancangan</strong> sebelum produksi batch #1 (Selasa 1 Des). Karena saat hujan bobot daun bisa tampak tetap walau kadar air masih &gt;8%, digunakan <strong>dua lapis pengecekan</strong> (acuan pembanding <strong>SNI 3836:2013</strong>): <strong>(1) Lab kampus:</strong> uji <strong>oven gravimetri (SNI 01-2891-1992)</strong> untuk batch #1 &amp; batch awal tiap musim beserta uji ALT &amp; kapang-khamir (hasil 18 Des sebelum kemasan diserahkan); <strong>(2) Dapur desa:</strong> penimbangan <strong>berat target hasil kalibrasi lab</strong> (mis. daun layu 70% air → 100 g sampel kering bila mencapai ≤32,6 g dan renyah saat diremas). Kemasan menyimpan 1 sampel arsip/batch (estimasi simpan awal <strong>6 bulan</strong> dalam klip <em>ziplock</em> rapat) seiring pemberkasan <strong>SPP-IRT</strong> (target 31 Jan 2027).
-          </div>
+          <!-- Collapsible Technical Details for Advisors / Evaluators -->
+          <details class="bg-[#FFFFFF] border border-[#DFDDD4] rounded-xl p-4 text-xs text-[#4C5370] group">
+            <summary class="cursor-pointer font-bold text-[#1A2240] flex items-center justify-between gap-2 list-none">
+              <span>Detail teknis kalibrasi &amp; aplikasi catat</span>
+              <span class="text-[#2A4EB3] text-[11px] font-semibold group-open:hidden">+ Buka</span>
+              <span class="text-[#5B3FA7] text-[11px] font-semibold hidden group-open:inline">− Tutup</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-[#DFDDD4]/70 space-y-2 leading-relaxed">
+              <p>Data di samping adalah simulasi rancangan sebelum uji rak &amp; batch #1 (1 Des) serta lapak uji (6 Des). Berat per kemasan dan takaran per cangkir mengikuti penimbangan contoh produk berizin pada uji coba 1–7 Des.</p>
+              <p>Penentuan titik kering di desa mengacu pembanding SNI 3836:2013 (kadar air maks. 8%): 100 g bunga segar batch #1 dijemur sampai rapuh lalu ditimbang sebagai berat target batch berikutnya.</p>
+              <p>Aplikasi memakai Google Sheets + AppSheet 3 layar (Catat Batch, Catat Jual, Rekap) pada akun UMKM penjual, dapat diekspor ke Excel (rencana desa 2027), dan dilengkapi cadangan formulir kertas 1 lembar.</p>
+            </div>
+          </details>
         </div>
 
-        <!-- Right Column: Structured Batch Inspection Record Card -->
-        <div class="lg:col-span-7">
+        <!-- Right Column: Structured Batch Inspection Record Card (First on mobile!) -->
+        <div class="lg:col-span-7 order-1 lg:order-2">
           <div class="botanical-surface rounded-3xl overflow-hidden">
             <!-- Top Header Bar -->
-            <div class="bg-[#5B6B2F] text-[#FAF6EC] px-6 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+            <div class="telang-deep-card px-6 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
               <div>
-                <div class="text-[11px] uppercase tracking-widest text-[#EFDCBA]/85">Simulasi Catatan Pemeriksaan Batch</div>
-                <div id="val-code" class="font-serif-display text-2xl font-bold text-[#FFFFFF]">TB-2612-01 · Contoh Rancangan</div>
+                <div class="text-[11px] uppercase tracking-widest text-[#FFCF79] font-semibold">Simulasi Catatan Pemeriksaan Batch</div>
+                <div id="val-code" class="font-serif-display text-2xl font-bold text-[#FFFFFF]">TT-2612-01 · Contoh Rancangan</div>
               </div>
-              <div class="inline-flex items-center gap-2 bg-[#9A9F46]/30 border border-[#EFDCBA] text-[#EFDCBA] px-3.5 py-1.5 rounded-full text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-[#EFDCBA]"></span>
+              <div class="inline-flex items-center gap-2 bg-[#FFFFFF]/15 border border-[#FFCF79]/70 text-[#FFCF79] px-3.5 py-1.5 rounded-full text-xs font-bold">
+                <span class="w-2 h-2 rounded-full bg-[#FFCF79]"></span>
                 <span id="val-badge">Simulasi Prototipe · Pra-Implementasi</span>
               </div>
             </div>
 
+            <!-- Interactive Batch Switcher Bar -->
+            <div class="bg-[#F3F5FC] border-b border-[#DFDDD4] px-6 sm:px-8 py-3 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#4C5370]">Pratinjau Simulasi Batch:</span>
+              <div class="flex flex-wrap items-center gap-1.5" role="tablist" aria-label="Pilih Simulasi Batch">
+                <button onclick="setBatch('TT-2612-01')" id="btn-batch-TT-2612-01" class="px-3 py-1 rounded-full text-xs font-bold bg-[#2A4EB3] text-[#FFFFFF] transition cursor-pointer">TT-2612-01</button>
+                <button onclick="setBatch('TT-2612-02')" id="btn-batch-TT-2612-02" class="px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFFFF] border border-[#DFDDD4] text-[#1A2240] hover:border-[#2A4EB3] transition cursor-pointer">TT-2612-02</button>
+                <button onclick="setBatch('TT-2701-01')" id="btn-batch-TT-2701-01" class="px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFFFF] border border-[#DFDDD4] text-[#1A2240] hover:border-[#2A4EB3] transition cursor-pointer">TT-2701-01</button>
+              </div>
+            </div>
+
             <!-- Real Recorded Batch Metrics Trio -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#E2E6DC] bg-[#FFFFFF] border-b border-[#E2E6DC]">
+            <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#DFDDD4] bg-[#FFFFFF] border-b border-[#DFDDD4]">
               <div class="p-4 sm:p-5">
-                <div class="text-[11px] uppercase tracking-wider text-[#926936] font-semibold">Tanggal Petik</div>
-                <div id="val-prod-short" class="text-base font-bold text-[#283118] mt-1">21 Desember 2026</div>
+                <div class="text-[11px] uppercase tracking-wider text-[#5B3FA7] font-semibold">Tanggal Petik</div>
+                <div id="val-prod-short" class="text-base font-bold text-[#1A2240] mt-1">15 Desember 2026</div>
               </div>
               <div class="p-4 sm:p-5">
-                <div class="text-[11px] uppercase tracking-wider text-[#926936] font-semibold">Berat Segar → Kering</div>
-                <div id="val-ratio-short" class="text-base font-bold text-[#5B6B2F] mt-1">2,0 kg → 0,5 kg (25%)</div>
+                <div class="text-[11px] uppercase tracking-wider text-[#5B3FA7] font-semibold">Bunga Segar → Kering</div>
+                <div id="val-ratio-short" class="text-base font-bold text-[#2A4EB3] mt-1">1,0 kg → 0,2 kg</div>
               </div>
               <div class="p-4 sm:p-5">
-                <div class="text-[11px] uppercase tracking-wider text-[#926936] font-semibold">Cek Mata 20 Sampel</div>
-                <div id="val-sorted-short" class="text-base font-bold text-[#283118] mt-1">1 dari 20 daun sampel</div>
+                <div class="text-[11px] uppercase tracking-wider text-[#5B3FA7] font-semibold">Cek Mata 20 Bunga</div>
+                <div id="val-sorted-short" class="text-base font-bold text-[#1A2240] mt-1">1 dari 20 bunga rusak</div>
               </div>
             </div>
 
             <!-- Concise Non-Duplicated Batch Fields -->
-            <div class="p-6 sm:p-8 divide-y divide-[#E2E6DC]/80 text-sm">
+            <div class="p-6 sm:p-8 divide-y divide-[#DFDDD4]/80 text-sm">
               <div class="py-3 first:pt-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                <span class="text-xs uppercase tracking-wider text-[#926936] font-semibold shrink-0">Pengolah &amp; Kebun</span>
-                <span class="font-semibold text-[#283118] sm:text-right">KWT Malati Asih · Kompos &amp; pestisida nabati Kelompok Berlian</span>
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Produsen &amp; Pemegang Izin</span>
+                <span class="font-semibold text-[#1A2240] sm:text-right">KWT Malati Asih (kebun &amp; produksi) · UMKM Penjual (NIB, P-IRT &amp; Halal)</span>
               </div>
 
               <div class="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                <span class="text-xs uppercase tracking-wider text-[#926936] font-semibold shrink-0">Anjuran Simpan</span>
-                <span id="val-dates" class="font-semibold text-[#283118] sm:text-right">Baik diseduh s.d. Jun 2027 (estimasi awal 6 bulan)</span>
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Jumlah Kemasan &amp; Simpan</span>
+                <span id="val-dates" class="font-semibold text-[#1A2240] sm:text-right">Contoh 12 kemasan (+ 1 arsip batch) · Tanggal kedaluwarsa mengikuti standar izin UMKM</span>
               </div>
 
               <div class="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                <span class="text-xs uppercase tracking-wider text-[#926936] font-semibold shrink-0">Cek Daun &amp; Pencatatan</span>
-                <span id="val-ai-check" class="font-semibold text-[#5B6B2F] sm:text-right">Cek mata KWT 20 sampel (&lt;3 bergejala; sortir dikomposkan) · dicatat Duta Remaja</span>
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Sortir &amp; Pencatatan</span>
+                <span id="val-sortir-check" class="font-semibold text-[#2A4EB3] sm:text-right">Cek mata KWT 20 bunga sampel (&lt;3 rusak; tangkai hijau &amp; buangan dikomposkan) · diinput Duta Remaja</span>
               </div>
 
               <div class="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                <span class="text-xs uppercase tracking-wider text-[#926936] font-semibold shrink-0">Pengeringan &amp; Sebelum Kemas</span>
-                <span id="val-physical" class="font-semibold text-[#283118] sm:text-right">Cuci 2×, rak jemur plastik UV 4 tingkat 3 hari (bukan oven), berat target kalibrasi lab SNI ≤8% (≤32,6 g/100 g layu), giling 2–5 mm, kemas ≤2 jam · 40 g (±2%)</span>
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Pengeringan, Asap &amp; Jeruk Nipis</span>
+                <span id="val-physical" class="font-semibold text-[#1A2240] sm:text-right">Rak jemur plastik UV 4 tingkat (tanpa oven, acuan SNI ≤8% &amp; berat target batch #1) · Pengasapan KWT &amp; takaran jeruk nipis tercatat · Bunga utuh (tidak digiling)</span>
+              </div>
+
+              <div class="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Transparansi Data (A18)</span>
+                <span id="val-log-note" class="font-medium text-[#4C5370] sm:text-right">Foto cek sortir apa adanya &amp; catatan batch ditolak tampil dari Google Sheets (terkunci setelah disimpan)</span>
               </div>
 
               <div class="py-3 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                <span class="text-xs uppercase tracking-wider text-[#926936] font-semibold shrink-0">Kemasan &amp; Berat Bersih</span>
-                <span class="font-serif-editorial italic text-lg font-semibold text-[#5B6B2F] sm:text-right">DAUNARA Standing Pouch Berlapis Foil · Netto 40 g (Rp15.000)</span>
+                <span class="text-xs uppercase tracking-wider text-[#5B3FA7] font-semibold shrink-0">Kemasan &amp; Harga</span>
+                <span class="font-serif-editorial italic text-lg font-semibold text-[#2A4EB3] sm:text-right">Ngalang Standing Pouch Foil · Bunga Telang + Jeruk Nipis · Rp15.000 (P-IRT &amp; Halal)</span>
               </div>
             </div>
 
             <!-- Footer Bar -->
-            <div class="bg-[#F8F9F5] px-6 sm:px-8 py-4 border-t border-[#E2E6DC] flex flex-wrap items-center justify-between gap-3 text-xs text-[#5C5338]">
-              <span>Sumber data: <strong>Catatan KWT Malati Asih &amp; Aplikasi Duta Remaja</strong></span>
-              <button onclick="toggleQRModal()" class="inline-flex items-center gap-1.5 font-bold text-[#5B6B2F] hover:text-[#926936] underline cursor-pointer transition">
+            <div class="bg-[#F3F5FC] px-6 sm:px-8 py-4 border-t border-[#DFDDD4] flex flex-wrap items-center justify-between gap-3 text-xs text-[#4C5370]">
+              <span>Sumber data: <strong>Catatan KWT Malati Asih &amp; Google Sheets Akun UMKM Penjual</strong></span>
+              <button onclick="toggleQRModal()" class="inline-flex items-center gap-1.5 font-bold text-[#2A4EB3] hover:text-[#5B3FA7] underline cursor-pointer transition">
                 <span>Unduh QR Batch Ini</span>
               </button>
             </div>
@@ -353,91 +389,91 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- SECTION 3 — PROSES PRODUKSI (#proses)                                 -->
+  <!-- SECTION 3 — PROSES PRODUKSI 8 LANGKAH (#proses)                       -->
   <!-- ===================================================================== -->
   <section id="proses" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
     <div class="max-w-2xl mb-12 md:mb-16">
-      <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#5B6B2F] mb-3">
-        <span class="w-6 h-[2px] bg-[#9A9F46]"></span>
-        <span>02 · Pemeriksaan di Setiap Batch</span>
+      <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2A4EB3] mb-3">
+        <span class="w-6 h-[2px] bg-[#5B3FA7]"></span>
+        <span>02 · SOP 8 Langkah di Setiap Batch</span>
       </div>
-      <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#283118] tracking-editorial leading-tight">
-        Dari Kebun Bidara ke Cangkir Anda
+      <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1A2240] tracking-editorial leading-tight">
+        Dari Kebun Bunga Telang ke Cangkir Anda
       </h2>
-      <p class="text-sm sm:text-base text-[#5C5338] mt-3 leading-relaxed">
-        Tiga tahap pengolahan terukur oleh Ibu-ibu KWT Malati Asih dengan pencatatan aplikasi oleh Duta Remaja Karang Taruna agar aroma dan warna seduhan daun tetap terjaga.
+      <p class="text-sm sm:text-base text-[#4C5370] mt-3 leading-relaxed">
+        Delapan langkah pengolahan terukur oleh Ibu-ibu KWT Malati Asih dengan pencatatan digital oleh Duta Remaja (Karang Taruna &amp; siswa SMK) agar warna biru pekat, aroma khas, dan kualitas bunga utuh tetap terjaga.
       </p>
     </div>
 
     <!-- 3-Step Visual Editorial Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-8">
 
-      <!-- Step 1: Petik Pagi & Cek Mata 20 Daun -->
+      <!-- Step 1: Petik Pagi, Sortir 20 Bunga & Layukan -->
       <article class="botanical-surface rounded-3xl overflow-hidden flex flex-col justify-between">
         <div>
           <figure class="editorial-img-wrap aspect-[4/3] relative">
-            <img src="public/images/daunara/bidara-leaves.webp" alt="Detail daun bidara (Ziziphus mauritiana) segar" class="w-full h-full object-cover" loading="lazy" />
-            <div class="absolute top-3.5 left-3.5 bg-[#5B6B2F] text-[#FAF6EC] text-xs font-bold px-3 py-1 rounded-full">Tahap 01</div>
+            <img src="public/images/telang/telang-flower.jpg" alt="Detail bunga telang (Clitoria ternatea) biru pekat segar" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#2A4EB3] text-[#FFFFFF] text-xs font-bold px-3 py-1 rounded-full">Tahap 01</div>
           </figure>
           <div class="px-5 pt-2.5 pb-1">
-            <p class="text-[11px] italic text-[#5C5338]">Contoh tanaman bidara (Ziziphus mauritiana), bukan foto kebun KWT Malati Asih.</p>
+            <p class="text-[11px] italic text-[#4C5370]">Ilustrasi spesies bunga telang (Clitoria ternatea) segar, bukan foto kebun KWT Malati Asih (Foto: Wilfredor, CC0).</p>
           </div>
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
-            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#283118]">Petik Pagi &amp; Sortir 20 Daun</h3>
-            <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-              Daun ke-3 sampai ke-7 dari pucuk dipetik pagi hari setelah embun kering (minimal 7 hari pascasemprot pestisida nabati <strong>Kelompok Berlian</strong>). KWT Malati Asih mengecek langsung <strong>20 daun sampel</strong>; bila &lt;3 bergejala (serbuk putih, bercak, lubang, kuning), daun dicuci 2× air mengalir lalu dilayukan 1–2 jam di nampan <em>food-grade</em> tertutup.
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#1A2240]">Petik Pagi &amp; Sortir 20 Bunga</h3>
+            <p class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+              Bunga biru pekat yang mekar penuh dipetik pagi hari setelah embun kering (≥7 hari pascasemprot pestisida nabati). KWT mengecek 20 bunga sampel, membuang tangkai hijau dan bunga rusak ke kompos Kelompok Berlian/TPS 3R, lalu melayukannya di nampan tertutup.
             </p>
           </div>
         </div>
-        <div class="px-6 py-3.5 bg-[#F8F9F5] border-t border-[#E2E6DC] text-[11px] font-semibold text-[#5B6B2F] flex items-center justify-between">
-          <span>Daun ke-3 s.d. ke-7</span>
+        <div class="px-6 py-3.5 bg-[#F4F1E9] border-t border-[#DFDDD4] text-[11px] font-semibold text-[#2A4EB3] flex items-center justify-between">
+          <span>Bunga Mekar Biru Pekat</span>
           <span>Cek Mata 20 Sampel</span>
         </div>
       </article>
 
-      <!-- Step 2: Rak Jemur Tertutup Plastik UV -->
+      <!-- Step 2: Rak Jemur Plastik UV, Pengasapan KWT & Jeruk Nipis -->
       <article class="botanical-surface rounded-3xl overflow-hidden flex flex-col justify-between">
         <div>
           <figure class="editorial-img-wrap aspect-[4/3] relative">
-            <img src="public/images/daunara/leaf-processing.webp" alt="Gambaran proses pengolahan dan pengeringan daun teh" class="w-full h-full object-cover" loading="lazy" />
-            <div class="absolute top-3.5 left-3.5 bg-[#9A9F46] text-[#283118] text-xs font-bold px-3 py-1 rounded-full">Tahap 02</div>
+            <img src="public/images/telang/telang-dried.jpg" alt="Ilustrasi bunga telang kering utuh" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#5B3FA7] text-[#FFFFFF] text-xs font-bold px-3 py-1 rounded-full">Tahap 02</div>
           </figure>
           <div class="px-5 pt-2.5 pb-1">
-            <p class="text-[11px] italic text-[#5C5338]">Ilustrasi pengolahan daun teh, bukan foto dapur produksi KWT Malati Asih.</p>
+            <p class="text-[11px] italic text-[#4C5370]">Ilustrasi bunga telang kering utuh, bukan foto dapur produksi KWT Malati Asih (Foto: Fumikas Sagisavas, CC0).</p>
           </div>
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
-            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#283118]">Rak Jemur Tertutup Plastik UV</h3>
-            <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-              Di lereng 855 mdpl yang lembap saat hujan (jemur terbuka memakan 7–10 hari), daun dikeringkan di <strong>rak tertutup plastik UV 4 tingkat</strong> (efek rumah kaca menaikkan suhu &amp; melindungi dari hujan/debu tanpa listrik; nampan diputar atas–bawah tiap siang, target durasi hujan <strong>≤5 hari atau ≥30% lebih singkat</strong>, diuji banding dengan 2 termo-higrometer). Sengaja <strong>tidak memakai oven/dehydrator</strong> karena studi <em>Adhamatika &amp; Murtini (2021)</em> menunjukkan pengeringan sinar matahari menghasilkan fenol, flavonoid, tanin, antioksidan, dan skor kesukaan seduhan teh bidara tertinggi. Titik kering dicek dengan <strong>dua lapis cek kadar air ≤8%</strong> (oven gravimetri SNI 01-2891-1992 di lab kampus &amp; berat target sampel 100 g di desa).
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#1A2240]">Rak Plastik UV, Asap &amp; Jeruk Nipis</h3>
+            <p class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+              Di lereng lembap 855 mdpl, bunga dijemur di rak tertutup plastik UV 4 tingkat tanpa oven (target saat hujan ≤5 hari, menjaga aroma dan warna) sampai rapuh diremas. Setelah itu dilakukan pengasapan tradisional KWT dan pencampuran jeruk nipis segar dengan takaran tercatat per batch.
             </p>
           </div>
         </div>
-        <div class="px-6 py-3.5 bg-[#F8F9F5] border-t border-[#E2E6DC] text-[11px] font-semibold text-[#5B6B2F] flex items-center justify-between">
+        <div class="px-6 py-3.5 bg-[#F4F1E9] border-t border-[#DFDDD4] text-[11px] font-semibold text-[#5B3FA7] flex items-center justify-between">
           <span>Rak UV 4 Tingkat · Tanpa Oven</span>
-          <span>2 Lapis Cek Kadar Air ≤8%</span>
+          <span>Pengasapan &amp; Jeruk Nipis</span>
         </div>
       </article>
 
-      <!-- Step 3: Giling 2–5 mm, Segel & Label QR -->
+      <!-- Step 3: Kemas Bunga Utuh, Segel & Label P-IRT + QR -->
       <article class="botanical-surface rounded-3xl overflow-hidden flex flex-col justify-between">
         <div>
           <figure class="editorial-img-wrap aspect-[4/3] relative">
-            <img src="public/images/daunara/herbal-tea-production.webp" alt="Ilustrasi cangkir seduhan teh daun herbal" class="w-full h-full object-cover" loading="lazy" />
-            <div class="absolute top-3.5 left-3.5 bg-[#926936] text-[#FFFFFF] text-xs font-bold px-3 py-1 rounded-full">Tahap 03</div>
+            <img src="public/images/telang/telang-tea-shift.jpg" alt="Ilustrasi perubahan warna seduhan teh bunga telang dari biru ke ungu dengan jeruk nipis" class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-3.5 left-3.5 bg-[#FFCF79] text-[#1A2240] text-xs font-bold px-3 py-1 rounded-full">Tahap 03</div>
           </figure>
           <div class="px-5 pt-2.5 pb-1">
-            <p class="text-[11px] italic text-[#5C5338]">Ilustrasi sajian seduhan teh herbal.</p>
+            <p class="text-[11px] italic text-[#4C5370]">Ilustrasi seduhan teh bunga telang biru → ungu dengan jeruk nipis (Foto: Mx. Granger, CC0).</p>
           </div>
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
-            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#283118]">Giling 2–5 mm, Segel &amp; QR</h3>
-            <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-              Daun kering digiling seragam ukuran 2–5 mm, diayak dan diperiksa di atas nampan putih agar bersih dari batang atau kotoran. Dalam ≤2 jam setelah giling, teh ditimbang <strong>Netto 40 g (±2%, setara ±20 cangkir)</strong>, dikemas ke <em>standing pouch</em> foil dengan <em>impulse sealer</em>, disisihkan 1 kemasan arsip per batch, lalu dilabeli kode batch &amp; QR oleh Duta Remaja.
+            <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#1A2240]">Kemas Bunga Utuh, Izin &amp; QR</h3>
+            <p class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+              Bunga dikemas utuh (tidak digiling) ke dalam <em>standing pouch</em> foil, disisihkan 1 arsip per batch, lalu dilabeli kode batch, QR, serta No. P-IRT dan logo halal dari izin UMKM. Kantong bekasnya juga diterima kembali di Lapak Minggu untuk kerajinan plastik TPS 3R.
             </p>
           </div>
         </div>
-        <div class="px-6 py-3.5 bg-[#F8F9F5] border-t border-[#E2E6DC] text-[11px] font-semibold text-[#5B6B2F] flex items-center justify-between">
-          <span>Potongan 2–5 mm</span>
-          <span>Segel ≤2 Jam · 40 g</span>
+        <div class="px-6 py-3.5 bg-[#F4F1E9] border-t border-[#DFDDD4] text-[11px] font-semibold text-[#2A4EB3] flex items-center justify-between">
+          <span>Bunga Utuh · Tidak Digiling</span>
+          <span>P-IRT · Halal · QR</span>
         </div>
       </article>
 
@@ -445,134 +481,156 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- SECTION 4 — KISAH KWT & VARIAN KARTU PARSEL + PRODUK                  -->
+  <!-- SECTION 4 — KISAH DESA, VARIAN KARTU PARSEL & PRODUK                  -->
   <!-- ===================================================================== -->
-  <section id="kisah" class="bg-[#F8F9F5] py-16 md:py-24 border-y border-[#E2E6DC]">
+  <section id="kisah" class="bg-[#F4F1E9] py-16 md:py-24 border-y border-[#DFDDD4]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 space-y-16 md:space-y-20">
 
       <!-- Story Header -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
         <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#5B6B2F] mb-3">
-            <span class="w-6 h-[2px] bg-[#9A9F46]"></span>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2A4EB3] mb-3">
+            <span class="w-6 h-[2px] bg-[#5B3FA7]"></span>
             <span>03 · Kisah Desa Cinanjung</span>
           </div>
-          <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#283118] tracking-editorial leading-tight">
-            Ketekunan Ibu-Ibu KWT Malati Asih
-            <span class="block font-serif-editorial italic text-[#5B6B2F] font-semibold mt-1">
-              di Lereng Cinanjung, Sumedang
+          <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1A2240] tracking-editorial leading-tight">
+            Kolaborasi Warga Desa
+            <span class="block font-serif-editorial italic text-[#5B3FA7] font-semibold mt-1">
+              di Lereng Gunung Batu, Cinanjung
             </span>
           </h2>
         </div>
         <div class="lg:col-span-5">
-          <p class="text-sm sm:text-base text-[#5C5338] leading-relaxed">
-            Berdiri sejak tahun 2010 di ketinggian 855 mdpl di lereng perbukitan kawasan Wisata Gunung Batu, <strong>KWT Malati Asih</strong> berkolaborasi bersama <strong>Kelompok Berlian</strong>, <strong>Duta Remaja (Karang Taruna)</strong>, dan kelas alam <strong>Duta Cilik</strong> dengan semangat: <em>Remaja Menjual, Anak Belajar, Ibu KWT Memproduksi</em>.
+          <p class="text-sm sm:text-base text-[#4C5370] leading-relaxed">
+            Di ketinggian 855 mdpl kawasan Wisata Gunung Batu, KWT Malati Asih (aktif 16 tahun), UMKM penjual pemegang izin, Duta Remaja (Karang Taruna &amp; siswa SMK), serta Duta Cilik (TK–SD) bergerak bersama menjangkau pembeli luar desa sekaligus membangun kebiasaan memilah sampah sejak dini.
           </p>
         </div>
       </div>
 
-      <!-- Editorial Split Block 1: Kebun Lereng Cinanjung & Kelompok Berlian -->
+      <!-- Editorial Split Block 1: Kebun Lereng Cinanjung & Siklus Sirkular -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="lg:col-span-6 space-y-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure class="botanical-surface rounded-2xl overflow-hidden p-2">
               <div class="editorial-img-wrap rounded-xl aspect-[4/3]">
-                <img src="public/images/daunara/village-landscape.webp" alt="Lanskap pertanian hijau di Kabupaten Sumedang, Jawa Barat" class="w-full h-full object-cover" loading="lazy" />
+                <img src="public/images/telang/village-landscape.webp" alt="Lanskap pertanian hijau di Kabupaten Sumedang, Jawa Barat" class="w-full h-full object-cover" loading="lazy" />
               </div>
-              <figcaption class="p-2.5 text-[11px] text-[#5C5338] leading-snug">
-                <strong class="text-[#283118]">Foto Wilayah Regional:</strong> Lahan pertanian di Kabupaten Sumedang (Foto: Pak Andri Irawan, CC BY 4.0).
+              <figcaption class="p-2.5 text-[11px] text-[#4C5370] leading-snug">
+                <strong class="text-[#1A2240]">Foto Wilayah Regional:</strong> Lahan pertanian di Kabupaten Sumedang (Foto: Pak Andri Irawan, CC BY 4.0).
               </figcaption>
             </figure>
 
             <figure class="botanical-surface rounded-2xl overflow-hidden p-2">
               <div class="editorial-img-wrap rounded-xl aspect-[4/3]">
-                <img src="public/images/daunara/botanical-garden.webp" alt="Ilustrasi pohon bidara (Ziziphus mauritiana)" class="w-full h-full object-cover" loading="lazy" />
+                <img src="public/images/telang/telang-plant.jpg" alt="Ilustrasi tanaman merambat bunga telang (Clitoria ternatea)" class="w-full h-full object-cover" loading="lazy" />
               </div>
-              <figcaption class="p-2.5 text-[11px] text-[#5C5338] leading-snug">
-                <strong class="text-[#283118]">Ilustrasi Tanaman:</strong> Pohon bidara (<em>Ziziphus mauritiana</em>), bukan foto kebun Desa Cinanjung.
+              <figcaption class="p-2.5 text-[11px] text-[#4C5370] leading-snug">
+                <strong class="text-[#1A2240]">Ilustrasi Tanaman:</strong> Bunga telang (<em>Clitoria ternatea</em>), bukan foto kebun Desa Cinanjung (Foto: Vengolis, CC BY-SA 4.0).
               </figcaption>
             </figure>
           </div>
         </div>
 
         <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#5B6B2F]">Kebun Desa & Pupuk Kompos Kelompok Berlian</span>
-          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#283118] leading-snug">
-            Tumbuh di Lereng Perbukitan Gunung Batu
+          <span class="text-xs font-bold uppercase tracking-widest text-[#2A4EB3]">Kebun KWT, Kompos Kelompok Berlian &amp; TPS 3R</span>
+          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#1A2240] leading-snug">
+            Tumbuh di Lereng Gunung Batu, Kembali ke Tanah &amp; Kerajinan
           </h3>
-          <p class="text-sm text-[#5C5338] leading-relaxed">
-            Di lereng perbukitan kawasan Wisata Gunung Batu, Kecamatan Tanjungsari, Kabupaten Sumedang, para ibu di <strong>KWT Malati Asih</strong> telah merawat tanaman pangan dan pohon bidara sejak 2010. Kesuburan tanah di kebun dirawat dengan <strong>pupuk kompos dan pestisida nabati buatan Kelompok Berlian</strong> di Desa Cinanjung.
+          <p class="text-sm text-[#4C5370] leading-relaxed">
+            Di lereng perbukitan kawasan Wisata Gunung Batu, Kecamatan Tanjungsari, Kabupaten Sumedang, KWT Malati Asih merawat kebun bunga telang dan memproduksi sekitar ±50 kemasan/bulan untuk dipasarkan lewat UMKM penjual. Perawatan kebun didukung kompos dan pestisida nabati buatan Kelompok Berlian di Desa Cinanjung.
           </p>
-          <p class="text-sm text-[#5C5338] leading-relaxed">
-            Helai daun yang disortir keluar pada pemeriksaan 20 sampel tidak dibuang, melainkan dikembalikan ke unit kompos <strong>Kelompok Berlian</strong> dan <strong>TPS 3R</strong> setempat agar menyuburkan kembali kebun desa — sekaligus menjadi contoh daur ulang nyata di kelas anak.
+          <p class="text-sm text-[#4C5370] leading-relaxed">
+            Siklus lingkungannya tertutup rapi: bunga telang yang tidak lolos sortir 20 sampel dikembalikan menjadi kompos di Kelompok Berlian / TPS 3R untuk menanam biji telang baru, sedangkan kantong foil bekas diterima kembali di Lapak Minggu Gunung Batu untuk disalurkan ke kerajinan plastik TPS 3R.
           </p>
         </div>
       </div>
 
-      <!-- Editorial Split Block 2: Ibu KWT Memproduksi, Duta Remaja Menjual, Duta Cilik Belajar -->
+      <!-- Editorial Split Block 2: Rantai 4 Pelaksana Warga Desa -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="lg:col-span-6 order-2 lg:order-1 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#926936]">KWT Malati Asih · Duta Remaja · Duta Cilik</span>
-          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#283118] leading-snug">
-            Ibu KWT Memproduksi, Remaja Menjual &amp; Anak Ikut Belajar
+          <span class="text-xs font-bold uppercase tracking-widest text-[#5B3FA7]">KWT Malati Asih · UMKM Penjual · Duta Remaja · Duta Cilik</span>
+          <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#1A2240] leading-snug">
+            KWT Memproduksi, UMKM Memegang Izin &amp; Akun, Remaja Menjual ke Luar Desa
           </h3>
-          <p class="text-sm text-[#5C5338] leading-relaxed">
-            <strong>KWT Malati Asih</strong> memegang produksi dan kepemilikan penuh seluruh <strong>aset digital usaha (email Google, Shopee, WhatsApp Business, Instagram, aplikasi AppSheet, dan rekening/QRIS KWT dipegang Ketua + Bendahara KWT)</strong>. Tim <strong>Duta Remaja (≥5 aktif dari ≥7 remaja Karang Taruna yang dilatih)</strong> mengisi <strong>5 peran × (1 utama + 1 cadangan)</strong> lewat akses terpisah (sub-akun Shopee, perangkat tertaut WA, peran admin IG) dengan <strong>rekrutmen 2 magang tiap semester (Januari &amp; Juli, termasuk alumni Duta Cilik SMP)</strong> dan pencabutan akses di hari yang sama saat anggota purna tugas. Pembayaran masuk ke <strong>rekening/QRIS KWT</strong> (setoran tunai duta ≤H+2) dan direkap tiap tanggal 5: dari tiap kemasan <strong>Rp15.000 (40 g)</strong>, <strong>Rp3.000</strong> masuk kas modal kemasan, <strong>Rp1.500 (10%)</strong> untuk komisi Duta Remaja, <strong>Rp500</strong> ke Kas Duta Cilik, dan <strong>Rp10.000</strong> menjadi laba bersih KWT (80 kemasan terjual sudah membiayai 400 kemasan berikutnya).
-          </p>
-          <p class="text-sm text-[#5C5338] leading-relaxed">
-            Di sisi pendidikan, <strong>≥30 anak TK–SD peserta Duta Cilik</strong> mengikuti alur 4 kelas <strong>"Perjalanan Daun Bidara"</strong> yang dibiayai berkelanjutan oleh Kas Duta Cilik (Rp500/kemasan &amp; Rp1.000/parsel): <strong>(1) Kenal</strong> (13 Des: petik &amp; sortir daun bersama KWT, gambar kartu parsel Natal), <strong>(2) Pilah</strong> (20 Des: organik daun buangan vs anorganik plastik + kantong pilah &amp; kartu 14 hari), <strong>(3) Olah</strong> (3 Jan: kunjungan TPS 3R melihat kompos &amp; maggot), dan <strong>(4) Kembalikan</strong> (10 Jan: tanam bibit bidara dengan kompos TPS 3R di pot bambu bekas + gambar kartu Imlek/Lebaran). Dampaknya diukur dengan <strong>tes pilah 10 kartu bergambar</strong> sebelum–sesudah kelas (target rata-rata ≥8/10) dan kartu kebiasaan 14 hari berparaf orang tua.
+          <p class="text-sm text-[#4C5370] leading-relaxed">
+            Agar usaha tetap berjalan mandiri, seluruh akun digital serta rekening/QRIS terdaftar atas nama <strong>UMKM penjual pemegang izin</strong>. Duta Remaja (Karang Taruna &amp; siswa SMK) membantu memasarkan produk ke pembeli luar desa lewat 5 kanal resmi serta mencatat setiap transaksi secara digital.
           </p>
 
-          <!-- Positioning Produk & Kesiapan P-IRT -->
-          <div class="bg-[#FFFFFF] border border-[#E2E6DC] border-l-4 border-l-[#5B6B2F] p-5 rounded-r-2xl my-4 space-y-1.5">
-            <div class="text-[11px] font-bold uppercase tracking-wider text-[#5B6B2F]">Positioning Pasar, 5 Kanal Jual &amp; Kesiapan P-IRT</div>
-            <p class="text-sm text-[#283118] leading-relaxed">
-              DAUNARA diposisikan sebagai <strong>teh daun bidara jemur matahari dari kebun KWT yang asal-usulnya terlacak lewat QR untuk hadiah &amp; oleh-oleh</strong> (tanpa klaim khasiat medis atau ruqyah). Dengan isi <strong>40 g (Rp15.000 = Rp750/cangkir untuk ±20 cangkir)</strong>, harganya setara teh celup bidara termurah di pasaran (Rp650–Rp1.750/cangkir) namun unggul pada kejelasan batch &amp; cerita desa. Dipasarkan lewat <strong>5 kanal</strong>: Lapak Minggu Gunung Batu (cicip gratis), WhatsApp Business KWT, titip jual 4 titik kampus/kantor, Shopee KWT, dan Instagram KWT, berdampingan dengan uji lab kampus serta pemberkasan SPP-IRT (target 31 Jan 2027).
+          <!-- Compact 4-Class Duta Cilik Card Grid -->
+          <div class="bg-[#FFFFFF] border border-[#DFDDD4] rounded-2xl p-4 space-y-2.5">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#2A4EB3]">4 Kelas Alam Duta Cilik ("Perjalanan Bunga Telang")</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#4C5370]">
+              <div class="bg-[#F4F1E9] rounded-xl p-2.5"><span class="font-bold text-[#1A2240]">1. Kenal:</span> Petik telang, eksperimen biru → ungu (jeruk nipis) &amp; hijau (sabun), gambar kartu parsel.</div>
+              <div class="bg-[#F4F1E9] rounded-xl p-2.5"><span class="font-bold text-[#1A2240]">2. Pilah:</span> Pisah organik vs plastik, kumpul kantong teh bekas, &amp; kartu kebiasaan 14 hari.</div>
+              <div class="bg-[#F4F1E9] rounded-xl p-2.5"><span class="font-bold text-[#1A2240]">3. Olah:</span> Kunjungan TPS 3R melihat pengolahan kompos, maggot, dan cacah botol.</div>
+              <div class="bg-[#F4F1E9] rounded-xl p-2.5"><span class="font-bold text-[#1A2240]">4. Kembalikan:</span> Tanam biji telang dengan kompos TPS 3R di pot bambu bekas + kartu Lebaran.</div>
+            </div>
+          </div>
+
+          <!-- Positioning Produk Ringkas -->
+          <div class="bg-[#FFFFFF] border border-[#DFDDD4] border-l-4 border-l-[#2A4EB3] p-4 rounded-r-2xl space-y-1">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-[#2A4EB3]">Positioning Pasar &amp; 5 Kanal Penjualan</div>
+            <p class="text-xs sm:text-sm text-[#1A2240] leading-relaxed">
+              Diposisikan sebagai <strong>teh bunga telang + jeruk nipis untuk hadiah &amp; oleh-oleh</strong> (Rp15.000/kemasan, sudah P-IRT &amp; halal) tanpa klaim khasiat medis — tersedia di Lapak Minggu Gunung Batu, katalog WA Business, titip jual 2 titik (Jatinangor &amp; Kec. Tanjungsari), Shopee, dan Instagram.
             </p>
           </div>
+
+          <!-- Collapsible Governance, Profit Share & Target Metrics -->
+          <details class="bg-[#FFFFFF] border border-[#DFDDD4] rounded-xl p-4 text-xs text-[#4C5370] group">
+            <summary class="cursor-pointer font-bold text-[#1A2240] flex items-center justify-between gap-2 list-none">
+              <span>Lihat rincian tata kelola akun, pembagian hasil &amp; target 6 minggu</span>
+              <span class="text-[#2A4EB3] text-[11px] font-semibold group-open:hidden">+ Buka</span>
+              <span class="text-[#5B3FA7] text-[11px] font-semibold hidden group-open:inline">− Tutup</span>
+            </summary>
+            <ul class="mt-3 pt-3 border-t border-[#DFDDD4]/70 space-y-1.5 list-disc list-inside leading-relaxed">
+              <li><span class="font-semibold text-[#1A2240]">Pembagian Rp15.000/kemasan:</span> Rp1.500 (10%) komisi Duta Remaja, Rp500 Kas Duta Cilik, dan Rp13.000 ke UMKM penjual (termasuk bayar teh ke KWT Malati Asih &amp; sisihan Rp2.000 kas modal kemasan).</li>
+              <li><span class="font-semibold text-[#1A2240]">Regenerasi Duta:</span> ≥5 duta aktif (dari ≥7 dilatih) mengisi 5 peran × (1 utama + 1 cadangan), rekrutmen 2 magang tiap Jan &amp; Jul (termasuk alumni Duta Cilik SMP), serta pencabutan akses di hari yang sama saat berhenti.</li>
+              <li><span class="font-semibold text-[#1A2240]">Target Program (8 Des–21 Jan):</span> ≥60 kemasan (40 eceran + 10 parsel; ≥30 ke luar desa; omzet ≈Rp1,43 juta) sehingga produksi KWT naik dari ±50 menjadi ≥70 kemasan/bulan, plus ≥30 anak TK–SD peserta kelas alam.</li>
+            </ul>
+          </details>
         </div>
 
         <div class="lg:col-span-6 order-1 lg:order-2">
           <figure class="botanical-surface rounded-3xl overflow-hidden p-3">
             <div class="editorial-img-wrap rounded-2xl aspect-[4/3]">
-              <img src="public/images/daunara/women-farming.webp" alt="Ilustrasi kolaborasi kelompok petani perempuan Indonesia" class="w-full h-full object-cover" loading="lazy" />
+              <img src="public/images/telang/women-farming.webp" alt="Ilustrasi kolaborasi kelompok petani perempuan Indonesia" class="w-full h-full object-cover" loading="lazy" />
             </div>
-            <figcaption class="p-3 text-xs text-[#5C5338] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <span><strong class="text-[#283118]">Ilustrasi:</strong> Petani perempuan Indonesia, bukan foto anggota KWT Malati Asih.</span>
-              <span class="text-[11px] text-[#5B6B2F] shrink-0">Foto: Jaljog (CC BY-SA 4.0)</span>
+            <figcaption class="p-3 text-xs text-[#4C5370] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span><strong class="text-[#1A2240]">Ilustrasi:</strong> Petani perempuan Indonesia, bukan foto anggota KWT Malati Asih.</span>
+              <span class="text-[11px] text-[#2A4EB3] shrink-0">Foto: Jaljog (CC BY-SA 4.0)</span>
             </figcaption>
           </figure>
         </div>
       </div>
 
       <!-- ================================================================= -->
-      <!-- VARIAN KARTU UCAPAN PARSEL HARI RAYA (#kartu-ucapan) — Poin 13   -->
+      <!-- VARIAN KARTU UCAPAN PARSEL HARI RAYA (#kartu-ucapan)              -->
       <!-- ================================================================= -->
       <div id="kartu-ucapan" class="botanical-surface rounded-3xl p-6 sm:p-10 md:p-12 space-y-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
           <div class="lg:col-span-7 space-y-2">
-            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#5B6B2F]">
-              <span class="w-6 h-[2px] bg-[#9A9F46]"></span>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2A4EB3]">
+              <span class="w-6 h-[2px] bg-[#5B3FA7]"></span>
               <span>Parsel Hari Raya · Lereng Gunung Batu Cinanjung</span>
             </div>
-            <h3 class="font-serif-display text-2xl sm:text-4xl font-semibold text-[#283118] leading-tight">
-              Varian Kartu Ucapan &amp; Gambar Cerita Anak
+            <h3 class="font-serif-display text-2xl sm:text-4xl font-semibold text-[#1A2240] leading-tight">
+              Varian Kartu Ucapan &amp; Gambar Cerita Duta Cilik
             </h3>
-            <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-              Parsel DAUNARA ditujukan sebagai hantaran sosial kantor, kampus, maupun keluarga dengan kartu ucapan musiman (Natal/Tahun Baru, Imlek, dan Lebaran) beserta ilustrasi gambar tangan anak-anak <strong>Duta Cilik Desa Cinanjung</strong>. Pemesanan parsel memakai sistem <em>pre-order</em> (DP 50%) untuk menjaga jadwal penjemuran rak plastik UV.
+            <p class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+              Parsel Ngalang ditujukan sebagai hantaran kantor, kampus, maupun keluarga dengan kartu ucapan musiman bergambar karya tangan anak-anak Duta Cilik dan QR telusur batch. Semua momen menggunakan sistem <em>pre-order</em> DP 50% (untuk pengadaan kotak), komisi duta 10%, Rp1.000/parsel ke Kas Duta Cilik, dan hanya diisi teh dari batch lolos cek SOP.
             </p>
           </div>
           <div class="lg:col-span-5">
-            <div class="text-[11px] font-bold uppercase tracking-wider text-[#926936] mb-2">Pilih Momen Kartu Ucapan</div>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-[#5B3FA7] mb-2">Pilih Momen Kartu Ucapan</div>
             <div class="grid grid-cols-3 gap-2" role="tablist" aria-label="Pilih Momen Parsel">
-              <button onclick="setMoment('nataru')" id="btn-moment-nataru" class="py-2.5 px-2.5 rounded-xl text-xs font-bold bg-[#5B6B2F] text-[#FFFFFF] transition cursor-pointer">
-                Natal & Tahun Baru
+              <button onclick="setMoment('nataru')" id="btn-moment-nataru" class="py-2.5 px-2 rounded-xl text-xs font-bold bg-[#2A4EB3] text-[#FFFFFF] transition cursor-pointer">
+                Natal &amp; Tahun Baru
               </button>
-              <button onclick="setMoment('imlek')" id="btn-moment-imlek" class="py-2.5 px-2.5 rounded-xl text-xs font-semibold bg-[#F8F9F5] border border-[#E2E6DC] text-[#283118] hover:bg-[#FFFFFF] transition cursor-pointer">
-                Imlek
-              </button>
-              <button onclick="setMoment('lebaran')" id="btn-moment-lebaran" class="py-2.5 px-2.5 rounded-xl text-xs font-semibold bg-[#F8F9F5] border border-[#E2E6DC] text-[#283118] hover:bg-[#FFFFFF] transition cursor-pointer">
+              <button onclick="setMoment('lebaran')" id="btn-moment-lebaran" class="py-2.5 px-2 rounded-xl text-xs font-semibold bg-[#F4F1E9] border border-[#DFDDD4] text-[#1A2240] hover:bg-[#FFFFFF] transition cursor-pointer">
                 Lebaran
+              </button>
+              <button onclick="setMoment('imlek')" id="btn-moment-imlek" class="py-2.5 px-2 rounded-xl text-xs font-semibold bg-[#F4F1E9] border border-[#DFDDD4] text-[#1A2240] hover:bg-[#FFFFFF] transition cursor-pointer">
+                Imlek (UMKM)
               </button>
             </div>
           </div>
@@ -580,144 +638,204 @@
 
         <!-- Greeting Card Preview Box -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          <div class="lg:col-span-7 bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-4">
+          <div class="lg:col-span-7 bg-[#F4F1E9] border border-[#DFDDD4] rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-4">
             <div class="space-y-3">
               <div class="flex flex-wrap items-center justify-between gap-2">
-                <span id="moment-badge" class="inline-block bg-[#5B6B2F] text-[#FAF6EC] text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                  Edisi Natal & Tahun Baru
+                <span id="moment-badge" class="inline-block bg-[#2A4EB3] text-[#FFFFFF] text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  Edisi Natal &amp; Tahun Baru · Rp65.000
                 </span>
-                <span id="moment-angle" class="text-[11px] font-semibold text-[#926936]">
-                  Sudut Cerita: Kehangatan Keluarga di Akhir & Awal Tahun
+                <span id="moment-angle" class="text-[11px] font-semibold text-[#5B3FA7]">
+                  Target Program: 6 Parsel Mini · Kartu Akhir Tahun Gambar Duta Cilik
                 </span>
               </div>
-              <h4 id="moment-title" class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#283118] leading-snug">
-                Secangkir Hangat dari Lereng Cinanjung untuk Momen Natal & Tahun Baru
+              <h4 id="moment-title" class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#1A2240] leading-snug">
+                Hadiah Hangat dari Lereng Cinanjung untuk Momen Natal &amp; Tahun Baru
               </h4>
-              <p id="moment-greeting" class="font-serif-editorial italic text-xl sm:text-2xl text-[#5B6B2F] leading-relaxed bg-[#FFFFFF] border border-[#E2E6DC] rounded-xl p-5">
-                "Selamat merayakan Natal dan menyambut Tahun Baru. Semoga kehangatan seduhan daun bidara dari lereng perbukitan Cinanjung ini menemani waktu berkumpul Anda bersama keluarga dan orang-orang terdekat."
+              <p id="moment-greeting" class="font-serif-editorial italic text-xl sm:text-2xl text-[#2A4EB3] leading-relaxed bg-[#FFFFFF] border border-[#DFDDD4] rounded-xl p-5">
+                "Selamat merayakan Natal dan menyambut Tahun Baru. Semoga secangkir teh bunga telang yang berubah biru ke ungu dari lereng Cinanjung ini menemani hangatnya waktu berkumpul bersama keluarga dan rekan."
               </p>
-              <p id="moment-story" class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-                Di tengah udara sejuk penghujung tahun, secangkir teh hangat sering menjadi alasan untuk duduk sejenak dan berbincang santai. Parsel ini berasal dari hasil panen Ibu-ibu KWT Malati Asih di lereng perbukitan kawasan Wisata Gunung Batu, Desa Cinanjung.
+              <p id="moment-story" class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+                Disiapkan dalam pilihan Parsel Mini (Rp65.000) berisi 2 kemasan Ngalang (Teh Bunga Telang) + kotak kraft &amp; kartu akhir tahun netral gambar Duta Cilik (PO 8–18 Des, kirim 21–31 Des) untuk divisi Grup Astra &amp; ACC, dosen/staf kampus Jatinangor, serta keluarga.
               </p>
             </div>
           </div>
 
-          <div class="lg:col-span-5 botanical-olive-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-5">
+          <div class="lg:col-span-5 telang-hero-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-5">
             <div class="space-y-2">
-              <span class="text-[11px] uppercase tracking-widest text-[#EFDCBA] font-bold">Pilihan Paket Parsel</span>
-              <h4 class="font-serif-display text-2xl font-semibold text-[#FFFFFF]">Siap Dikirim dengan Kartu Momen</h4>
+              <span class="text-[11px] uppercase tracking-widest text-[#FFCF79] font-bold">Pilihan Paket Parsel (Target 10 Parsel / 6 Minggu)</span>
+              <h4 class="font-serif-display text-2xl font-semibold text-[#FFFFFF]">Siap Dikirim dengan Kartu Duta Cilik</h4>
             </div>
             <div class="space-y-3 text-xs">
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-xl p-4 space-y-1">
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/30 rounded-xl p-4 space-y-1">
                 <div class="flex items-center justify-between gap-2">
-                  <span class="font-bold text-[#EFDCBA]">Parsel Mini · Rp65.000</span>
-                  <span class="text-[11px] text-[#EFDCBA]/80">Nataru (10) &amp; Imlek (5)</span>
+                  <span class="font-bold text-[#FFCF79]">Parsel Mini · Rp65.000</span>
+                  <span class="text-[11px] text-[#F4F1E9]/85">Nataru (6 Mini) · Imlek (UMKM)</span>
                 </div>
-                <p class="text-[#FAF6EC]/85 leading-relaxed"><strong>2 kemasan Teh Daun Bidara DAUNARA (@ 40 g)</strong> + kotak kraft &amp; kertas isi + kartu ucapan gambar Duta Cilik &amp; QR (komisi duta 10% Rp6.500, Kas Duta Cilik Rp1.000, laba KWT Rp26.500).</p>
+                <p class="text-[#F4F1E9]/90 leading-relaxed">2 kemasan Ngalang (Teh Bunga Telang) + kotak kraft &amp; kertas isi + kartu ucapan gambar Duta Cilik &amp; QR (komisi duta 10% Rp6.500, Kas Duta Cilik Rp1.000, Rp32.500 + sisihan kotak ke UMKM &amp; KWT).</p>
               </div>
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-xl p-4 space-y-1">
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/30 rounded-xl p-4 space-y-1">
                 <div class="flex items-center justify-between gap-2">
-                  <span class="font-bold text-[#EFDCBA]">Parsel Lengkap · Rp110.000</span>
-                  <span class="text-[11px] text-[#EFDCBA]/80">Edisi Lebaran (≥5)</span>
+                  <span class="font-bold text-[#FFCF79]">Parsel Lengkap · Rp110.000</span>
+                  <span class="text-[11px] text-[#F4F1E9]/85">Lebaran (4 Early Bird s.d. 21 Jan)</span>
                 </div>
-                <p class="text-[#FAF6EC]/85 leading-relaxed"><strong>2 kemasan Teh Daun Bidara (@ 40 g)</strong> + <strong>Abon Pepaya KWT Malati Asih</strong> + kotak kraft &amp; kartu cerita gambar anak (komisi duta 10% Rp11.000, Kas Duta Cilik Rp1.000, laba KWT Rp47.000).</p>
+                <p class="text-[#F4F1E9]/90 leading-relaxed">2 kemasan Ngalang (Teh Bunga Telang) + 1 Abon Pepaya Cinanjung (label halal sudah ada) + kotak kraft &amp; kartu gambar anak; <em>early bird</em> gratis kartu bernama pemesan (komisi duta 10% Rp11.000, Kas Duta Cilik Rp1.000).</p>
               </div>
             </div>
-            <a id="wa-parcel" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#EFDCBA] hover:bg-[#FFFFFF] text-[#283118] font-bold text-xs py-3 px-4 rounded-full transition">
+            <a id="wa-parcel" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#FFCF79] hover:bg-[#FFFFFF] text-[#1A2240] font-bold text-xs py-3 px-4 rounded-full transition">
               <span>Pre-Order Parsel (DP 50%) via Duta Remaja</span>
             </a>
-            <p id="wa-parcel-demo-hint" class="text-[11px] text-[#FAF6EC]/80 text-center leading-snug">
-              Mode prototipe: Parsel Mini Rp65.000 &amp; Lengkap Rp110.000 (DP 50%) dikonfirmasi lewat WhatsApp usaha KWT.
+            <p id="wa-parcel-demo-hint" class="text-[11px] text-[#F4F1E9]/85 text-center leading-snug">
+              Mode prototipe: Parsel Mini Rp65.000 &amp; Lengkap Rp110.000 (DP 50%) dikonfirmasi lewat WhatsApp usaha UMKM penjual.
             </p>
           </div>
         </div>
       </div>
 
       <!-- ================================================================= -->
-      <!-- PRODUCT SHOWCASE (#produk) — Moodboard Standing Pouch + Komposisi  -->
+      <!-- PRODUCT SHOWCASE (#produk) — Standing Pouch Slide 11 + Biru->Ungu -->
       <!-- ================================================================= -->
-      <div id="produk" class="botanical-olive-card rounded-3xl p-6 sm:p-10 md:p-12 border border-[#9A9F46]/40 relative overflow-hidden">
+      <div id="produk" class="telang-deep-card rounded-3xl p-6 sm:p-10 md:p-12 border border-[#5B3FA7]/40 relative overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
 
           <div class="lg:col-span-6 space-y-5">
-            <div class="inline-flex items-center gap-2 bg-[#EFDCBA] text-[#283118] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              Standing Pouch Berlapis Foil · Netto 40 g · Rp15.000
+            <div class="inline-flex items-center gap-2 bg-[#FFCF79] text-[#1A2240] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+              Standing Pouch Foil · Bunga Utuh · Rp15.000 · P-IRT &amp; Halal
             </div>
             <h3 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#FFFFFF] leading-tight">
-              DAUNARA Teh Daun Bidara
-              <span class="block font-serif-editorial italic text-[#EFDCBA] font-normal text-3xl sm:text-4xl mt-1">
-                Teh Kebun 855 mdpl &amp; Oleh-Oleh Berkode QR
+              Ngalang
+              <span class="block font-serif-editorial italic text-[#FFCF79] font-normal text-3xl sm:text-4xl mt-1">
+                Teh Bunga Telang + Jeruk Nipis · Biru → Ungu
               </span>
             </h3>
-            <p class="text-sm text-[#FAF6EC]/85 leading-relaxed">
-              Dikemas dalam <em>standing pouch</em> foil berpelindung kelembapan dengan klip <em>ziplock</em>, rajangan daun bidara pilihan ini diposisikan sebagai teh hadiah dan oleh-oleh kebun desa yang asal-usulnya terlacak lewat QR (bukan daun curah biasa), berisi <strong>40 g untuk ±20 cangkir seduhan hangat (Rp750/cangkir)</strong>.
+            <p class="text-sm text-[#F4F1E9]/90 leading-relaxed">
+              Dikemas dalam <em>standing pouch</em> foil berpelindung kelembapan dengan No. P-IRT, logo halal, dan QR telusur batch, teh bunga telang utuh ini diposisikan sebagai hadiah &amp; oleh-oleh khas lereng Gunung Batu dengan harga <strong>Rp15.000/kemasan</strong> (berada di tengah pasar Rp6.000–Rp35.405; berat bersih mengikuti kemasan berizin pada uji coba 1–7 Des).
             </p>
 
-            <!-- Spec Grid (No misleading "100% Terverifikasi" or organic claims) -->
+            <!-- Spec Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-2xl p-4">
-                <div class="text-xs font-bold text-[#EFDCBA] uppercase tracking-wider">Komposisi Tunggal</div>
-                <p class="text-xs text-[#FAF6EC]/80 mt-1 leading-relaxed">
-                  Rajangan daun bidara (<em>Ziziphus mauritiana</em>) kering jemur matahari tanpa pewarna, tanpa pengawet, dan tanpa klaim khasiat medis/ruqyah.
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/25 rounded-2xl p-4">
+                <div class="text-xs font-bold text-[#FFCF79] uppercase tracking-wider">Komposisi &amp; Ubah Warna</div>
+                <p class="text-xs text-[#F4F1E9]/85 mt-1 leading-relaxed">
+                  Bunga telang (<em>Clitoria ternatea</em>) utuh jemur matahari (tidak digiling) + jeruk nipis (biru → ungu), menyalin komposisi izin UMKM, tanpa klaim khasiat medis.
                 </p>
               </div>
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-2xl p-4">
-                <div class="text-xs font-bold text-[#EFDCBA] uppercase tracking-wider">Klip Ziplock &amp; Nilai Ekonomis</div>
-                <p class="text-xs text-[#FAF6EC]/80 mt-1 leading-relaxed">
-                  Menjaga daun tetap kering untuk ±20 cangkir per pouch 40 g (@ 2 g/cangkir = <strong>Rp750/cangkir</strong>, setara teh celup bidara termurah di pasaran).
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/25 rounded-2xl p-4">
+                <div class="text-xs font-bold text-[#FFCF79] uppercase tracking-wider">Legalitas &amp; Daur Ulang Kantong</div>
+                <p class="text-xs text-[#F4F1E9]/85 mt-1 leading-relaxed">
+                  NIB, P-IRT &amp; sertifikat halal sudah dimiliki sehingga penjualan dimulai 8 Des. Kantong bekas diterima kembali di Lapak Minggu untuk kerajinan plastik TPS 3R.
                 </p>
               </div>
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-2xl p-4">
-                <div class="text-xs font-bold text-[#EFDCBA] uppercase tracking-wider">5 Kanal Resmi Usaha KWT</div>
-                <p class="text-xs text-[#FAF6EC]/80 mt-1 leading-relaxed">
-                  Tersedia di Lapak Minggu Gunung Batu, WhatsApp Business KWT, titip jual 4 titik kampus/kantor, Shopee KWT (Rp16.500–Rp17.000), dan Instagram KWT.
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/25 rounded-2xl p-4">
+                <div class="text-xs font-bold text-[#FFCF79] uppercase tracking-wider">5 Kanal Resmi UMKM &amp; Duta</div>
+                <p class="text-xs text-[#F4F1E9]/85 mt-1 leading-relaxed">
+                  Lapak Minggu Gunung Batu (demo warna &amp; cicip), katalog WA Business, titip jual 2 titik (kampus Jatinangor &amp; Kec. Tanjungsari), Shopee (Rp16.500–Rp17.000), &amp; Instagram.
                 </p>
               </div>
-              <div class="bg-[#445222] border border-[#9A9F46]/40 rounded-2xl p-4">
-                <div class="text-xs font-bold text-[#EFDCBA] uppercase tracking-wider">Dampak Tiap Kemasan</div>
-                <p class="text-xs text-[#FAF6EC]/80 mt-1 leading-relaxed">
-                  Dari harga Rp15.000: laba bersih KWT Rp10.000, kas modal kemasan Rp3.000, komisi Duta Remaja Rp1.500 (10%), dan Kas Duta Cilik Rp500.
+              <div class="bg-[#162760]/70 border border-[#FFCF79]/25 rounded-2xl p-4">
+                <div class="text-xs font-bold text-[#FFCF79] uppercase tracking-wider">Alokasi Tiap Kemasan Rp15.000</div>
+                <p class="text-xs text-[#F4F1E9]/85 mt-1 leading-relaxed">
+                  Rp1.500 (10%) komisi Duta Remaja, Rp500 ke Kas Duta Cilik, dan Rp13.000 ke UMKM penjual (termasuk bayar teh ke KWT &amp; sisihan Rp2.000 kas modal kemasan).
                 </p>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5 items-center">
-            <div class="bg-[#FFFFFF] text-[#283118] rounded-2xl p-5 flex flex-col items-center text-center shadow-lg">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B6B2F] mb-2">Desain Kemasan Pouch</span>
-              <svg class="w-40 h-52 my-1" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi Standing Pouch DAUNARA">
-                <ellipse cx="100" cy="246" rx="66" ry="8" fill="#283118" fill-opacity="0.16"/>
-                <path d="M36 22C36 16.5 40.5 12 46 12H154C159.5 12 164 16.5 164 22V232C164 238.6 158.6 244 152 244H48C41.4 244 36 238.6 36 232V22Z" fill="#EFDCBA" stroke="#926936" stroke-opacity="0.45" stroke-width="1.5"/>
-                <line x1="42" y1="34" x2="158" y2="34" stroke="#926936" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <path d="M38 14C52 28 68 24 76 12Z" fill="#5B6B2F" fill-opacity="0.85"/>
-                <path d="M72 12C82 30 102 28 112 12Z" fill="#9A9F46" fill-opacity="0.85"/>
-                <path d="M118 12C130 28 150 28 162 14Z" fill="#5B6B2F" fill-opacity="0.85"/>
-                <path d="M95 58C93 62 97 65 95 69" stroke="#9A9F46" stroke-width="2" stroke-linecap="round"/>
-                <path d="M103 56C101 60 105 64 103 69" stroke="#9A9F46" stroke-width="2" stroke-linecap="round"/>
-                <path d="M84 74H114V80C114 88 107.5 94 99 94C90.5 94 84 88 84 80V74Z" fill="#5B6B2F"/>
-                <path d="M114 76H117C119.5 76 121 77.5 121 80C121 82.5 119.5 84 117 84H113" stroke="#5B6B2F" stroke-width="2.2"/>
-                <text x="100" y="109" text-anchor="middle" fill="#5B6B2F" font-family="Georgia, serif" font-size="11" font-weight="bold" letter-spacing="3">DAUNARA</text>
-                <rect x="48" y="122" width="104" height="36" rx="6" fill="#3B4321" stroke="#926936" stroke-width="1"/>
-                <circle cx="68" cy="140" r="9" fill="#5B6B2F" fill-opacity="0.6"/>
-                <circle cx="102" cy="138" r="11" fill="#926936" fill-opacity="0.5"/>
-                <circle cx="130" cy="142" r="8" fill="#9A9F46" fill-opacity="0.45"/>
-                <text x="100" y="143" text-anchor="middle" fill="#EFDCBA" font-family="sans-serif" font-size="7" letter-spacing="1.5">TEH DAUN BIDARA</text>
-                <text x="100" y="182" text-anchor="middle" fill="#5B6B2F" font-family="Georgia, serif" font-size="14" font-weight="bold" letter-spacing="3.5">DAUNARA</text>
-                <text x="100" y="195" text-anchor="middle" fill="#926936" font-family="sans-serif" font-size="6.5" letter-spacing="1.2">KWT MALATI ASIH · NETTO 40G</text>
-                <path d="M38 242C52 224 72 226 84 244Z" fill="#5B6B2F" fill-opacity="0.85"/>
-                <path d="M80 244C96 224 116 226 128 244Z" fill="#9A9F46" fill-opacity="0.85"/>
-                <path d="M122 244C138 226 154 228 162 242Z" fill="#5B6B2F" fill-opacity="0.85"/>
+            <!-- Standing Pouch SVG modeled directly after Slide 10 & Lampiran A24 of revisi9 -->
+            <div class="bg-[#FFFFFF] text-[#1A2240] rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-lg">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-[#2A4EB3] mb-2">Desain Kemasan Ngalang (A24)</span>
+              <svg class="w-full max-w-[230px] h-auto my-1" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi Kemasan Depan dan Belakang Ngalang Desa Cinanjung">
+                <defs>
+                  <linearGradient id="ngalangPouchGrad" x1="12" y1="8" x2="108" y2="178" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#2A4EB3" />
+                    <stop offset="100%" stop-color="#5B3FA7" />
+                  </linearGradient>
+                  <linearGradient id="ngalangBarGrad" x1="138" y1="0" x2="218" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#2A4EB3" />
+                    <stop offset="100%" stop-color="#5B3FA7" />
+                  </linearGradient>
+                  <clipPath id="frontPouchClip">
+                    <rect x="12" y="8" width="96" height="170" rx="6" />
+                  </clipPath>
+                  <clipPath id="backPouchClip">
+                    <rect x="130" y="8" width="98" height="170" rx="6" />
+                  </clipPath>
+                </defs>
+
+                <!-- Shadows -->
+                <ellipse cx="60" cy="182" rx="44" ry="4" fill="#1A2240" fill-opacity="0.14"/>
+                <ellipse cx="179" cy="182" rx="45" ry="4" fill="#1A2240" fill-opacity="0.14"/>
+
+                <!-- LEFT: FRONT POUCH (Gradient Blue -> Purple + Cropped Outline Flower + Lime Pistil) -->
+                <g clip-path="url(#frontPouchClip)">
+                  <rect x="12" y="8" width="96" height="170" rx="6" fill="url(#ngalangPouchGrad)"/>
+                  <rect x="12" y="8" width="96" height="11" fill="#FFFFFF" fill-opacity="0.12"/>
+                  <!-- Cropped White Outline 5-Petal Flower -->
+                  <g transform="translate(80 62)" stroke="#FFFFFF" stroke-opacity="0.72" stroke-width="1.3">
+                    <ellipse cx="0" cy="-24" rx="11" ry="20" transform="rotate(-15)"/>
+                    <ellipse cx="0" cy="-24" rx="11" ry="20" transform="rotate(57)"/>
+                    <ellipse cx="0" cy="-24" rx="11" ry="20" transform="rotate(129)"/>
+                    <ellipse cx="0" cy="-24" rx="11" ry="20" transform="rotate(201)"/>
+                    <ellipse cx="0" cy="-24" rx="11" ry="20" transform="rotate(273)"/>
+                  </g>
+                  <!-- Single Lime Green Accent Pistil (A24) -->
+                  <circle cx="80" cy="62" r="4.5" fill="#9FE034"/>
+                  <!-- Front Typography (Single Left Margin) -->
+                  <text x="20" y="29" fill="#FFFFFF" fill-opacity="0.92" font-family="sans-serif" font-size="5.6" letter-spacing="1.6">TEH BUNGA TELANG</text>
+                  <text x="20" y="138" fill="#FFFFFF" font-family="Georgia, serif" font-size="18.5" font-weight="bold">Ngalang</text>
+                  <text x="20" y="150" fill="#F4F1E9" fill-opacity="0.95" font-family="sans-serif" font-size="6.2">bunga telang + jeruk nipis</text>
+                  <line x1="20" y1="158" x2="100" y2="158" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.7"/>
+                  <text x="20" y="169" fill="#FFFFFF" fill-opacity="0.88" font-family="sans-serif" font-size="5.4" letter-spacing="1.3">CINANJUNG · SUMEDANG</text>
+                </g>
+
+                <!-- RIGHT: BACK POUCH (Warm Cream #F4F1E9 + Story + Blue->Purple Bar + QR TT-2612-01) -->
+                <g clip-path="url(#backPouchClip)">
+                  <rect x="130" y="8" width="98" height="170" rx="6" fill="#F4F1E9" stroke="#DFDDD4" stroke-width="1"/>
+                  <!-- Top-right cropped purple outline flower -->
+                  <g transform="translate(214 34)" stroke="#5B3FA7" stroke-opacity="0.75" stroke-width="1">
+                    <ellipse cx="0" cy="-12" rx="5.5" ry="10" transform="rotate(-10)"/>
+                    <ellipse cx="0" cy="-12" rx="5.5" ry="10" transform="rotate(62)"/>
+                    <ellipse cx="0" cy="-12" rx="5.5" ry="10" transform="rotate(134)"/>
+                    <ellipse cx="0" cy="-12" rx="5.5" ry="10" transform="rotate(206)"/>
+                    <ellipse cx="0" cy="-12" rx="5.5" ry="10" transform="rotate(278)"/>
+                  </g>
+                  <circle cx="214" cy="34" r="2.2" fill="#9FE034"/>
+                  <!-- Back Typography (Left Margin) -->
+                  <text x="138" y="34" fill="#2A4EB3" font-family="Georgia, serif" font-size="12" font-weight="bold">Ngalang</text>
+                  <text x="138" y="47" fill="#1A2240" font-family="sans-serif" font-size="5.0">Dipetik pagi dari kebun</text>
+                  <text x="138" y="54.5" fill="#1A2240" font-family="sans-serif" font-size="5.0">KWT Malati Asih, dijemur</text>
+                  <text x="138" y="62" fill="#1A2240" font-family="sans-serif" font-size="5.0">matahari, dijual remaja desa.</text>
+                  <!-- Blue -> Purple Identity Bar -->
+                  <rect x="138" y="70" width="80" height="5" rx="2.5" fill="url(#ngalangBarGrad)"/>
+                  <text x="138" y="85" fill="#1A2240" font-family="sans-serif" font-size="4.8">Seduh air panas, lalu beri</text>
+                  <text x="138" y="92" fill="#2A4EB3" font-family="sans-serif" font-size="4.8" font-weight="bold">jeruk nipis: biru jadi ungu.</text>
+                  <!-- Mini QR & Batch TT-2612-01 -->
+                  <rect x="138" y="103" width="26" height="26" rx="2.5" fill="#1A2240"/>
+                  <rect x="141" y="106" width="6.5" height="6.5" fill="#F4F1E9"/>
+                  <rect x="154" y="106" width="6.5" height="6.5" fill="#F4F1E9"/>
+                  <rect x="141" y="119" width="6.5" height="6.5" fill="#F4F1E9"/>
+                  <rect x="151" y="116" width="3.5" height="3.5" fill="#FFCF79"/>
+                  <rect x="156" y="121" width="4" height="4" fill="#F4F1E9"/>
+                  <text x="169" y="112" fill="#1A2240" font-family="sans-serif" font-size="5.6" font-weight="bold">Pindai</text>
+                  <text x="169" y="119.5" fill="#4C5370" font-family="sans-serif" font-size="5.0">kebun &amp; batch</text>
+                  <text x="169" y="127" fill="#2A4EB3" font-family="monospace" font-size="5.2" font-weight="bold">TT-2612-01</text>
+                  <!-- Mandatory Info Footer -->
+                  <line x1="138" y1="141" x2="218" y2="141" stroke="#DFDDD4" stroke-width="0.9"/>
+                  <text x="138" y="151" fill="#4C5370" font-family="sans-serif" font-size="4.4">Komposisi: bunga telang, jeruk nipis</text>
+                  <text x="138" y="158" fill="#4C5370" font-family="sans-serif" font-size="4.4">Produksi: KWT Malati Asih, Cinanjung</text>
+                  <text x="138" y="165" fill="#2A4EB3" font-family="sans-serif" font-size="4.4" font-weight="bold">P-IRT &amp; halal: sesuai izin</text>
+                </g>
               </svg>
-              <p class="text-xs font-bold text-[#283118] mt-1">Standing Pouch Foil 40 g</p>
-              <p class="text-[11px] text-[#5C5338]">Klip Ziplock · Label Batch</p>
+              <p class="text-xs font-bold text-[#1A2240] mt-1">Depan Biru–Ungu · Belakang QR</p>
+              <p class="text-[11px] text-[#4C5370]">Label mengikuti izin UMKM</p>
             </div>
 
-            <figure class="bg-[#FFFFFF] text-[#283118] rounded-2xl p-3 shadow-lg">
+            <figure class="bg-[#FFFFFF] text-[#1A2240] rounded-2xl p-3 shadow-lg">
               <div class="editorial-img-wrap rounded-xl aspect-[4/5]">
-                <img src="public/images/daunara/product-daunara.webp" alt="Ilustrasi sajian cangkir teh daun bidara hangat" class="w-full h-full object-cover" loading="lazy" />
+                <img src="public/images/telang/telang-tea-purple.jpg" alt="Ilustrasi seduhan teh bunga telang ungu dengan jeruk nipis" class="w-full h-full object-cover" loading="lazy" />
               </div>
-              <figcaption class="pt-2.5 px-1 text-[11px] text-[#5C5338] leading-snug">
-                <strong class="text-[#283118]">Ilustrasi Sajian:</strong> Seduhan teh daun bidara hangat berwarna keemasan.
+              <figcaption class="pt-2.5 px-1 text-[11px] text-[#4C5370] leading-snug">
+                <strong class="text-[#1A2240]">Ilustrasi Sajian:</strong> Seduhan teh bunga telang berubah ungu setelah ditambah jeruk nipis (Foto: Mx. Granger, CC0).
               </figcaption>
             </figure>
           </div>
@@ -729,60 +847,63 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- SECTION 5 — SARAN PENYEDUHAN (#seduh)                                 -->
+  <!-- SECTION 5 — SARAN PENYEDUHAN & DEMO UBAH WARNA (#seduh)               -->
   <!-- ===================================================================== -->
   <section id="seduh" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
     <div class="botanical-surface rounded-3xl p-6 sm:p-10 md:p-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
         <div class="lg:col-span-4 space-y-3">
-          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#5B6B2F]">
-            <span class="w-6 h-[2px] bg-[#9A9F46]"></span>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2A4EB3]">
+            <span class="w-6 h-[2px] bg-[#5B3FA7]"></span>
             <span>04 · Saran Penyajian</span>
           </div>
-          <h2 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#283118] leading-tight">
-            Cara Menyeduh Teh Daun Bidara
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#1A2240] leading-tight">
+            Cara Menyeduh &amp; Ubah Warna Biru → Ungu
           </h2>
-          <p class="text-xs sm:text-sm text-[#5C5338] leading-relaxed">
-            Teh daun bidara adalah <strong>minuman seduhan herbal</strong> untuk dinikmati sehari-hari maupun sebagai suguhan hangat bagi keluarga dan tamu.
+          <p class="text-xs sm:text-sm text-[#4C5370] leading-relaxed">
+            Ngalang (Teh Bunga Telang Cinanjung) adalah minuman seduhan herbal ber-PIRT &amp; halal untuk dinikmati sehari-hari, sebagai suguhan tamu, maupun pengalaman seduh seru bersama keluarga.
           </p>
-          <div class="pt-2">
-            <span class="inline-block bg-[#F8F9F5] text-[#283118] text-[11px] font-bold px-3 py-1.5 rounded-lg border border-[#E2E6DC]">
-              Minuman Seduhan Herbal · Produk Pangan Olahan
+          <div class="pt-2 flex flex-wrap gap-2">
+            <span class="inline-block bg-[#F3F5FC] text-[#2A4EB3] text-[11px] font-bold px-3 py-1.5 rounded-lg border border-[#2A4EB3]/20">
+              Minuman Seduhan Herbal
+            </span>
+            <span class="inline-block bg-[#F4F1E9] text-[#5B3FA7] text-[11px] font-bold px-3 py-1.5 rounded-lg border border-[#DFDDD4]">
+              Biru → Ungu (Asam–Basa)
             </span>
           </div>
         </div>
 
         <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-          <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-5 space-y-2">
-            <div class="w-9 h-9 rounded-xl bg-[#5B6B2F]/15 text-[#5B6B2F] flex items-center justify-center font-bold text-xs">01</div>
-            <h3 class="text-sm font-bold text-[#283118]">Takaran Seduh (1 Sendok Teh)</h3>
-            <p class="text-xs text-[#5C5338] leading-relaxed">
-              Masukkan 1 sendok teh (±2 gram) rajangan kering Teh Daun Bidara DAUNARA ke dalam cangkir atau teko saring yang bersih.
+          <div class="bg-[#F4F1E9] border border-[#DFDDD4] rounded-2xl p-5 space-y-2">
+            <div class="w-9 h-9 rounded-xl bg-[#2A4EB3] text-[#FFFFFF] flex items-center justify-center font-bold text-xs">01</div>
+            <h3 class="text-sm font-bold text-[#1A2240]">Siapkan Bunga Telang Utuh</h3>
+            <p class="text-xs text-[#4C5370] leading-relaxed">
+              Masukkan ±5–7 kuntum bunga telang kering utuh (atau mengikuti takaran pada label kemasan berizin UMKM) ke dalam gelas bening agar perubahan warnanya terlihat jelas.
             </p>
           </div>
 
-          <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-5 space-y-2">
-            <div class="w-9 h-9 rounded-xl bg-[#5B6B2F]/15 text-[#5B6B2F] flex items-center justify-center font-bold text-xs">02</div>
-            <h3 class="text-sm font-bold text-[#283118]">Air Panas 85–90°C (3–5 Menit)</h3>
-            <p class="text-xs text-[#5C5338] leading-relaxed">
-              Tuangkan ±200 ml air panas bersuhu 85–90°C. Diamkan selama 3–5 menit hingga warna seduhan berubah keemasan dan aromanya keluar.
+          <div class="bg-[#F4F1E9] border border-[#DFDDD4] rounded-2xl p-5 space-y-2">
+            <div class="w-9 h-9 rounded-xl bg-[#2A4EB3] text-[#FFFFFF] flex items-center justify-center font-bold text-xs">02</div>
+            <h3 class="text-sm font-bold text-[#1A2240]">Seduh Air Panas 85–90°C (3–5 Menit)</h3>
+            <p class="text-xs text-[#4C5370] leading-relaxed">
+              Tuangkan ±200 ml air panas (tidak mendidih bergolak). Diamkan 3–5 menit hingga kelopak mekar kembali dan warna air berubah menjadi <strong>biru pekat alami</strong>.
             </p>
           </div>
 
-          <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-5 space-y-2">
-            <div class="w-9 h-9 rounded-xl bg-[#5B6B2F]/15 text-[#5B6B2F] flex items-center justify-center font-bold text-xs">03</div>
-            <h3 class="text-sm font-bold text-[#283118]">Saring & Nikmati Hangat</h3>
-            <p class="text-xs text-[#5C5338] leading-relaxed">
-              Saring ampas daun sebelum diminum. Dapat dinikmati langsung, atau ditambahkan madu maupun irisan lemon sesuai selera.
+          <div class="bg-[#F3F5FC] border border-[#5B3FA7]/25 rounded-2xl p-5 space-y-2">
+            <div class="w-9 h-9 rounded-xl bg-[#5B3FA7] text-[#FFFFFF] flex items-center justify-center font-bold text-xs">03</div>
+            <h3 class="text-sm font-bold text-[#1A2240]">Tuang Jeruk Nipis: Biru → Ungu!</h3>
+            <p class="text-xs text-[#4C5370] leading-relaxed">
+              Tambahkan jeruk nipis sesuai selera lalu aduk perlahan — reaksi asam–basa alami mengubah warna seduhan seketika dari <strong>biru menjadi ungu</strong>. Nikmat diminum hangat atau dingin bersama madu.
             </p>
           </div>
 
-          <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-5 space-y-2">
-            <div class="w-9 h-9 rounded-xl bg-[#5B6B2F]/15 text-[#5B6B2F] flex items-center justify-center font-bold text-xs">04</div>
-            <h3 class="text-sm font-bold text-[#283118]">Tutup Rapat Klip Kemasan</h3>
-            <p class="text-xs text-[#5C5338] leading-relaxed">
-              Tutup rapat kembali klip <em>ziplock</em> setelah mengambil teh, lalu simpan di tempat sejuk, kering, dan terhindar dari sinar matahari langsung.
+          <div class="bg-[#F4F1E9] border border-[#DFDDD4] rounded-2xl p-5 space-y-2">
+            <div class="w-9 h-9 rounded-xl bg-[#FFCF79] text-[#1A2240] flex items-center justify-center font-bold text-xs">04</div>
+            <h3 class="text-sm font-bold text-[#1A2240]">Simpan Teduh &amp; Kembalikan Kantong</h3>
+            <p class="text-xs text-[#4C5370] leading-relaxed">
+              Tutup rapat kemasan setelah mengambil bunga dan simpan di tempat kering serta terhindar dari sinar matahari langsung. Kantong foil bekas dapat dikembalikan di Lapak Minggu untuk kerajinan plastik TPS 3R.
             </p>
           </div>
         </div>
@@ -795,48 +916,44 @@
   <!-- SECTION 6 — PESAN ULANG & FOOTER                                      -->
   <!-- ===================================================================== -->
   <section id="pesan" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-16">
-    <div class="botanical-olive-card rounded-3xl p-8 sm:p-12 text-center space-y-5 border border-[#9A9F46]/40">
-      <div class="w-12 h-12 rounded-full bg-[#EFDCBA]/20 border border-[#EFDCBA] mx-auto flex items-center justify-center">
-        <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
-          <path d="M27 12C24.5 16 29.5 19 27 23" stroke="#EFDCBA" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M35 10C32.5 14.5 37.5 18 35 23" stroke="#EFDCBA" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M16 28H46V35C46 43.8 38.8 51 30 51H32C23.2 51 16 43.8 16 35V28Z" fill="#EFDCBA"/>
-        </svg>
+    <div class="telang-deep-card rounded-3xl p-8 sm:p-12 text-center space-y-5 border border-[#5B3FA7]/40">
+      <div class="w-14 h-14 rounded-full bg-[#F4F1E9] border-2 border-[#FFCF79] mx-auto flex items-center justify-center p-2 shadow-md">
+        <img src="assets/logo.png" alt="Logo Ngalang" class="w-full h-full object-contain" />
       </div>
       <h2 class="font-serif-display text-2xl sm:text-4xl font-semibold text-[#FFFFFF] max-w-xl mx-auto leading-tight">
-        Suka dengan Tehnya? Pesan Lagi Lewat Kanal Resmi Usaha KWT
+        Suka dengan Tehnya? Pesan Lagi Lewat Kanal Resmi UMKM &amp; Duta Remaja
       </h2>
-      <p class="text-xs sm:text-sm text-[#FAF6EC]/85 max-w-xl mx-auto leading-relaxed">
-        Pemesanan <strong>DAUNARA Teh Daun Bidara (Netto 40 g · Rp15.000)</strong> maupun <strong>Parsel Hari Raya (Rp65.000 &amp; Rp110.000)</strong> lewat WhatsApp Business, Shopee, Instagram resmi KWT, titip jual kampus/kantor, dan Lapak Minggu Gunung Batu masuk ke rekening/kas <strong>KWT Malati Asih</strong>, menyisihkan Rp500/kemasan (&amp; Rp1.000/parsel) ke <strong>Kas Duta Cilik</strong>, serta memberi komisi 10% bagi tim <strong>Duta Remaja (Karang Taruna)</strong>.
+      <p class="text-xs sm:text-sm text-[#F4F1E9]/90 max-w-xl mx-auto leading-relaxed">
+        Pemesanan Ngalang — Teh Bunga Telang (Rp15.000/kemasan · P-IRT &amp; Halal) maupun Parsel Hari Raya (Rp65.000 &amp; Rp110.000) lewat WhatsApp Business, Shopee, Instagram resmi UMKM penjual, titip jual 2 titik, dan Lapak Minggu Gunung Batu menambah pesanan bagi KWT Malati Asih, menyisihkan Rp500/kemasan (&amp; Rp1.000/parsel) ke Kas Duta Cilik, serta memberi komisi 10% bagi Duta Remaja (Karang Taruna &amp; siswa SMK).
       </p>
       <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-        <a id="wa-reorder" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#EFDCBA] hover:bg-[#FFFFFF] text-[#283118] font-bold text-xs sm:text-sm px-6 py-3 rounded-full transition shadow-md">
+        <a id="wa-reorder" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#FFCF79] hover:bg-[#FFFFFF] text-[#1A2240] font-bold text-xs sm:text-sm px-6 py-3 rounded-full transition shadow-md">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
           <span>Pesan Ulang via WhatsApp Duta Remaja</span>
         </a>
-        <button onclick="toggleQRModal()" class="inline-flex items-center gap-2 bg-transparent hover:bg-[#FFFFFF]/10 text-[#FAF6EC] border border-[#EFDCBA]/40 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition cursor-pointer">
+        <button onclick="toggleQRModal()" class="inline-flex items-center gap-2 bg-transparent hover:bg-[#FFFFFF]/10 text-[#F4F1E9] border border-[#FFCF79]/50 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition cursor-pointer">
           <span>Unduh Kode QR Kemasan</span>
         </button>
       </div>
-      <p id="wa-reorder-demo-hint" class="text-[11px] text-[#EFDCBA]/80 max-w-md mx-auto leading-snug">
-        Mode prototipe: klik tombol WhatsApp untuk melihat pratinjau pesan pemesanan ke Duta Remaja Karang Taruna (tautan aktif saat implementasi).
+      <p id="wa-reorder-demo-hint" class="text-[11px] text-[#FFCF79]/90 max-w-md mx-auto leading-snug">
+        Mode prototipe: klik tombol WhatsApp untuk melihat pratinjau pesan pemesanan ke Duta Remaja pada akun WhatsApp Business UMKM penjual (aktif 8 Des 2026).
       </p>
     </div>
   </section>
 
-  <footer class="border-t border-[#E2E6DC] bg-[#FFFFFF] py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-[#5C5338]">
+  <footer class="border-t border-[#DFDDD4] bg-[#FFFFFF] py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-[#4C5370]">
       <div class="space-y-1">
-        <div class="font-bold text-[#283118] tracking-wide">
-          DAUNARA — Desa Cinanjung, Kec. Tanjungsari, Kab. Sumedang
+        <div class="font-bold text-[#1A2240] tracking-wide">
+          Ngalang — Teh Bunga Telang Desa Cinanjung, Kec. Tanjungsari, Kab. Sumedang
         </div>
         <p>
-          Kolaborasi KWT Malati Asih × Kelompok Berlian × Duta Remaja (Karang Taruna) × Duta Cilik · ACC #NextGreen Leaders Challenge
+          Kolaborasi KWT Malati Asih × UMKM Penjual × Duta Remaja (Karang Taruna &amp; SMK) × Kelompok Berlian &amp; TPS 3R × Duta Cilik · ACC #NextGreen Leaders Challenge
         </p>
       </div>
       <div class="flex items-center gap-4 shrink-0">
-        <a href="#pesan" class="font-bold text-[#5B6B2F] underline hover:text-[#926936] transition">Pesan Ulang</a>
-        <button onclick="toggleQRModal()" class="font-bold text-[#5B6B2F] underline hover:text-[#926936] cursor-pointer transition">
+        <a href="#pesan" class="font-bold text-[#2A4EB3] underline hover:text-[#5B3FA7] transition">Pesan Ulang</a>
+        <button onclick="toggleQRModal()" class="font-bold text-[#2A4EB3] underline hover:text-[#5B3FA7] cursor-pointer transition">
           Buka / Unduh QR
         </button>
       </div>
@@ -846,47 +963,47 @@
   <!-- ===================================================================== -->
   <!-- QR CODE GENERATOR & DOWNLOAD MODAL                                    -->
   <!-- ===================================================================== -->
-  <div id="qr-modal" class="hidden fixed inset-0 bg-[#283118]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-    <div class="bg-[#FFFFFF] rounded-3xl max-w-sm w-full p-6 space-y-4 border border-[#E2E6DC] shadow-2xl">
+  <div id="qr-modal" class="hidden fixed inset-0 bg-[#1A2240]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFFFF] rounded-3xl max-w-sm w-full p-6 space-y-4 border border-[#DFDDD4] shadow-2xl">
       <div class="flex items-center justify-between">
         <div>
-          <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B6B2F] block">Kartu QR Produk</span>
-          <span class="font-serif-display text-lg font-bold text-[#283118]">DAUNARA — Desa Cinanjung</span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B3FA7] block">Kartu QR Produk</span>
+          <span class="font-serif-display text-lg font-bold text-[#1A2240]">Ngalang — Cinanjung</span>
         </div>
-        <button onclick="toggleQRModal()" class="w-8 h-8 rounded-full bg-[#F8F9F5] text-[#283118] font-bold text-xs hover:bg-[#9A9F46] transition cursor-pointer">✕</button>
+        <button onclick="toggleQRModal()" class="w-8 h-8 rounded-full bg-[#F4F1E9] text-[#1A2240] font-bold text-xs hover:bg-[#FFCF79] transition cursor-pointer">✕</button>
       </div>
-      <div class="bg-[#FFFFFF] rounded-2xl p-6 flex flex-col items-center border border-[#E2E6DC]">
-        <img id="qr-img" src="" alt="QR Code DAUNARA Cinanjung" class="w-48 h-48 bg-white p-2 rounded-xl" />
-        <p id="qr-url-label" class="text-[11px] font-mono text-[#5C5338] break-all mt-3 text-center"></p>
+      <div class="bg-[#F4F1E9] rounded-2xl p-6 flex flex-col items-center border border-[#DFDDD4]">
+        <img id="qr-img" src="" alt="QR Code Ngalang Desa Cinanjung" class="w-48 h-48 bg-white p-2 rounded-xl" />
+        <p id="qr-url-label" class="text-[11px] font-mono text-[#4C5370] break-all mt-3 text-center"></p>
       </div>
-      <a id="qr-download-btn" href="#" target="_blank" rel="noopener" class="block w-full py-3 rounded-full bg-[#5B6B2F] hover:bg-[#475522] text-[#FFFFFF] text-center text-xs font-bold transition">
+      <a id="qr-download-btn" href="#" target="_blank" rel="noopener" class="block w-full py-3 rounded-full bg-[#2A4EB3] hover:bg-[#1E3A8A] text-[#FFFFFF] text-center text-xs font-bold transition">
         Buka / Simpan Gambar QR Resolusi Tinggi
       </a>
     </div>
   </div>
 
-  <!-- WHATSAPP DEMO PREVIEW MODAL (Aktif otomatis saat nomor WA Duta masih placeholder) -->
-  <div id="wa-demo-modal" class="hidden fixed inset-0 bg-[#283118]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-    <div class="bg-[#FFFFFF] rounded-3xl max-w-md w-full p-6 space-y-4 border border-[#E2E6DC] shadow-2xl">
+  <!-- WHATSAPP DEMO PREVIEW MODAL (Aktif otomatis saat nomor WA UMKM masih placeholder) -->
+  <div id="wa-demo-modal" class="hidden fixed inset-0 bg-[#1A2240]/70 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFFFF] rounded-3xl max-w-md w-full p-6 space-y-4 border border-[#DFDDD4] shadow-2xl">
       <div class="flex items-start justify-between gap-3">
         <div>
-          <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B6B2F] block">Mode Simulasi Prototipe</span>
-          <h3 id="wa-demo-title" class="font-serif-display text-lg font-bold text-[#283118]">Pratinjau Pesan WhatsApp Duta Desa</h3>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-[#5B3FA7] block">Mode Simulasi Prototipe</span>
+          <h3 id="wa-demo-title" class="font-serif-display text-lg font-bold text-[#1A2240]">Pratinjau Pesan WhatsApp Duta Remaja</h3>
         </div>
-        <button onclick="closeWADemoModal()" class="w-8 h-8 rounded-full bg-[#F8F9F5] text-[#283118] font-bold text-xs hover:bg-[#9A9F46] transition cursor-pointer shrink-0">✕</button>
+        <button onclick="closeWADemoModal()" class="w-8 h-8 rounded-full bg-[#F4F1E9] text-[#1A2240] font-bold text-xs hover:bg-[#FFCF79] transition cursor-pointer shrink-0">✕</button>
       </div>
-      <p class="text-xs text-[#5C5338] leading-relaxed">
-        Nomor WhatsApp Duta Remaja (Karang Taruna) Desa Cinanjung diaktifkan pada fase implementasi lapangan (Des 2026). Saat QR dipindai pembeli nanti, tombol ini langsung mengirim pesan berikut:
+      <p class="text-xs text-[#4C5370] leading-relaxed">
+        Nomor WhatsApp Business UMKM penjual (dikelola bersama Duta Remaja Karang Taruna &amp; SMK) diaktifkan pada fase implementasi lapangan (8 Des 2026). Saat QR dipindai pembeli nanti, tombol ini langsung mengirim pesan berikut:
       </p>
-      <div class="bg-[#F8F9F5] border border-[#E2E6DC] rounded-2xl p-4 space-y-1.5">
-        <div class="text-[10px] font-bold uppercase tracking-wider text-[#926936]">Tujuan: Duta Remaja (Karang Taruna) Desa Cinanjung</div>
-        <p id="wa-demo-message" class="text-xs text-[#283118] font-medium leading-relaxed"></p>
+      <div class="bg-[#F4F1E9] border border-[#DFDDD4] rounded-2xl p-4 space-y-1.5">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#2A4EB3]">Tujuan: WhatsApp Business UMKM Penjual · Duta Remaja Desa Cinanjung</div>
+        <p id="wa-demo-message" class="text-xs text-[#1A2240] font-medium leading-relaxed"></p>
       </div>
       <div class="flex items-center gap-2.5">
-        <button id="wa-demo-copy-btn" onclick="copyWADemoMessage()" class="flex-1 py-2.5 px-4 rounded-full bg-[#5B6B2F] hover:bg-[#475522] text-[#FFFFFF] text-xs font-bold transition cursor-pointer">
+        <button id="wa-demo-copy-btn" onclick="copyWADemoMessage()" class="flex-1 py-2.5 px-4 rounded-full bg-[#2A4EB3] hover:bg-[#1E3A8A] text-[#FFFFFF] text-xs font-bold transition cursor-pointer">
           Salin Format Pesan
         </button>
-        <button onclick="closeWADemoModal()" class="py-2.5 px-5 rounded-full bg-[#F8F9F5] hover:bg-[#E2E6DC] text-[#283118] text-xs font-semibold transition cursor-pointer">
+        <button onclick="closeWADemoModal()" class="py-2.5 px-5 rounded-full bg-[#F4F1E9] hover:bg-[#DFDDD4] text-[#1A2240] text-xs font-semibold transition cursor-pointer">
           Tutup
         </button>
       </div>
@@ -896,50 +1013,54 @@
   <!-- Centralized Image Asset Mapping & Dynamic Batch + Moment Logic -->
   <script>
     window.IMAGE_ASSETS = {
-      heroVillage: "public/images/daunara/hero-village.webp",
-      villageLandscape: "public/images/daunara/village-landscape.webp",
-      botanicalGarden: "public/images/daunara/botanical-garden.webp",
-      bidaraLeaves: "public/images/daunara/bidara-leaves.webp",
-      womenFarming: "public/images/daunara/women-farming.webp",
-      leafProcessing: "public/images/daunara/leaf-processing.webp",
-      herbalTeaProduction: "public/images/daunara/herbal-tea-production.webp",
-      productDaunara: "public/images/daunara/product-daunara.webp"
+      heroVillage: "public/images/telang/hero-village.webp",
+      villageLandscape: "public/images/telang/village-landscape.webp",
+      telangPlant: "public/images/telang/telang-plant.jpg",
+      telangFlower: "public/images/telang/telang-flower.jpg",
+      womenFarming: "public/images/telang/women-farming.webp",
+      telangDried: "public/images/telang/telang-dried.jpg",
+      telangTeaBlue: "public/images/telang/telang-tea-blue.jpg",
+      telangTeaPurple: "public/images/telang/telang-tea-purple.jpg",
+      telangTeaShift: "public/images/telang/telang-tea-shift.jpg"
     };
 
-    // GANTI dengan nomor WhatsApp Duta Remaja (Karang Taruna) Desa Cinanjung (format 62xxxxxxxxxx)
+    // GANTI dengan nomor WhatsApp Business UMKM Penjual Desa Cinanjung (format 62xxxxxxxxxx)
     const WA_NUMBER = '6281234567890';
     const IS_DEMO_WA = !WA_NUMBER || WA_NUMBER === '6281234567890';
 
     const batches = {
-      'TB-2612-01': {
-        code: 'TB-2612-01 · Contoh Rancangan',
-        prodShort: '21 Desember 2026',
-        ratioShort: '2,0 kg → 0,5 kg (25%)',
-        sortedShort: '1 dari 20 daun sampel',
-        dates: 'Baik diseduh s.d. Jun 2027 (estimasi awal 6 bulan)',
-        aiCheck: 'Cek mata KWT 20 sampel (<3 bergejala; sortir dikomposkan) · dicatat Duta Remaja di AppSheet KWT',
-        physical: 'Cuci 2×, rak jemur plastik UV 4 tingkat 3 hari (bukan oven), berat target kalibrasi lab SNI ≤8% (≤32,6 g/100 g layu), giling 2–5 mm, kemas ≤2 jam · 40 g (±2%)',
+      'TT-2612-01': {
+        code: 'TT-2612-01 · Contoh Rancangan',
+        prodShort: '15 Desember 2026',
+        ratioShort: '1,0 kg → 0,2 kg',
+        sortedShort: '1 dari 20 bunga rusak',
+        dates: 'Contoh 12 kemasan (+ 1 arsip batch) · Tanggal kedaluwarsa mengikuti standar izin UMKM',
+        sortirCheck: 'Cek mata KWT 20 bunga sampel (<3 rusak; tangkai hijau & buangan dikomposkan) · diinput Duta Remaja di AppSheet UMKM',
+        physical: 'Rak jemur plastik UV 4 tingkat 3 hari (tanpa oven, rapuh diremas · acuan SNI ≤8% & berat target batch #1) · Pengasapan KWT & takaran jeruk nipis tercatat · Bunga utuh (tidak digiling)',
+        logNote: 'Foto cek sortir apa adanya & catatan batch ditolak tampil dari Google Sheets (terkunci setelah disimpan)',
         badge: 'Simulasi Prototipe · Pra-Implementasi'
       },
-      'TB-2612-02': {
-        code: 'TB-2612-02 · Contoh Rancangan',
-        prodShort: '28 Desember 2026',
-        ratioShort: '2,5 kg → 0,6 kg (24%)',
-        sortedShort: '2 dari 20 daun sampel',
-        dates: 'Baik diseduh s.d. Jun 2027 (estimasi awal 6 bulan)',
-        aiCheck: 'Cek mata KWT 20 sampel (<3 bergejala; sortir dikomposkan) · dicatat Duta Remaja di AppSheet KWT',
-        physical: 'Cuci 2×, rak jemur plastik UV 4 tingkat ≤5 hari (cuaca hujan, target ≥30% lebih cepat, tanpa oven), berat target kalibrasi lab SNI ≤8%, giling 2–5 mm, kemas ≤2 jam · 40 g (±2%)',
+      'TT-2612-02': {
+        code: 'TT-2612-02 · Contoh Rancangan',
+        prodShort: '22 Desember 2026',
+        ratioShort: '1,2 kg → 0,24 kg',
+        sortedShort: '2 dari 20 bunga rusak',
+        dates: 'Contoh 14 kemasan (+ 1 arsip batch) · Tanggal kedaluwarsa mengikuti standar izin UMKM',
+        sortirCheck: 'Cek mata KWT 20 bunga sampel (<3 rusak; tangkai hijau & buangan dikomposkan) · diinput Duta Remaja di AppSheet UMKM',
+        physical: 'Rak jemur plastik UV 4 tingkat ≤5 hari (cuaca hujan, target ≥30% lebih singkat tanpa oven, acuan SNI ≤8%) · Pengasapan KWT & takaran jeruk nipis tercatat · Bunga utuh',
+        logNote: 'Foto cek sortir apa adanya & catatan batch ditolak tampil dari Google Sheets (terkunci setelah disimpan)',
         badge: 'Simulasi Prototipe · Pra-Implementasi'
       },
-      'TB-2701-01': {
-        code: 'TB-2701-01 · Contoh Rancangan',
+      'TT-2701-01': {
+        code: 'TT-2701-01 · Contoh Rancangan',
         prodShort: '12 Januari 2027',
-        ratioShort: '2,0 kg → 0,5 kg (25%)',
-        sortedShort: '1 dari 20 daun sampel',
-        dates: 'Baik diseduh s.d. Jul 2027 (estimasi awal 6 bulan)',
-        aiCheck: 'Cek mata KWT 20 sampel (<3 bergejala; sortir dikomposkan) · dicatat Duta Remaja di AppSheet KWT',
-        physical: 'Cuci 2×, rak jemur plastik UV 4 tingkat ≤5 hari (musim hujan, tanpa oven), berat target kalibrasi lab SNI ≤8%, giling 2–5 mm, kemas ≤2 jam · 40 g (±2%)',
-        badge: 'Simulasi Prototipe · Pra-Implementasi'
+        ratioShort: '1,0 kg → 0,2 kg',
+        sortedShort: '1 dari 20 bunga rusak',
+        dates: 'Contoh 12 kemasan (+ 1 arsip batch) · Batch fase uji mandiri desa (11–21 Jan)',
+        sortirCheck: 'Cek mata KWT 20 bunga sampel (<3 rusak; tangkai hijau & buangan dikomposkan) · diinput mandiri Duta Remaja',
+        physical: 'Rak jemur plastik UV 4 tingkat ≤5 hari (musim hujan, tanpa oven, acuan SNI ≤8%) · Pengasapan KWT & takaran jeruk nipis tercatat · Bunga utuh (tidak digiling)',
+        logNote: 'Foto cek sortir apa adanya & catatan batch ditolak tampil dari Google Sheets (terkunci setelah disimpan)',
+        badge: 'Simulasi Uji Mandiri · Pra-Implementasi'
       }
     };
 
@@ -947,32 +1068,32 @@
       nataru: {
         label: 'Natal & Tahun Baru (Parsel Mini Rp65.000)',
         badge: 'Edisi Natal & Tahun Baru · Rp65.000',
-        angle: 'Sudut Cerita: Parsel Mini Akhir Tahun (2 Pouch @ 40 g) · Gambar Karya Duta Cilik',
-        title: 'Secangkir Hangat dari Lereng Cinanjung untuk Momen Natal & Tahun Baru',
-        greeting: '"Selamat merayakan Natal dan menyambut Tahun Baru. Semoga kehangatan seduhan daun bidara dari lereng perbukitan Cinanjung ini menemani waktu berkumpul Anda bersama keluarga serta rekan kerja."',
-        story: 'Disiapkan dalam pilihan Parsel Mini (Rp65.000) berisi 2 kemasan Teh Daun Bidara (@ 40 g) bersama kartu cerita gambar tangan anak-anak kelas Duta Cilik Cinanjung. Diolah Ibu-ibu KWT Malati Asih di kawasan Gunung Batu dan ditawarkan kolektif untuk kantor Grup Astra & ACC, dosen/staf kampus Jatinangor, maupun keluarga.'
-      },
-      imlek: {
-        label: 'Tahun Baru Imlek (Parsel Mini Rp65.000)',
-        badge: 'Edisi Tahun Baru Imlek · Rp65.000',
-        angle: 'Sudut Cerita: Tradisi Minum Teh sebagai Hantaran & Keramahan',
-        title: 'Menjamu Tamu dengan Kehangatan Teh dari Lereng Cinanjung',
-        greeting: '"Gong Xi Fa Cai. Di setiap cangkir teh yang dituangkan, tersimpan rasa hormat dan keramahan bagi keluarga serta tamu yang berkunjung. Semoga tahun yang baru membawa ketenangan dan kebaikan bagi kita semua."',
-        story: 'Dalam perayaan Imlek, Parsel Mini DAUNARA (Rp65.000, berisi 2 kemasan @ 40 g) dengan kartu nuansa merah-emas dan ilustrasi Duta Cilik menjadi hantaran hangat tradisi minum teh bagi sanak saudara serta pecinta teh di Bandung dan Sumedang. Dikeringkan di rak tertutup plastik UV (bukan oven) sehingga aroma daunnya terjaga.'
+        angle: 'Target Program: 6 Parsel Mini · Kartu Akhir Tahun Gambar Duta Cilik',
+        title: 'Hadiah Hangat dari Lereng Cinanjung untuk Momen Natal & Tahun Baru',
+        greeting: '"Selamat merayakan Natal dan menyambut Tahun Baru. Semoga secangkir teh bunga telang yang berubah biru ke ungu dari lereng Cinanjung ini menemani hangatnya waktu berkumpul bersama keluarga dan rekan."',
+        story: 'Disiapkan dalam pilihan Parsel Mini (Rp65.000) berisi 2 kemasan Ngalang (Teh Bunga Telang) + kotak kraft & kartu akhir tahun netral gambar tangan anak-anak Duta Cilik (pre-order 8–18 Des, kirim 21–31 Des) untuk divisi Grup Astra & ACC, dosen/staf kampus Jatinangor, serta keluarga.'
       },
       lebaran: {
         label: 'Idulfitri / Lebaran (Parsel Lengkap Rp110.000)',
         badge: 'Edisi Idulfitri / Lebaran · Rp110.000',
-        angle: 'Sudut Cerita: Hantaran Silaturahmi 2 Teh Bidara 40 g & Abon Pepaya KWT',
-        title: 'Suguhan Hangat untuk Hari Raya & Silaturahmi di Rumah',
-        greeting: '"Selamat Hari Raya Idulfitri, mohon maaf lahir dan batin. Semoga teh daun bidara dan olahan warga dari lereng perbukitan Cinanjung ini dapat menemani obrolan silaturahmi hangat bersama keluarga dan tamu di rumah."',
-        story: 'Untuk momen Lebaran tersedia Parsel Lengkap (Rp110.000) berisi 2 kemasan Teh Daun Bidara (@ 40 g) dan Abon Pepaya olahan pembuat abon KWT Malati Asih, lengkap dengan kartu ucapan bernama pemesan (early bird) serta gambar cerita Duta Cilik Desa Cinanjung.'
+        angle: 'Target Program: 4 Parsel Lengkap Early Bird (s.d. 21 Jan) · Sudah Halal',
+        title: 'Hantaran Silaturahmi Berizin Halal dari Lereng Cinanjung',
+        greeting: '"Selamat Hari Raya Idulfitri, mohon maaf lahir dan batin. Semoga teh bunga telang biru ke ungu dan abon pepaya dari warga Desa Cinanjung ini menemani obrolan silaturahmi hangat bersama keluarga dan tamu di rumah."',
+        story: 'Tersedia dalam Parsel Lengkap (Rp110.000) berisi 2 kemasan Ngalang (Teh Bunga Telang) dan 1 Abon Pepaya (label halal sudah ada) beserta kartu gambar Duta Cilik. Pre-order 11 Jan–28 Feb (early bird s.d. 21 Jan gratis kartu bernama pemesan; pengiriman 1–5 Mar dijalankan bersama UMKM).'
+      },
+      imlek: {
+        label: 'Tahun Baru Imlek (Parsel Mini Rp65.000 · Dijalankan UMKM)',
+        badge: 'Edisi Tahun Baru Imlek · Rp65.000 (Mandiri UMKM)',
+        angle: 'Dijalankan UMKM Sendiri (PO 11–25 Jan) · Teh Biru–Ungu untuk Hantaran',
+        title: 'Menjamu Tamu dengan Keunikan Teh Biru–Ungu dari Cinanjung',
+        greeting: '"Gong Xi Fa Cai. Di setiap cangkir teh bunga telang yang dituangkan, tersimpan keramahan bagi keluarga dan tamu yang berkunjung. Semoga tahun yang baru membawa ketenangan dan kebaikan bagi kita semua."',
+        story: 'Pada momen Imlek (6 Feb 2027), Parsel Mini (Rp65.000, berisi 2 kemasan Ngalang + kartu merah-emas) ditawarkan langsung oleh UMKM penjual lewat Instagram, Shopee, dan toko oleh-oleh Bandung/Jatinangor (PO 11–25 Jan, kirim 1–4 Feb).'
       }
     };
 
     const params = new URLSearchParams(window.location.search);
     const rawBatch = (params.get('batch') || '').trim().toUpperCase();
-    let currentBatch = batches[rawBatch] ? rawBatch : 'TB-2612-01';
+    let currentBatch = batches[rawBatch] ? rawBatch : 'TT-2612-01';
 
     const rawMoment = (params.get('momen') || '').trim().toLowerCase();
     let currentMoment = moments[rawMoment] ? rawMoment : 'nataru';
@@ -1020,7 +1141,7 @@
     }
 
     function setBatch(id) {
-      const targetId = batches[id] ? id : 'TB-2612-01';
+      const targetId = batches[id] ? id : 'TT-2612-01';
       currentBatch = targetId;
       const d = batches[targetId];
       document.getElementById('nav-batch-label').textContent = 'Contoh · ' + targetId;
@@ -1029,44 +1150,53 @@
       document.getElementById('val-ratio-short').textContent = d.ratioShort;
       document.getElementById('val-sorted-short').textContent = d.sortedShort;
       document.getElementById('val-dates').textContent = d.dates;
-      document.getElementById('val-ai-check').textContent = d.aiCheck;
+      document.getElementById('val-sortir-check').textContent = d.sortirCheck;
       document.getElementById('val-physical').textContent = d.physical;
+      document.getElementById('val-log-note').textContent = d.logNote;
       document.getElementById('val-badge').textContent = d.badge;
 
-      const msg = 'Halo Duta Remaja Desa Cinanjung, saya ingin memesan ulang DAUNARA Teh Daun Bidara 40 g Rp15.000 (dari batch ' + targetId + ').';
-      bindWhatsAppLink('wa-reorder', 'wa-reorder-demo-hint', 'Pratinjau Pesan Ulang DAUNARA', msg);
+      Object.keys(batches).forEach(k => {
+        const btn = document.getElementById('btn-batch-' + k);
+        if (!btn) return;
+        btn.className = (k === targetId)
+          ? 'px-3 py-1 rounded-full text-xs font-bold bg-[#2A4EB3] text-[#FFFFFF] transition cursor-pointer'
+          : 'px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFFFF] border border-[#DFDDD4] text-[#1A2240] hover:border-[#2A4EB3] transition cursor-pointer';
+      });
+
+      const msg = 'Halo Duta Remaja Desa Cinanjung, saya ingin memesan ulang Ngalang — Teh Bunga Telang Rp15.000 (dari batch ' + targetId + ').';
+      bindWhatsAppLink('wa-reorder', 'wa-reorder-demo-hint', 'Pratinjau Pesan Ulang Ngalang', msg);
       updateQRModal();
     }
 
     function setMoment(m) {
-      currentMoment = m;
-      const d = moments[m];
+      currentMoment = moments[m] ? m : 'nataru';
+      const d = moments[currentMoment];
       document.getElementById('moment-badge').textContent = d.badge;
       document.getElementById('moment-angle').textContent = d.angle;
       document.getElementById('moment-title').textContent = d.title;
       document.getElementById('moment-greeting').textContent = d.greeting;
       document.getElementById('moment-story').textContent = d.story;
 
-      ['nataru', 'imlek', 'lebaran'].forEach(k => {
+      ['nataru', 'lebaran', 'imlek'].forEach(k => {
         const btn = document.getElementById('btn-moment-' + k);
-        btn.className = (k === m)
-          ? 'py-2.5 px-2.5 rounded-xl text-xs font-bold bg-[#5B6B2F] text-[#FFFFFF] transition cursor-pointer'
-          : 'py-2.5 px-2.5 rounded-xl text-xs font-semibold bg-[#F8F9F5] border border-[#E2E6DC] text-[#283118] hover:bg-[#FFFFFF] transition cursor-pointer';
+        btn.className = (k === currentMoment)
+          ? 'py-2.5 px-2 rounded-xl text-xs font-bold bg-[#2A4EB3] text-[#FFFFFF] transition cursor-pointer'
+          : 'py-2.5 px-2 rounded-xl text-xs font-semibold bg-[#F4F1E9] border border-[#DFDDD4] text-[#1A2240] hover:bg-[#FFFFFF] transition cursor-pointer';
       });
 
-      const msgParcel = 'Halo Duta Remaja Desa Cinanjung, saya tertarik pre-order Parsel DAUNARA edisi ' + d.label + '.';
-      bindWhatsAppLink('wa-parcel', 'wa-parcel-demo-hint', 'Pratinjau Pemesanan Parsel DAUNARA', msgParcel);
+      const msgParcel = 'Halo Duta Remaja Desa Cinanjung, saya tertarik pre-order Parsel Ngalang edisi ' + d.label + '.';
+      bindWhatsAppLink('wa-parcel', 'wa-parcel-demo-hint', 'Pratinjau Pemesanan Parsel Ngalang', msgParcel);
       updateQRModal();
     }
 
     function updateQRModal() {
-      let base = 'https://jejak-cinanjung.netlify.app/';
+      let base = 'https://jejak-desa.netlify.app/cinanjung/';
       if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
         const cleanPath = window.location.pathname.replace(/\/index\.html$/i, '/');
         base = window.location.origin + (cleanPath.endsWith('/') ? cleanPath : cleanPath + '/');
       }
       const fullUrl = base + '?batch=' + currentBatch + '&momen=' + currentMoment;
-      const qrApi = 'https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=16&color=283118&bgcolor=FFFFFF&data=' + encodeURIComponent(fullUrl);
+      const qrApi = 'https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=16&color=1A2240&bgcolor=FFFFFF&data=' + encodeURIComponent(fullUrl);
       document.getElementById('qr-img').src = qrApi;
       document.getElementById('qr-url-label').textContent = fullUrl;
       document.getElementById('qr-download-btn').href = qrApi;

@@ -28,7 +28,7 @@ const targets = [
     to: path.join(distDir, 'pasir-wetan'),
   },
   {
-    name: 'DAUNARA (Cinanjung)',
+    name: 'Ngalang (Cinanjung)',
     from: path.join(root, 'Cinanjung', 'netlify-cinanjung'),
     to: path.join(distDir, 'cinanjung'),
   },

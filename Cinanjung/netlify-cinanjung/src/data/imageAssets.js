@@ -1,6 +1,6 @@
 /**
  * Centralized Image Asset Mapping (Section 5.4)
- * Maps all RELIGHT (Desa Pasir Wetan) and DAUNARA (Desa Cinanjung) local WebP assets
+ * Maps all RELIGHT (Desa Pasir Wetan) and Ngalang — Teh Bunga Telang (Desa Cinanjung) local assets
  * with alt text, honest visual representation captions, Category A/B classification,
  * and source attribution.
  */
@@ -64,69 +64,76 @@ export const IMAGE_ASSETS = {
       credit: "Foto: Nunung Mintarsih / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
-  daunara: {
+  telang: {
     heroVillage: {
-      src: "public/images/daunara/hero-village.webp",
+      src: "public/images/telang/hero-village.webp",
       alt: "Lanskap perbukitan dan hamparan pertanian di Kabupaten Sumedang, Jawa Barat",
       caption: "Bentang alam perbukitan agrikultur di Kabupaten Sumedang, Jawa Barat — wilayah Desa Cinanjung berada pada ketinggian ±855 mdpl.",
       category: "Category A — Verified Regional Location Photography (Kab. Sumedang)",
       credit: "Foto: Pak Andri Irawan / Wikimedia Commons (CC BY 4.0)"
     },
     villageLandscape: {
-      src: "public/images/daunara/village-landscape.webp",
+      src: "public/images/telang/village-landscape.webp",
       alt: "Hamparan lahan pertanian hijau berlatar perbukitan di Kabupaten Sumedang",
       caption: "Lanskap pertanian Kabupaten Sumedang yang merepresentasikan potensi agrikultur lereng perbukitan Desa Cinanjung.",
       category: "Category A — Verified Regional Location Photography (Kab. Sumedang)",
       credit: "Foto: Pak Andri Irawan / Wikimedia Commons (CC BY 4.0)"
     },
-    botanicalGarden: {
-      src: "public/images/daunara/botanical-garden.webp",
-      alt: "Ilustrasi pohon bidara (Ziziphus mauritiana)",
-      caption: "Ilustrasi pohon bidara (Ziziphus mauritiana) — di kebun KWT Malati Asih dirawat dengan pupuk kompos dan pestisida nabati buatan Kelompok Berlian (bukan foto kebun KWT Malati Asih).",
+    telangPlant: {
+      src: "public/images/telang/telang-plant.jpg",
+      alt: "Ilustrasi tanaman merambat bunga telang (Clitoria ternatea)",
+      caption: "Ilustrasi tanaman bunga telang (Clitoria ternatea) — di kebun KWT Malati Asih dirawat dengan kompos dan pestisida nabati buatan Kelompok Berlian (bukan foto kebun Desa Cinanjung).",
       category: "Category B — Representative Botanical Photography",
-      credit: "Foto: Forest & Kim Starr / Wikimedia Commons (CC BY 3.0)"
+      credit: "Foto: Vengolis / Wikimedia Commons (CC BY-SA 4.0)"
     },
-    bidaraLeaves: {
-      src: "public/images/daunara/bidara-leaves.webp",
-      alt: "Detail daun bidara (Ziziphus mauritiana) segar",
-      caption: "Contoh tanaman bidara (Ziziphus mauritiana) segar yang menjadi objek pemeriksaan awal berbantuan aplikasi deteksi gambar sebelum dicek petugas KWT Malati Asih (bukan foto kebun KWT).",
+    telangFlower: {
+      src: "public/images/telang/telang-flower.jpg",
+      alt: "Detail bunga telang (Clitoria ternatea) biru pekat segar",
+      caption: "Ilustrasi spesies bunga telang (Clitoria ternatea) segar yang diperiksa 20 bunga sampel per batch oleh KWT Malati Asih (bukan foto kebun KWT).",
       category: "Category B — Verified Botanical Species Photography",
-      credit: "Foto: Gururantau Pak Haris / Wikimedia Commons (CC0 1.0 Public Domain)"
+      credit: "Foto: Wilfredor / Wikimedia Commons (CC0 1.0 Public Domain)"
     },
     womenFarming: {
-      src: "public/images/daunara/women-farming.webp",
+      src: "public/images/telang/women-farming.webp",
       alt: "Ilustrasi kolaborasi kelompok petani perempuan Indonesia",
       caption: "Ilustrasi petani perempuan Indonesia — merepresentasikan kegiatan ibu-ibu KWT Malati Asih di Desa Cinanjung (bukan foto anggota KWT Malati Asih).",
       category: "Category B — Representative Photography",
       credit: "Foto: Jaljog / Wikimedia Commons (CC BY-SA 4.0)"
     },
-    leafProcessing: {
-      src: "public/images/daunara/leaf-processing.webp",
-      alt: "Ilustrasi pengolahan dan pengeringan daun teh",
-      caption: "Ilustrasi pengolahan daun teh hingga bobot segar dan kering dicatat per batch (bukan foto dapur produksi KWT Malati Asih).",
+    telangDried: {
+      src: "public/images/telang/telang-dried.jpg",
+      alt: "Ilustrasi bunga telang kering utuh",
+      caption: "Ilustrasi bunga telang kering utuh sebelum dikemas (bukan foto dapur produksi KWT Malati Asih).",
       category: "Category B — Representative Photography",
-      credit: "Foto: Bdx / Wikimedia Commons (CC BY-SA 4.0)"
+      credit: "Foto: Fumikas Sagisavas / Wikimedia Commons (CC0 1.0 Public Domain)"
     },
-    herbalTeaProduction: {
-      src: "public/images/daunara/herbal-tea-production.webp",
-      alt: "Ilustrasi cangkir seduhan teh daun herbal berwarna kuning keemasan hangat",
-      caption: "Ilustrasi sajian seduhan teh herbal berwarna keemasan dalam cangkir.",
+    telangTeaBlue: {
+      src: "public/images/telang/telang-tea-blue.jpg",
+      alt: "Ilustrasi seduhan teh bunga telang berwarna biru alami",
+      caption: "Ilustrasi sajian seduhan teh bunga telang berwarna biru alami sebelum ditambah jeruk nipis.",
       category: "Category B — Representative Photography",
-      credit: "Foto: PagesAndPathsPH / Wikimedia Commons (CC0 1.0 Public Domain)"
+      credit: "Foto: Mx. Granger / Wikimedia Commons (CC0 1.0 Public Domain)"
     },
-    productDaunara: {
-      src: "public/images/daunara/product-daunara.webp",
-      alt: "Ilustrasi sajian cangkir teh daun bidara hangat",
-      caption: "Ilustrasi sajian teh daun bidara hangat berwarna keemasan hasil olahan KWT Malati Asih.",
-      category: "Category B & Official Brand Moodboard Asset",
-      credit: "Foto: PagesAndPathsPH (CC0 1.0) & Moodboard Resmi DAUNARA"
+    telangTeaPurple: {
+      src: "public/images/telang/telang-tea-purple.jpg",
+      alt: "Ilustrasi seduhan teh bunga telang ungu setelah ditambah jeruk nipis",
+      caption: "Ilustrasi sajian seduhan teh bunga telang berubah ungu setelah ditambah jeruk nipis.",
+      category: "Category B — Representative Photography",
+      credit: "Foto: Mx. Granger / Wikimedia Commons (CC0 1.0 Public Domain)"
     },
-    moodboardTeaCup: {
-      src: "public/images/daunara/moodboard-tea-cup.webp",
-      alt: "Referensi cangkir teh daun bidara dari moodboard resmi DAUNARA",
-      caption: "Referensi visual cangkir teh herbal dari dokumen identitas merek DAUNARA.",
-      category: "Official Brand Moodboard Asset",
-      credit: "Sumber: Moodboard Resmi DAUNARA (Desa Cinanjung)"
+    telangTeaShift: {
+      src: "public/images/telang/telang-tea-shift.jpg",
+      alt: "Ilustrasi perbandingan warna seduhan teh bunga telang biru ke ungu dengan jeruk nipis",
+      caption: "Ilustrasi perubahan warna seduhan teh bunga telang dari biru menjadi ungu dengan jeruk nipis.",
+      category: "Category B — Representative Photography",
+      credit: "Foto: Mx. Granger / Wikimedia Commons (CC0 1.0 Public Domain)"
+    },
+    iconTelang: {
+      src: "public/images/telang/icon-telang.png",
+      alt: "Ikon resmi 5 kelopak biru-ungu-kuning Teh Bunga Telang Cinanjung",
+      caption: "Ikon resmi Teh Bunga Telang Cinanjung (biru #2A4EB3, ungu #5B3FA7, kuning #FFCF79, krem #F4F1E9).",
+      category: "Official Brand Icon Asset",
+      credit: "Tim Desain ACC #NextGreen Leaders Challenge (Desa Cinanjung)"
     }
   }
 };

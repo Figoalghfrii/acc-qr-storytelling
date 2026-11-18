@@ -13,6 +13,8 @@
   <meta property="og:title" content="RELIGHT — Desa Pasir Wetan | Dari Dapur UMKM, Jadi Produk Desa yang Dikenal" />
   <meta property="og:description" content="Catatan batch lilin wangi ±100 g, hasil uji bakar, paket hampers hadiah bersama produk UMKM mitra, dan ringkasan jelantah tercatat dari ledger Bank Sampah Suka Mandiri, Desa Pasir Wetan, Banyumas." />
   <meta property="og:image" content="public/images/relight/hero-village.webp" />
+  <link rel="icon" type="image/png" href="assets/logo-relight.png" />
+  <link rel="apple-touch-icon" href="assets/logo-relight.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,12 +62,8 @@
   <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FFFFFF]/95 border-b border-[#E8E5DF]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
       <a href="#" class="inline-flex items-center gap-3 group" aria-label="RELIGHT Desa Pasir Wetan">
-        <div class="w-10 h-10 rounded-full bg-[#FFFFFF] border border-[#926633]/25 flex items-center justify-center group-hover:border-[#F7911D] transition">
-          <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 8C32 8 42 19.5 42 27.5C42 33.2 37.5 37.5 32 37.5C26.5 37.5 22 33.2 22 27.5C22 23.5 24.5 19.5 26.8 17C26.2 21 28.5 25.5 30.5 25.5C28.8 18.5 32 8 32 8Z" fill="#F7911D"/>
-            <path d="M12 40H52C50.8 50.2 42.4 56 32 56C21.6 56 13.2 50.2 12 40Z" fill="#6D4B1D"/>
-            <rect x="10" y="37.5" width="44" height="3" rx="1.5" fill="#3D281E"/>
-          </svg>
+        <div class="w-10 h-10 rounded-full bg-[#FFFFFF] border border-[#926633]/25 flex items-center justify-center group-hover:border-[#F7911D] transition overflow-hidden p-1.5">
+          <img src="assets/logo-relight.png" alt="Logo RELIGHT Desa Pasir Wetan" class="w-full h-full object-contain" />
         </div>
         <div>
           <span class="block font-serif-display font-bold tracking-[0.18em] text-base md:text-lg text-[#3D281E] leading-none">RELIGHT</span>
@@ -90,6 +88,17 @@
         </span>
       </a>
     </div>
+
+    <!-- Mobile Quick-Jump Navigation Pills -->
+    <nav class="md:hidden border-t border-[#E8E5DF] bg-[#F9F8F5]/80 px-4 py-2 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-[11px] font-semibold text-[#3D281E]" aria-label="Navigasi cepat">
+      <a href="#jejak-batch" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E8E5DF] shrink-0">Batch</a>
+      <a href="#dampak" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E8E5DF] shrink-0">Dampak</a>
+      <a href="#proses" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E8E5DF] shrink-0">Cara Buat</a>
+      <a href="#kisah" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E8E5DF] shrink-0">Cerita Desa</a>
+      <a href="#produk" class="px-3 py-1 rounded-full bg-[#FFFFFF] border border-[#E8E5DF] shrink-0">Komposisi</a>
+      <a href="#panduan" class="px-3 py-1 rounded-full bg-[#F7911D]/20 border border-[#F7911D]/50 text-[#A3560A] shrink-0">Panduan Aman</a>
+      <a href="#pesan" class="px-3 py-1 rounded-full bg-[#3D281E] text-[#FAF3E6] shrink-0">Pesan</a>
+    </nav>
   </header>
 
   <!-- Banner Status Prototipe Proposal -->
@@ -98,7 +107,7 @@
       <span class="w-1.5 h-1.5 rounded-full bg-[#F7911D]"></span>
       Prototipe Proposal Final ACC #NextGreen 2026:
     </span>
-    Data batch adalah <strong>simulasi rancangan</strong> menjelang uji bakar &amp; uji wadah (1–7 Des), pelatihan &amp; batch 1 = 60 lilin (8–20 Des), penjualan ke komunitas kampus &amp; batch 2–3 (21 Des–10 Jan), serta serah terima penuh ke desa (11–21 Jan 2027).
+    Data batch masih <strong>simulasi rancangan</strong> menjelang uji coba &amp; implementasi lapangan (Des 2026–Jan 2027).
   </div>
 
   <!-- ===================== SECTION 1 — HERO ===================== -->
@@ -122,7 +131,7 @@
       </div>
       <div class="lg:col-span-4 space-y-4">
         <p class="text-sm md:text-base text-[#3D281E]/90 leading-relaxed">
-          UMKM menyetor jelantah, kelompok produksi mengolah lilin berwadah logam pengrajin <strong>Desa Pasir Wetan</strong>, dan <strong>Duta Muda (Karang Taruna)</strong> memasarkannya satuan maupun hampers ke komunitas kampus Purwokerto.
+          UMKM menyetor jelantah, kelompok produksi mengolah lilin berwadah logam pengrajin Desa Pasir Wetan, dan Duta Muda (Karang Taruna) memasarkannya satuan maupun hampers ke komunitas kampus Purwokerto.
         </p>
         <div class="flex flex-wrap items-center gap-3 pt-1">
           <a href="#jejak-batch" class="inline-flex items-center gap-2.5 bg-[#926633] hover:bg-[#6D4B1D] text-[#FFFFFF] font-bold text-xs sm:text-sm px-5 py-3 rounded-full shadow-md transition">
@@ -193,32 +202,39 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-        <!-- Left Column: Intro + Privacy + Data Disclaimer -->
-        <div class="lg:col-span-5 space-y-5">
+        <!-- Left Column: Intro + Privacy + Collapsible Disclaimer (Appears second on mobile) -->
+        <div class="lg:col-span-5 space-y-5 order-2 lg:order-1">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#926633]">
             <span class="w-6 h-[2px] bg-[#F7911D]"></span>
             <span>01 · Dari Ledger Bank Sampah</span>
           </div>
           <h2 class="font-serif-display text-3xl sm:text-4xl font-semibold text-[#3D281E] tracking-editorial leading-tight">Catatan Batch Produk Anda</h2>
           <p class="text-sm text-[#694B38] leading-relaxed">
-            Jelantah dikumpulkan dari <strong>warga &amp; UMKM kuliner mitra (target ≥3 UMKM)</strong> oleh <strong>Bank Sampah Suka Mandiri</strong> (ditimbang dalam kg dan dipilah kategori jernih maupun keruh), lalu dicatat per batch (<code class="text-xs font-mono bg-[#FFFFFF] px-1.5 py-0.5 rounded border border-[#E8E5DF]">B-YYYYMMDD</code>) sesuai porsi diolah, dijual, maupun stok yang belum dialokasikan.
+            Jelantah dikumpulkan dari warga dan UMKM kuliner mitra oleh Bank Sampah Suka Mandiri (ditimbang dalam kg, dipilah jernih/keruh), lalu dicatat per batch (<code class="text-xs font-mono bg-[#FFFFFF] px-1.5 py-0.5 rounded border border-[#E8E5DF]">B-YYYYMMDD</code>) sesuai porsi diolah, dijual, atau stok.
           </p>
 
-          <!-- Privasi Penyetor (Selaras Proposal v2 + Catatan Revisi) -->
+          <!-- Privasi Penyetor -->
           <div id="privasi" class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-xl p-4 text-xs text-[#3D281E] space-y-1.5">
             <div class="font-bold uppercase tracking-wider text-[#926633]">Privasi Penyetor &amp; Persetujuan UMKM</div>
             <p class="text-[#694B38] leading-relaxed">
-              Secara default, halaman publik hanya menampilkan tanggal batch, jumlah penyetor, berat (kg), alokasi, hasil uji bakar, dan jumlah lilin — <strong>tanpa nama lengkap, nama usaha, alamat, atau nomor HP</strong>. Profil/cerita UMKM penyetor baru ditampilkan di halaman batch atau kartu hampers apabila telah ada <strong>persetujuan tertulis UMKM</strong> saat implementasi lapangan.
+              Halaman publik hanya menampilkan tanggal, jumlah penyetor, berat, alokasi, dan hasil uji bakar — <strong>tanpa nama, alamat, atau nomor HP pribadi</strong>. Profil UMKM penyetor hanya ditampilkan bila ada persetujuan tertulis UMKM terkait.
             </p>
           </div>
 
-          <div class="bg-[#FFFFFF] border border-[#E8E5DF] rounded-xl p-4 text-xs text-[#694B38] leading-relaxed">
-            <strong class="text-[#3D281E]">Status Data Prototipe &amp; Catatan QR:</strong> Angka batch dan rekap di halaman ini adalah <strong>simulasi ilustrasi rancangan</strong> untuk proposal, bukan data produksi nyata. Saat implementasi desa, halaman QR merujuk pada <strong>pencatatan internal</strong> Bank Sampah Suka Mandiri &amp; kelompok produksi (termasuk pencatatan uji bakar ≥2 jam dan batch gagal secara transparan; terkunci setelah simpan) — <strong>bukan sertifikasi eksternal atau jaminan keamanan produk</strong>.
-          </div>
+          <details class="bg-[#FFFFFF] border border-[#E8E5DF] rounded-xl p-4 text-xs text-[#694B38] group">
+            <summary class="cursor-pointer font-bold text-[#3D281E] flex items-center justify-between gap-2 list-none">
+              <span>Status data prototipe &amp; peran transparansi QR</span>
+              <span class="text-[#926633] text-[11px] font-semibold group-open:hidden">+ Buka</span>
+              <span class="text-[#A3560A] text-[11px] font-semibold hidden group-open:inline">− Tutup</span>
+            </summary>
+            <p class="mt-3 pt-3 border-t border-[#E8E5DF] leading-relaxed">
+              Angka batch di halaman ini adalah simulasi ilustrasi rancangan sebelum uji bakar &amp; batch 1 (Des 2026). Saat implementasi, halaman QR merujuk pada pencatatan internal Bank Sampah Suka Mandiri dan kelompok produksi (termasuk hasil uji bakar ≥2 jam dan batch gagal secara transparan; terkunci setelah disimpan) — bukan sertifikasi eksternal atau jaminan keamanan produk.
+            </p>
+          </details>
         </div>
 
-        <!-- Right Batch Card -->
-        <div class="lg:col-span-7">
+        <!-- Right Batch Card (First on mobile!) -->
+        <div class="lg:col-span-7 order-1 lg:order-2">
           <div class="artisan-surface rounded-3xl overflow-hidden">
             <div class="bg-[#3D281E] text-[#FAF3E6] px-6 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
               <div>
@@ -377,15 +393,21 @@
           </div>
         </div>
 
-        <!-- Posisi Pilot Penyerapan Bertahap & Alokasi 150 Lilin (Final A18 & A19) -->
-        <div class="bg-[#F9F8F5] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-2xl p-4 sm:p-5 text-xs text-[#694B38] leading-relaxed space-y-1.5">
-          <div class="font-bold uppercase tracking-wider text-[#3D281E]">Posisi Pilot: Langkah Awal Bertahap (Serap ±7,5 kg / ±15%) &amp; Rincian 150 Unit</div>
+        <!-- Posisi Pilot Penyerapan Bertahap & Alokasi 150 Lilin (Ringkas + Collapsible untuk Juri) -->
+        <div class="bg-[#F9F8F5] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-2xl p-4 sm:p-5 text-xs text-[#694B38] leading-relaxed space-y-2">
+          <div class="font-bold uppercase tracking-wider text-[#3D281E]">Posisi Pilot: Langkah Awal Bertahap (Serap ±7,5 kg / ±15%)</div>
           <p>
-            <strong>Fase A (Pilot s.d. 21 Jan 2027)</strong> memproduksi <strong>150 lilin dalam 3 batch (60, 50, 40)</strong> yang menyerap <strong>±7,5 kg jelantah jernih (±15% dari ±50 kg tertahan)</strong> — diposisikan secara jujur sebagai <strong>langkah pertama dan pembuka jalur pasar</strong>, bukan solusi seluruh stok jelantah desa sekaligus (batch berikutnya diproduksi hanya bila <strong>≥70% batch sebelumnya terjual/dipesan</strong>, sementara bagian keruh tetap dijual ke pengepul). Selanjutnya masuk <strong>Fase B Mandiri (Feb–Apr)</strong> tanpa dana baru (<strong>62 lilin terjual membiayai 100 lilin/batch berikutnya</strong> @ ±5 kg jelantah) dan <strong>Fase C Perluasan</strong> setelah April (±400–600 lilin/bulan) bila A &amp; B terbukti.
+            Fase A (pilot s.d. 21 Jan 2027) memproduksi 150 lilin (3 batch) yang menyerap ±7,5 kg jelantah jernih sebagai pembuka jalur pasar — bukan solusi seluruh stok desa sekaligus — sementara jelantah keruh tetap dijual tercatat ke pengepul.
           </p>
-          <p>
-            <strong>Alokasi resmi 150 lilin pada RAB pilot:</strong> <strong>100 lilin terjual</strong> (<strong>80 satuan @ Rp35.000 = Rp2,8 jt</strong> + <strong>20 di dalam hampers @ Rp85.000 = Rp1,7 jt</strong> → total omzet <strong>Rp4,5 juta</strong>), <strong>25 stok awal kelompok</strong> (penjualan lanjutan &amp; pesanan susulan), <strong>15 cadangan <em>reject</em></strong> (±10% gagal uji bakar/cacat tuang), dan <strong>10 uji bakar &amp; sampel</strong> (uji tiap batch A2, foto produk, sampel duta).
-          </p>
+          <details class="pt-1 group">
+            <summary class="cursor-pointer font-bold text-[#926633] hover:text-[#3D281E] transition">
+              Lihat rincian Fase A–C &amp; alokasi 150 lilin RAB pilot
+            </summary>
+            <div class="mt-2.5 pt-2.5 border-t border-[#E8E5DF] space-y-2">
+              <p>Batch pilot (60, 50, 40) diproduksi bertahap bila ≥70% batch sebelumnya terjual/dipesan. Setelah Fase A, berlanjut Fase B Mandiri (Feb–Apr, tanpa dana baru; 62 lilin terjual membiayai 100 lilin/batch berikutnya) dan Fase C Perluasan (±400–600 lilin/bulan) bila terbukti.</p>
+              <p>Alokasi resmi 150 lilin pada RAB pilot: 100 lilin terjual (80 satuan @ Rp35.000 = Rp2,8 jt + 20 di dalam hampers @ Rp85.000 = Rp1,7 jt → total omzet Rp4,5 juta), 25 stok awal kelompok, 15 cadangan reject (±10%), dan 10 uji bakar &amp; sampel.</p>
+            </div>
+          </details>
         </div>
       </div>
 
@@ -416,7 +438,7 @@
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
             <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Setor, Pilah &amp; Catat</h3>
             <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
-              UMKM kuliner mitra (target ≥3 UMKM, mis. usaha pisang goreng atau bawang goreng) dan warga menyetor jelantah ke <strong>Bank Sampah Suka Mandiri</strong> untuk ditimbang (kg) serta dihargai lewat <strong>program poin barter sembako</strong>. Petugas memilah kategori <strong>jernih</strong> dan <strong>keruh</strong> ke dalam kode batch (<code class="text-[11px] font-mono">B-YYYYMMDD</code>) tanpa menampilkan identitas pribadi di halaman publik.
+              UMKM kuliner mitra (target ≥3 UMKM) dan warga menyetor jelantah ke Bank Sampah Suka Mandiri untuk ditimbang serta ditukar poin barter sembako. Petugas memilah kategori jernih dan keruh ke kode batch (<code class="text-[11px] font-mono">B-YYYYMMDD</code>) secara anonim.
             </p>
           </div>
         </div>
@@ -436,7 +458,7 @@
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
             <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Dijernihkan, Dicampur &amp; Uji Bakar</h3>
             <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
-              <strong>Kelompok produksi (5–8 orang)</strong> menindaklanjuti pengalaman Bank Sampah: jelantah keruh direndam rempah dapur (min. 1 malam), diolah dengan arang aktif/zeolit, dan disaring kertas (metode UNSOED 2023), lalu dicampur <strong>wax (stearin/parafin) rasio 1:1</strong> (50 g jelantah + 50 g wax) dan pewangi menjadi lilin ±100 g. Setiap batch menjalani <strong>uji bakar ≥2 jam</strong> ditandatangani 2 orang, menyisakan <strong>1 lilin arsip</strong>, dan batch gagal tetap tercatat transparan; sisanya dijual tercatat ke pengepul.
+              Kelompok produksi (5–8 orang) menjernihkan jelantah dengan rendaman rempah dapur ≥1 malam, arang aktif/zeolit, dan saring kertas (UNSOED 2023), lalu mencampurnya dengan wax rasio 1:1 dan pewangi (±100 g). Setiap batch wajib lolos uji bakar ≥2 jam, sementara batch gagal tetap dicatat dan minyak berlebih dijual tercatat.
             </p>
           </div>
         </div>
@@ -456,7 +478,7 @@
           <div class="p-5 sm:p-6 pt-3 space-y-2.5">
             <h3 class="font-serif-display text-xl sm:text-2xl font-semibold text-[#3D281E]">Dituang ke Wadah Logam</h3>
             <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
-              Lilin dituang ke wadah logam buatan <strong>pengrajin logam Desa Pasir Wetan (target ≥2 pengrajin)</strong>, jumlah lilin, hasil uji bakar, dan 1 lilin arsip dicatat pada batch terkait, lalu ditempeli stiker QR internal yang membuka halaman ini.
+              Lilin dituang ke wadah logam buatan pengrajin Desa Pasir Wetan (target ≥2 pengrajin), dicatat jumlah beserta 1 lilin arsip per batch, lalu ditempeli stiker QR internal yang membuka halaman ini.
             </p>
           </div>
         </div>
@@ -512,10 +534,10 @@
           <span class="text-xs font-bold uppercase tracking-widest text-[#A3560A]">Wadah Logam Desa · Fungsi, Bukan Estetika Semata</span>
           <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-snug">Kenapa Memilih Wadah Kaleng Logam Pengrajin Desa?</h3>
           <p class="text-sm text-[#694B38] leading-relaxed">
-            Wadah logam bertutup dipilih berdasarkan fungsi praktis: <strong>tahan benturan saat diantar langsung oleh duta atau dikirim</strong> (dibanding gelas/keramik yang mudah pecah), <strong>ringan</strong>, <strong>biaya relatif paling murah</strong> untuk menjaga harga Rp35.000, serta <strong>bertutup</strong> untuk melindungi permukaan wax dari debu dan bau sekitar. Yang <strong>tidak</strong> kami klaim: wadah logam tidak membuat waktu bakar lilin lebih awet — durasi bakar ditentukan formula wax, sumbu, dan diameter lilin yang diuji pada tiap batch (tidak bocor, tidak berkarat, aman dipegang dengan alas; cadangan kaleng pabrikan berlabel desa disiapkan bila diperlukan).
+            Wadah logam bertutup dipilih agar tahan benturan saat dikirim, ringan, terjangkau (harga lilin tetap Rp35.000), serta melindungi wax dari debu. Kami tidak mengklaim wadah logam membuat lilin menyala lebih awet — durasi bakar tetap bergantung pada formula wax dan sumbu yang diuji di tiap batch.
           </p>
           <p class="text-sm text-[#694B38] leading-relaxed">
-            Dari anggaran pilot Rp7,5 juta, sebesar <strong>Rp2,1 juta (28%) dibelanjakan langsung ke pelaku usaha desa</strong>: <strong>Rp1.500.000 untuk pemesanan 150 wadah logam (@ Rp10.000) ke ≥2 pengrajin logam desa</strong> (±Rp750.000/pengrajin) dan <strong>Rp600.000 untuk pembelian 30 produk pangan berizin P-IRT (@ Rp20.000) dari ≥3 UMKM mitra</strong> (±Rp200.000/UMKM) sebagai isi hampers.
+            Sebesar <strong>Rp2,1 juta (28%)</strong> dari dana pilot Rp7,5 juta dibelanjakan langsung ke pelaku usaha desa: Rp1,5 juta untuk 150 wadah logam pengrajin desa (≥2 pengrajin) dan Rp600 ribu untuk 30 produk pangan berizin P-IRT UMKM mitra sebagai isi hampers.
           </p>
           <!-- Slot persetujuan nama pengrajin (ringkas & rapi) -->
           <div class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#926633] rounded-r-xl p-3.5 text-xs text-[#694B38]">
@@ -530,17 +552,23 @@
           <span class="text-xs font-bold uppercase tracking-widest text-[#926633]">Bank Sampah Suka Mandiri</span>
           <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-snug">Dari Barter Sembako hingga Produk Desa Bercerita</h3>
           <p class="text-sm text-[#694B38] leading-relaxed">
-            Sejak 2016, <strong>Bank Sampah Suka Mandiri</strong> mengelola pengumpulan minyak jelantah di Desa Pasir Wetan dengan kisaran ±20–30 kg per bulan. Mayoritas setoran berasal dari <strong>UMKM makanan lokal</strong> (seperti usaha pisang goreng krispi dan bawang goreng) serta warga yang mengantar langsung jelantahnya untuk ditimbang (kg) dan ditukar melalui <strong>program poin barter sembako</strong>.
+            Sejak 2016, <strong>Bank Sampah Suka Mandiri</strong> mengumpulkan ±20–30 kg jelantah per bulan dari UMKM kuliner lokal dan warga Desa Pasir Wetan melalui program poin barter sembako.
           </p>
           <p class="text-sm text-[#694B38] leading-relaxed">
-            Dari berbagai pelatihan sebelumnya, pengurus sudah pernah menguji pembuatan sabun dan lilin secara internal. Dalam program ini, fokus usaha desa diarahkan khusus ke <strong>lilin wangi ruangan</strong> bersama <strong>kelompok produksi (5–8 orang)</strong> — sementara sabun tidak dijadikan produk jual program karena ketentuan notifikasi kosmetik (<strong>Peraturan BPOM 33/2021 &amp; 21/2022</strong>). Minyak jelantah keruh dijernihkan dengan metode UNSOED 2023 (rempah dapur, arang aktif/zeolit, dan saring kertas), sedangkan stok berlebih dijual tercatat ke pengepul.
+            Bersama kelompok produksi (5–8 orang), usaha desa difokuskan ke lilin wangi ruangan dalam wadah logam — minyak keruh dijernihkan dengan metode UNSOED 2023, sedangkan stok berlebih dijual tercatat ke pengepul.
           </p>
-          <div class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#F7911D] p-5 rounded-r-2xl my-4 space-y-1.5">
-            <div class="text-[11px] font-bold uppercase tracking-wider text-[#926633]">Pemegang Aset Digital, QR &amp; Serah Terima Bertahap (Pasca 21 Jan)</div>
-            <p class="text-sm text-[#3D281E] leading-relaxed">
-              Seluruh aset usaha menggunakan email dan nomor organisasi desa (bukan akun pribadi mahasiswa): <strong>Bank Sampah Suka Mandiri</strong> diusulkan memegang merek/logo, Instagram, WhatsApp Business (min. 2 admin warga; sandi dipegang Ketua Bank Sampah), serta kendali halaman QR cerita; <strong>Kelompok Produksi (5–8 orang)</strong> memegang akun toko marketplace (atas nama pengurus desa) serta Bendahara mengelola kas/komisi; dan <strong>Duta Muda Karang Taruna (≥5 orang)</strong> menjadi admin harian &amp; koordinator penjualan hampers/satuan (<strong>komisi 10%</strong> lewat kas Karang Taruna; anggota &lt;18 th dengan izin orang tua). Serah terima dilakukan bertahap (8–20 Des admin bersama → 21 Des–10 Jan Duta Muda harian/tim co-admin → <strong>11–21 Jan akses admin tim dicabut penuh dengan berita acara</strong> → Feb–Apr pendampingan bulanan).
-            </p>
-          </div>
+          <details class="bg-[#FFFFFF] border border-[#E8E5DF] border-l-4 border-l-[#F7911D] p-4 rounded-r-2xl text-xs text-[#694B38] group">
+            <summary class="cursor-pointer font-bold text-[#3D281E] flex items-center justify-between gap-2 list-none">
+              <span class="uppercase tracking-wider text-[11px] text-[#926633]">Pemegang Aset Digital, Regulasi &amp; Serah Terima (Pasca 21 Jan)</span>
+              <span class="text-[#926633] font-semibold group-open:hidden">+ Buka</span>
+              <span class="text-[#A3560A] font-semibold hidden group-open:inline">− Tutup</span>
+            </summary>
+            <div class="mt-3 pt-3 border-t border-[#E8E5DF] space-y-2 leading-relaxed">
+              <p>Sabun tidak dijadikan produk jual program karena ketentuan notifikasi kosmetik (Peraturan BPOM 33/2021 &amp; 21/2022).</p>
+              <p>Seluruh aset memakai email dan nomor organisasi desa: Bank Sampah Suka Mandiri diusulkan memegang merek/logo, Instagram, WhatsApp Business (min. 2 admin warga), dan halaman QR cerita; Kelompok Produksi memegang marketplace &amp; Bendahara mengelola kas; Duta Muda Karang Taruna (≥5 orang, komisi 10% lewat kas Karang Taruna) menjadi admin penjualan.</p>
+              <p>Serah terima dilakukan bertahap (8–20 Des admin bersama → 21 Des–10 Jan Duta Muda harian → 11–21 Jan akses admin tim dicabut penuh dengan berita acara → Feb–Apr pendampingan bulanan).</p>
+            </div>
+          </details>
         </div>
         <div class="lg:col-span-6 order-1 lg:order-2">
           <figure class="artisan-surface rounded-3xl overflow-hidden p-3">
@@ -581,7 +609,7 @@
               </div>
             </div>
             <p class="text-xs text-[#EFDCBA]/80 leading-relaxed">
-              <strong>Posisi harga sebanding (Tokopedia ±100 g):</strong> Dibandingkan <strong>9 listing unik lilin soy ±100 g dalam gelas/jar</strong> di Tokopedia (pantauan 17 Nov 2026: rentang <strong>Rp39.900–Rp71.000, median Rp58.000</strong>), harga usulan <strong>Rp35.000</strong> berada <strong>12% di bawah termurah dan 40% di bawah median</strong> agar terjangkau mahasiswa (margin Rp12.000/lilin; 62 lilin terjual membiayai 100 lilin berikutnya; opsi Rp39.900/Rp45.000 diuji lewat pre-order). Produk ini adalah pengharum ruangan: <strong>tidak untuk dimakan/dioleskan</strong> dan tanpa klaim kesehatan/aromaterapi.
+              Harga usulan Rp35.000 berada di bawah median pasar lilin ±100 g Tokopedia (Rp39.900–Rp71.000, median Rp58.000) agar terjangkau mahasiswa. Produk ini adalah pengharum ruangan: <strong>tidak untuk dimakan atau dioleskan</strong> dan tanpa klaim kesehatan/aromaterapi.
             </p>
           </div>
 
@@ -621,10 +649,10 @@
             <div class="inline-flex items-center gap-2 bg-[#F7911D]/15 text-[#A3560A] border border-[#F7911D]/50 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">Hampers Hadiah · Rp85.000</div>
             <h3 class="font-serif-display text-2xl sm:text-3xl font-semibold text-[#3D281E] leading-snug">Hampers Hadiah &amp; Satu Segmen Pasar Utama</h3>
             <p class="text-xs sm:text-sm text-[#694B38] leading-relaxed">
-              Pada fase pilot (Fase A), pemasaran dipusatkan pada <strong>satu segmen utama: mahasiswa dan organisasi kampus di Purwokerto</strong> (berbatasan dengan Kec. Karanglewas, sebaya Duta Muda, terukur lewat <strong>5 duta × [16 lilin satuan + 4 hampers] = 100 lilin</strong> dalam 3 minggu). Satuan Rp35.000 untuk dipakai atau kado pribadi; <strong>hampers Rp85.000 untuk apresiasi pembicara, panitia, atau wisuda</strong>. Wisatawan, toko oleh-oleh, dan pembeli korporat belum disasar sampai pilot terbukti (Fase C).
+              Pada fase pilot, pemasaran dipusatkan ke mahasiswa dan organisasi kampus Purwokerto (5 duta × [16 satuan + 4 hampers] = 100 lilin). Satuan Rp35.000 untuk pemakaian pribadi; hampers Rp85.000 cocok untuk apresiasi pembicara, panitia, atau wisuda.
             </p>
             <p class="text-xs text-[#694B38] leading-relaxed bg-[#F9F8F5] border border-[#E8E5DF] rounded-xl p-3">
-              <strong class="text-[#3D281E]">Target 100 Lilin = Rp4,5 Juta:</strong> Target <strong>100 lilin terjual</strong> sudah termasuk <strong>20 lilin di dalam hampers</strong> (bukan 100 + 20 = 120): <strong>80 satuan (@ Rp35.000 = Rp2,8 jt)</strong> + <strong>20 hampers (@ Rp85.000 = Rp1,7 jt)</strong> dengan pre-order <strong>DP 50%</strong>.
+              <strong class="text-[#3D281E]">Target 100 Lilin (Rp4,5 Juta):</strong> 80 satuan (@ Rp35.000) + 20 hampers (@ Rp85.000, berisi masing-masing 1 lilin) dengan pre-order DP 50%.
             </p>
             <div class="pt-1">
               <a id="wa-hampers" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#3D281E] hover:bg-[#926633] text-[#FFFFFF] text-xs font-bold px-5 py-2.5 rounded-full transition">
@@ -638,18 +666,18 @@
             <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
               <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">Rincian Hampers Hadiah (Rp85.000)</div>
               <ul class="text-xs text-[#694B38] space-y-1.5 list-disc list-inside leading-relaxed">
-                <li><strong class="text-[#3D281E]">1 Lilin RELIGHT ±100 g</strong> (biaya produksi Rp19.500) dalam wadah logam pengrajin desa.</li>
-                <li><strong class="text-[#3D281E]">1 Produk pangan UMKM mitra</strong> berizin <strong>P-IRT aktif</strong> (dibeli Rp20.000/pcs dari UMKM desa).</li>
-                <li><strong class="text-[#3D281E]">Kotak hadiah + kartu cerita QR</strong> (Rp25.000), komisi Duta Muda 10% (Rp8.500), &amp; <strong>margin desa Rp12.000/hampers</strong>.</li>
+                <li>1 Lilin RELIGHT ±100 g dalam wadah logam pengrajin desa (biaya produksi Rp19.500).</li>
+                <li>1 Produk pangan UMKM mitra berizin P-IRT aktif (dibeli Rp20.000/pcs dari UMKM desa).</li>
+                <li>Kotak hadiah + kartu cerita QR (Rp25.000), komisi Duta Muda 10% (Rp8.500), &amp; margin desa Rp12.000/hampers.</li>
               </ul>
             </div>
 
             <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
               <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">Jadwal Momentum &amp; Fase Sasaran</div>
               <ul class="text-xs text-[#694B38] space-y-2 leading-relaxed">
-                <li><strong class="text-[#3D281E]">Akhir semester, Hari Ibu, Natal, Tahun Baru (≥15 hampers):</strong> PO 8–18 Des · kirim 19–31 Des (organisasi &amp; panitia kampus Purwokerto, dosen/staf).</li>
-                <li><strong class="text-[#3D281E]">Imlek 6 Feb (≥5 PO s.d. 21 Jan):</strong> PO 11–25 Jan · kirim 1–4 Feb (pelanggan ulang komunitas kampus &amp; alumni — Fase B).</li>
-                <li><strong class="text-[#3D281E]">Ramadan–Lebaran ±10 Mar (Fase C, di luar target 100 lilin):</strong> Hampers lengkap instansi &amp; perantau; dibuka bila Fase A &amp; B terbukti.</li>
+                <li><span class="font-semibold text-[#3D281E]">Akhir semester, Hari Ibu, Natal, Tahun Baru (≥15 hampers):</span> PO 8–18 Des · kirim 19–31 Des untuk kampus Purwokerto.</li>
+                <li><span class="font-semibold text-[#3D281E]">Imlek 6 Feb (≥5 PO s.d. 21 Jan):</span> PO 11–25 Jan · kirim 1–4 Feb untuk pelanggan ulang &amp; alumni (Fase B).</li>
+                <li><span class="font-semibold text-[#3D281E]">Ramadan–Lebaran ±10 Mar (Fase C):</span> Hampers lengkap instansi &amp; perantau; dibuka bila Fase A &amp; B terbukti.</li>
               </ul>
             </div>
           </div>
@@ -679,30 +707,30 @@
           <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
             <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">1. Sebelum Menyalakan</div>
             <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
-              <li><strong class="text-[#3D281E]">Pastikan tepi wadah logam tidak tajam</strong> saat membuka tutup atau memindahkan lilin.</li>
-              <li><strong class="text-[#3D281E]">Pangkas sumbu ±0,5 cm</strong> agar nyala stabil dan minim jelaga.</li>
-              <li><strong class="text-[#3D281E]">Permukaan rata & tahan panas,</strong> jauh dari tirai, kertas, dan angin langsung.</li>
-              <li><strong class="text-[#3D281E]">Jauhkan dari anak & hewan peliharaan.</strong></li>
-              <li><strong class="text-[#3D281E]">Ruangan berventilasi;</strong> hentikan bila aroma mengganggu.</li>
+              <li>Pastikan tepi wadah logam tidak tajam saat membuka tutup.</li>
+              <li>Pangkas sumbu ±0,5 cm agar nyala stabil dan minim jelaga.</li>
+              <li>Permukaan rata &amp; tahan panas, jauh dari tirai dan angin.</li>
+              <li>Jauhkan dari anak &amp; hewan peliharaan.</li>
+              <li>Ruangan berventilasi; hentikan bila aroma mengganggu.</li>
             </ul>
           </div>
 
           <div class="bg-[#F7911D]/10 border border-[#F7911D]/40 rounded-2xl p-5 space-y-2.5">
             <div class="text-xs font-bold uppercase tracking-wider text-[#A3560A]">2. Saat Menyala</div>
             <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
-              <li><strong class="text-[#3D281E]">Wadah logam menjadi panas:</strong> jangan sentuh atau pindahkan saat menyala dan sesaat setelah padam.</li>
-              <li><strong class="text-[#3D281E]">Maksimal 3–4 jam</strong> sekali menyala.</li>
-              <li><strong class="text-[#3D281E]">Padamkan segera</strong> bila nyala terlalu besar, berasap, atau sumbu bergeser ke tepi.</li>
+              <li><span class="font-semibold text-[#3D281E]">Wadah logam ikut panas:</span> jangan sentuh atau pindahkan saat menyala maupun saat wax cair.</li>
+              <li>Maksimal 3–4 jam sekali menyala.</li>
+              <li>Padamkan segera bila nyala terlalu besar, berasap, atau sumbu bergeser ke tepi.</li>
             </ul>
           </div>
 
           <div class="bg-[#F9F8F5] border border-[#E8E5DF] rounded-2xl p-5 space-y-2.5">
             <div class="text-xs font-bold uppercase tracking-wider text-[#926633]">3. Padamkan & Simpan</div>
             <ul class="text-xs text-[#694B38] space-y-2 list-disc list-inside leading-relaxed">
-              <li><strong class="text-[#3D281E]">Jangan disiram air;</strong> tiup perlahan atau gunakan pemadam lilin.</li>
-              <li><strong class="text-[#3D281E]">Tutup kaleng setelah dingin</strong> dan simpan di tempat sejuk tanpa matahari langsung.</li>
-              <li><strong class="text-[#3D281E]">Hentikan saat sisa ±1 cm</strong> agar dasar wadah tidak terlalu panas.</li>
-              <li><strong class="text-[#3D281E]">Bukan untuk dimakan atau dioleskan,</strong> dan tidak untuk dipanaskan ulang di kompor (tanpa klaim kesehatan).</li>
+              <li>Jangan disiram air; tiup perlahan atau gunakan pemadam lilin.</li>
+              <li>Tutup kaleng setelah dingin dan simpan di tempat sejuk tanpa matahari langsung.</li>
+              <li>Hentikan saat sisa wax tinggal ±1 cm.</li>
+              <li><span class="font-semibold text-[#3D281E]">Bukan untuk dimakan atau dioleskan</span>, dan tidak untuk dipanaskan ulang di kompor.</li>
             </ul>
           </div>
         </div>
@@ -713,15 +741,12 @@
   <!-- ===================== SECTION 6 — PESAN ULANG ===================== -->
   <section id="pesan" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-16">
     <div class="artisan-dark-card rounded-3xl p-8 sm:p-12 text-center space-y-5">
-      <div class="w-12 h-12 rounded-full bg-[#F7911D]/20 border border-[#F7911D] mx-auto flex items-center justify-center">
-        <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
-          <path d="M32 10C32 10 42 21.5 42 29.5C42 35.2 37.5 39.5 32 39.5C26.5 39.5 22 35.2 22 29.5C22 25.5 24.5 21.5 26.8 19C26.2 23 28.5 25.5 30.5 25.5C28.8 20.5 32 10 32 10Z" fill="#F7911D"/>
-          <path d="M14 42H50C48.8 51.2 41.4 56 32 56C22.6 56 15.2 51.2 14 42Z" fill="#EFDCBA"/>
-        </svg>
+      <div class="w-14 h-14 rounded-full bg-[#FFFFFF] border-2 border-[#F7911D] mx-auto flex items-center justify-center p-2 shadow-md">
+        <img src="assets/logo-relight.png" alt="Logo RELIGHT" class="w-full h-full object-contain" />
       </div>
       <h2 class="font-serif-display text-2xl sm:text-4xl font-semibold text-[#FFFFFF] max-w-xl mx-auto leading-tight">Suka dengan Lilinnya? Pesan Lagi Lewat Duta Muda Karang Taruna</h2>
       <p class="text-xs sm:text-sm text-[#EFDCBA]/85 max-w-xl mx-auto leading-relaxed">
-        Pemesanan ulang <strong>RELIGHT Lilin Wangi ±100 g (Rp35.000)</strong> dan <strong>Hampers Hadiah (Rp85.000)</strong> dilayani oleh <strong>Duta Muda (Karang Taruna) Desa Pasir Wetan</strong> (komisi 10%). Setiap pembelian ikut mendukung Bank Sampah Suka Mandiri, kelompok produksi, UMKM mitra, dan pengrajin logam desa.
+        Pemesanan ulang RELIGHT Lilin Wangi ±100 g (Rp35.000) dan Hampers Hadiah (Rp85.000) dilayani oleh Duta Muda Karang Taruna Desa Pasir Wetan (komisi 10%) untuk mendukung Bank Sampah Suka Mandiri, kelompok produksi, UMKM mitra, dan pengrajin logam desa.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
         <a id="wa-reorder" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#F7911D] hover:bg-[#DF7B0B] text-[#3D281E] font-bold text-xs sm:text-sm px-6 py-3 rounded-full transition shadow-md">
